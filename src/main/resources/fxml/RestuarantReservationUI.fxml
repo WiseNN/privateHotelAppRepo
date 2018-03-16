@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="85.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name*" />
+      <Text layoutX="286.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email*" />
+      <Text layoutX="476.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone*" />
+      <TextField fx:id="nameTextField" layoutX="85.0" layoutY="123.0" />
+      <TextField fx:id="emailTextField" layoutX="286.0" layoutY="123.0" />
+      <TextField fx:id="phoneNumberTextField" layoutX="476.0" layoutY="123.0" />
+      <Text layoutX="85.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date*" />
+      <Text layoutX="286.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time*" />
+      <DatePicker fx:id="reservationFromDatePicker" layoutX="85.0" layoutY="217.0" prefHeight="27.0" prefWidth="167.0" />
+      <ComboBox fx:id="reservationTimesComboBox" layoutX="286.0" layoutY="217.0" prefHeight="27.0" prefWidth="167.0" />
+      <Text layoutX="476.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Party Size*" />
+      <ComboBox fx:id="partySizeComboBox" layoutX="476.0" layoutY="217.0" prefHeight="27.0" prefWidth="167.0" />
+      <Text layoutX="85.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPECIAL REQUESTS" />
+      <TextArea fx:id="specialRequestsTextArea" layoutX="85.0" layoutY="305.0" prefHeight="103.0" prefWidth="562.0" />
+      <Text layoutX="293.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fancy Restuarant Name" />
+      <Separator layoutX="33.0" layoutY="430.0" prefHeight="5.0" prefWidth="666.0" />
+      <Button fx:id="bookNowBtn" layoutX="313.0" layoutY="447.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="114.0" text="Book Now" />
+   </children>
+</AnchorPane>
