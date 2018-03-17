@@ -23,7 +23,7 @@ public class DB
     //This function creates documents that do not exist
     //It takes in the document name, and a new hashMap (if one exists).
     //This will return null if you try to create a document with an ID that already exists.
-    Map<String, Object> createDoc(String withDocName, Map<String, Object> andNewMap) throws IllegalArgumentException
+    public Map<String, Object> createDoc(String withDocName, Map<String, Object> andNewMap) throws IllegalArgumentException
     {
         Document newDoc = null;
 
@@ -75,7 +75,7 @@ public class DB
     //This update function will throw if a couchbase error is incurred.
     //Update conflicts will resolve themselves, because the update function is in-use, instead of
     //putProperties.
-    Map<String, Object> updateDocInDB(String withDocName, Map<String,Object> updatedMap) throws IllegalArgumentException
+    public Map<String, Object> updateDocInDB(String withDocName, Map<String,Object> updatedMap) throws IllegalArgumentException
     {
         Document updatedDoc = null;
         if((withDocName == "")||(withDocName == null)||(updatedMap == null))
@@ -121,7 +121,7 @@ public class DB
     //- However, you can pass in full objects as values ex.) a HashMap within a hashMap
     // *** if this throws, please report this to the creator ***
 
-    Map.Entry<String, Object> searchForKeyValueInDoc(String withDocName, String key, Object value) throws IllegalArgumentException
+    public Map.Entry<String, Object> searchForKeyValueInDoc(String withDocName, String key, Object value) throws IllegalArgumentException
     {
         Map.Entry<String, Object> keyValuePairInDoc = null;
 
@@ -168,7 +168,7 @@ public class DB
     //This function will print the JSON object to the console in green.
     //It takes in a Map<K,V> object (can pass a HashMap<K,V>) and an indent factor.
     //If a null value is passed in the docMap parameter, this function will throw an exception.
-    void printDocAsJSON(Map<String, Object> docMap, int indentFactor)
+    public void printDocAsJSON(Map<String, Object> docMap, int indentFactor)
     {
 
         if((docMap == null))
@@ -177,7 +177,8 @@ public class DB
             String params = "--- Arguments ---\n\tdocMap: "+docMap;
 
             throw new IllegalArgumentException("Cannot pass a null or empty string value to this function\nCheck Params:\n\n"+params);
-        }else{
+        }
+        else{
             JSONObject dbAsJSON = new JSONObject(docMap);
             System.out.println(ConsoleColors.greenText(dbAsJSON.toString(indentFactor)));
         }
@@ -188,7 +189,7 @@ public class DB
     //This function permanently removes a document from the database, and returns the removed document to the caller.
     //It takes in a document name. This function can throw if it passes null or an empty string for
     //the withDocName parameter, or incurs a database error.
-    Map<String, Object> permenantlyRemoveDoc(String withDocName)
+    public Map<String, Object> permenantlyRemoveDoc(String withDocName)
     {
         Document removedDoc = null;
         if((withDocName == "")||(withDocName == null))
@@ -235,7 +236,7 @@ public class DB
     //This function looks for a document based on the provided name passed into the
     //param, if no argument is specified this function will throw. If successfully found,
     //a document will return the Map<K,V> form of the document in the database
-    Map<String, Object> readDocInDB(String withDocName) {
+   public Map<String, Object> readDocInDB(String withDocName) {
         Document removedDoc = null;
         if ((withDocName == "") || (withDocName == null)) {
             //create formatted params string to display in console

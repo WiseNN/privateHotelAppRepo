@@ -53,11 +53,8 @@ public class HotelBackend
     }
 
 
-    public ArrayList<Object> bookRoom(LocalDate fromDate, LocalDate toDate, roomType roomType, int numOfRooms) throws Exception {
-
-        String myRoomType = "";
-        int temproomnummber = (int) (Math.random());
-        System.out.println(temproomnummber);
+    public ArrayList<Object> bookRoom(LocalDate fromDate, LocalDate toDate, roomType roomType, int numOfRooms) throws Exception
+    {
 
 
         Room db = new Room();
@@ -116,7 +113,10 @@ Make it so that each room type can be compared with the UI
 
             //call database with params and get callback
 
-            Sqllc s = new Sqllc();
+
+            Room roomsDB = new Room();
+
+            roomsDB.getRooms();
 
             s.insertCID(fromDate.getDayOfMonth(), fromDate.getMonthValue(), fromDate.getYear());
             s.insertCOD(toDate.getDayOfMonth(), toDate.getMonthValue(), toDate.getYear());

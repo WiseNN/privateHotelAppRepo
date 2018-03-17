@@ -1,6 +1,7 @@
 package mainhotelapp
 
 import couchdb.Room
+import hotelbackend.HotelBackEndNorris
 import hotelbackend.HotelBackend
 import javafx.application.Application
 import javafx.beans.property.SimpleStringProperty
@@ -13,6 +14,7 @@ import mainhotelapp.customCells.PackagesTableViewCell
 import mainhotelapp.customCells.StayDurationTableCell
 import mainhotelapp.customCells.SubmitBtnTableViewCell
 import tornadofx.*;
+import java.sql.Date
 import java.time.LocalDate
 import kotlin.collections.HashMap
 
@@ -40,7 +42,7 @@ class ReservationView : View()
     val bookingContainer: VBox by fxid()
     val fromBookingDatePicker: DatePicker by fxid()
     val toBookingDatePicker: DatePicker by fxid()
-    val roomBookingTypeComboBox: ComboBox<Room.roomType> by fxid()
+    val roomBookingTypeComboBox: ComboBox<Room.allRoomTypes> by fxid()
     val numOfBookedRoomsComboBox: ComboBox<Int> by fxid()
     val searchBookingBtn: Button by fxid()
     //---------fxml ---------fxml ---------fxml ---------fxml ---------
@@ -110,59 +112,26 @@ class ReservationView : View()
         //from FXML
         add(availableRoomsLabelWithDivider)
 
-        //call BookRoom function to get available rooms for selected Date (currently using dummy data)
-        val availableRooms = HotelBackend().bookRoom(LocalDate.now(), LocalDate.now(), Room.roomType.reg, 5)
-
-        //create a listOfAvailableRooms, make observable for the TableView
-        var listOfAvailableRooms = mutableListOf<AvailableRooms>().observable()
-
-        //initialize oneRoom from AvailableRooms class so the amenities property can be accessed
-        var oneAvailableRoom = AvailableRooms()
-
-        //map each room in the availableRooms to the observable listOfAvailableRooms
-        for (i in availableRooms.indices) {
-            //get room Object from ArrayList, cast to HashMap
-            val room = availableRooms[i] as HashMap<String, Object>
-
-            //get room properties from the hashMap, cast them to their corresponding types
-            val hasPet = (room["hasPet"] as String)
-            val roomType = room["roomType"] as String
-            val bedType = room["bedType"] as String
-            val isSmoking = room["isSmoking"] as String
-            val amenities = room["amenities"] as HashMap<String, Boolean>
-
-            val listOfAmenitiesInRoom = mutableListOf<String>()
-
-            //map Amenities for each room with index
-            amenities.forEach { key, value ->
-
-
-                listOfAmenitiesInRoom.add("$key : " + if (value) "yes" else "no")
-
-            }
-
-
-            //update oneAvailableRoom object from AvailableRooms class, and store in list
-            oneAvailableRoom = AvailableRooms((i + 1), "defaultValue", "defaultValue", hasPet, roomType, bedType, isSmoking, listOfAmenitiesInRoom)
-
-            listOfAvailableRooms.add(oneAvailableRoom)
-
-
-        }
-        val rooms: ObservableList<AvailableRooms> = listOfAvailableRooms
-
-        println(availableRooms)
 
 
 
-        tableview<AvailableRooms>(listOfAvailableRooms) {
+
+
+
+
+
+
+
+
+
+        tableview<Room>() {
 
 
             //            column<AvailableRooms, Int>("Room No.", AvailableRooms::roomNumberProperty)
 
-            val roomNumCol = TableColumn<AvailableRooms, Int>("Room Number")
+            val roomNumCol = TableColumn<Room, Int>("Room Number")
 
-            roomNumCol.setCellValueFactory { it.value.roomNumberProperty() }
+            roomNumCol.setCellValueFactory { it.value. }
 
 
             val durationColumn = TableColumn<AvailableRooms, String>("Duration")
@@ -200,10 +169,11 @@ class ReservationView : View()
 
         }
 
-        roomBookingTypeComboBox.items.addAll(Room.roomType.reg,Room.roomType.handi,Room.roomType.suite)
+        //room booking request params: fromDate, toDate, roomType, numOfRooms
+        roomBookingTypeComboBox.items.addAll(Room.allRoomTypes.reg,Room.allRoomTypes.handi,Room.allRoomTypes.suite)
         numOfBookedRoomsComboBox.items.addAll(1,2,3,4,5)
         searchBookingBtn.setOnMouseClicked {
-            val rez =  HotelBackend().bookRoom(fromBookingDatePicker.value, toBookingDatePicker.value, roomBookingTypeComboBox.value, numOfBookedRoomsComboBox.value)
+            val rez =  HotelBackEndNorris().bookRoomNorris(Date.valueOf(fromBookingDatePicker.value), Date.valueOf(toBookingDatePicker.value), roomBookingTypeComboBox.value, numOfBookedRoomsComboBox.value)
             println("rez: $rez")
 
 
