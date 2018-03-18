@@ -1,6 +1,9 @@
 package mainhotelapp.customCells
 
+import couchdb.DB
+import couchdb.DBNames
 import couchdb.Room
+import devutil.MyUtil
 import javafx.scene.control.TableCell
 import javafx.scene.control.TableColumn
 import javafx.scene.control.TextArea
@@ -17,7 +20,6 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
 {
 
     var isEditingActive = false
-    var currentIndex = 999
     var notesTextArea = createTextArea()
     var wrappingText = createText()
     val employeedID = employeeID
@@ -99,13 +101,50 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
             graphic = wrappingText
 
         }else{
+
+            //process notes tableCell value
+
+            print("this index from row: "+tableRow.index)
             val hour = Date().time.hours.toString()
             val min = Date().time.minutes.toString()
             val sec = Date().time.seconds.toString()
 
             wrappingText.text = notesTextArea.text+
                     "\n --${LocalDate.now()} ~ $employeedID--"
+
+
+
+
+
+
+            //get room number for corresponding row
+            val roomNumberCell = tableRow.getChildList()!![0] as? TableCell<Room, String>
+
+            val roomNumber = roomNumberCell!!.item
+
+            //update the notes property in the database
+            val db = DB()
+            val roomsMap = db.readDocInDB(DBNames.rooms)
+            val serializedRoom = roomsMap[roomNumber] as String
+
+            val util = MyUtil()
+            val deSerializedRoom = util.deserializeObject(Room::class.java,serializedRoom)
+            deSerializedRoom.notes = wrappingText.text
+
+            //re-serialize room
+            val reSerializedRoom = util.serializeObject(deSerializedRoom)
+
+            //put room back into roomsMap
+            roomsMap[roomNumber] = reSerializedRoom
+
+            //save updated roomsMap to DB
+            db.updateDocInDB(DBNames.rooms, roomsMap)
+
             graphic = wrappingText
+
+            tableView.refresh()
+
+
         }
 
 

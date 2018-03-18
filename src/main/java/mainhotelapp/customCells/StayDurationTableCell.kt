@@ -33,8 +33,15 @@ class StayDurationTableCell (durationColumn : TableColumn<Room, String>): TableC
     {
         super.updateItem(item, empty)
 
-        fromDateProperty.set(item)
-        toDateProperty.set(item)
+        //if not null split into array, if null make empty array
+        val fromToDateList = if(item != null) item!!.split(";".toRegex()) else listOf()
+
+        if(fromToDateList.isNotEmpty())
+        {
+            fromDateProperty.set(fromToDateList[0])
+            toDateProperty.set(fromToDateList[1])
+        }
+
 
 //        println("item from duration cell: ${cellGraphics.text()}")
 

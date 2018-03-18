@@ -24,37 +24,41 @@ public class Room implements Serializable
 
 
     public int roomNumber;
-    public transient SimpleIntegerProperty roomNumberProperty;
+    public transient SimpleStringProperty roomNumberProperty = new SimpleStringProperty(this, "roomNumber");;
 
     public allRoomTypes roomType;
-    public transient SimpleObjectProperty<allRoomTypes> roomTypeProperty;
+    public transient SimpleObjectProperty<allRoomTypes> roomTypeProperty = new SimpleObjectProperty<>(this, "roomType");;
 
     public allBedTypes bedType;
-    public transient SimpleObjectProperty<allBedTypes> bedTypeProperty;
+    public transient SimpleObjectProperty<allBedTypes> bedTypeProperty = new SimpleObjectProperty<>(this, "bedType");;
 
     public Boolean isSmoking;
-    public transient SimpleBooleanProperty isSmokingProperty;
+    public transient SimpleBooleanProperty isSmokingProperty = new SimpleBooleanProperty(this, "isSmoking");;
 
     public Boolean hasPet;
-    public transient SimpleBooleanProperty hasPetProperty;
+    public transient SimpleBooleanProperty hasPetProperty = new SimpleBooleanProperty(this, "hasPet");;
 
     public Boolean isAvailableForOccupancy;
-    public transient SimpleBooleanProperty isAvailableForOccupancyProperty;
+    public transient SimpleBooleanProperty isAvailableForOccupancyProperty = new SimpleBooleanProperty(this, "isAvailableForOccupancy");;
 
-    public String notes;
-    public transient SimpleStringProperty notesProperty;
+    public String notes = "";
+    public transient SimpleStringProperty notesProperty = new SimpleStringProperty(this, "notes");;
 
     public Map<String, Object> amenities;
-    public transient SimpleObjectProperty<Map<String, Object>> amenitiesProperty;
+    public transient SimpleObjectProperty<Map<String, Object>> amenitiesProperty = new SimpleObjectProperty<Map<String, Object>>(this, "amenities");
 
     public String additionalPackages;
-    public transient SimpleStringProperty additionalPackagesProperty;
+    public transient SimpleStringProperty additionalPackagesProperty = new SimpleStringProperty(this, "additionalPackages");;
+
+    public String stayDuration;
+    public transient SimpleStringProperty stayDurationProperty = new SimpleStringProperty(this, "stayDuration");
+
 
     public ArrayList<String> reservations;
 
 
-    public transient final HashMap<String, Object> regAmenities = getRegAmenities();
-    public transient final HashMap<String, Object> suiteAmenities = getSuiteAmenities();
+    public  final HashMap<String, Object> regAmenities = getRegAmenities();
+    public  final HashMap<String, Object> suiteAmenities = getSuiteAmenities();
 
     //HashMap keys
     private final String bedTypeKey = "bedType";
@@ -72,7 +76,7 @@ public class Room implements Serializable
                 Boolean hasPet, Boolean isAvailableForOccupancy, Map<String, Object> amenities)
     {
         this.roomNumber = roomNumber;
-        this.roomNumberProperty = new SimpleIntegerProperty(roomNumber);
+        this.roomNumberProperty = new SimpleStringProperty(""+roomNumber);
 
         this.roomType = roomType;
         this.roomTypeProperty = new SimpleObjectProperty<allRoomTypes>(roomType);
@@ -96,6 +100,7 @@ public class Room implements Serializable
 
         this.notes = "";
         this.notesProperty = new SimpleStringProperty(notes);
+
 
         this.reservations = new ArrayList<String>();
 
@@ -199,6 +204,9 @@ public class Room implements Serializable
         {
 
             DB db = new DB();
+
+            //additionalPackages String (to be parsed for viewing in the tableView)
+            String addPkgs = "";
 
             //if the rooms database exists, do not create one
             if(db.readDocInDB(DBNames.rooms) != null)
@@ -344,6 +352,9 @@ public class Room implements Serializable
 
                     //re-attach the updated list of reservationID's to the room
                     room.reservations = roomReservationsList;
+
+                    //update the current stay's duration (room duration property)
+                    room.stayDuration = pendingReservation.fromDate.toString()+";"+pendingReservation.toDate.toString();
 
                     //put the updated room back in the roomsMap the database
                     Map<String, Object> roomsMapFromDB = db.readDocInDB(DBNames.rooms);

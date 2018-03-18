@@ -7,6 +7,9 @@ import couchdb.Room
 import hotelbackend.HotelBackEndNorris
 //import hotelbackend.HotelBackend
 import javafx.application.Application
+import javafx.beans.property.SimpleBooleanProperty
+import javafx.beans.property.SimpleIntegerProperty
+import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
 import javafx.collections.ObservableList
 import javafx.scene.control.*
@@ -130,29 +133,32 @@ class ReservationView : View()
 
 
 
+        var listOfAvailableRooms = mutableListOf<Room>().observable()
 
 
 
 
 
 
-        tableview<Room>{
+        tableview<Room>(listOfAvailableRooms){
+
 
 
             //            column<AvailableRooms, Int>("Room No.", AvailableRooms::roomNumberProperty)
 
-            val roomNumCol = TableColumn<Room, Int>("Room Number")
+            val roomNumCol = TableColumn<Room, String>("Room Number")
 
-            roomNumCol.setCellValueFactory { it.value.roomNumberProperty.observable() }
+            roomNumCol.setCellValueFactory { it.value.roomNumberProperty }
 
 
             val durationColumn = TableColumn<Room, String>("Duration")
+            println("date: "+fromBookingDatePicker.value)
             val durationDateString : String = (fromBookingDatePicker.valueProperty().toString()+"-"+toBookingDatePicker.valueProperty().toString())
 
             durationColumn.prefWidthProperty().set(120.0)
             durationColumn.minWidthProperty().set(durationColumn.prefWidth)
             durationColumn.setCellFactory { StayDurationTableCell(durationColumn) }
-            durationColumn.setCellValueFactory {SimpleStringProperty(durationDateString)}
+            durationColumn.setCellValueFactory {it.value.stayDurationProperty}
 
 
             val notesColumn = TableColumn<Room, String>("Notes")
@@ -191,8 +197,27 @@ class ReservationView : View()
             println("rez: $rez")
 
             rez.forEach {
-                println("Room Number: ${it.roomNumber}")
+
+                it.roomNumberProperty = SimpleStringProperty(""+it.roomNumber)
+                it.roomTypeProperty = SimpleObjectProperty<Room.allRoomTypes>(it.roomType)
+                it.stayDurationProperty = SimpleStringProperty(it.stayDuration)
+                it.bedTypeProperty = SimpleObjectProperty<Room.allBedTypes>(it.bedType)
+                it.isSmokingProperty = SimpleBooleanProperty(it.isSmoking)
+                it.hasPetProperty = SimpleBooleanProperty(it.hasPet)
+                it.isAvailableForOccupancyProperty = SimpleBooleanProperty(it.isAvailableForOccupancy)
+                it.notesProperty = SimpleStringProperty(it.notes)
+                it.amenitiesProperty  = SimpleObjectProperty(it.amenities)
+                it.notesProperty = SimpleStringProperty(it.notes)
+
+
+
+            }.apply {
+                listOfAvailableRooms.removeAll()
+
+                listOfAvailableRooms.addAll(rez)
             }
+
+
 
 
 
