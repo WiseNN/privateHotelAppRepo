@@ -1,11 +1,13 @@
 package mainhotelapp
 
+import com.sun.javafx.scene.control.skin.LabeledText
+import javafx.scene.control.Button
 import javafx.scene.control.SplitPane
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.Priority
 import tornadofx.*
 
-class CalenderView constructor(listOfDays : List<Int>, parentView : SplitPane) : View()
+class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationView) : View()
 {
 
 
@@ -76,6 +78,21 @@ class CalenderView constructor(listOfDays : List<Int>, parentView : SplitPane) :
                     this.prefHeightProperty().bind(cellHeightProperty)
 
                     text = "$it"
+
+                    setOnMouseClicked {
+
+                        val calBtn = it.source as Button
+
+                        println("Calender Button with text: "+calBtn.text)
+
+                        when(calBtn.text)
+                        {
+                            "1" -> parentView.roomResWebView.engine.load("http://facebook.com")
+                            "7" -> parentView.roomResWebView.engine.load("http://instagram.com")
+
+                        }
+
+                    }
 
                 }
 

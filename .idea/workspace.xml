@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e20bf3d-5dc8-4883-857d-f7321037781f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/reservationsystemui.css" afterPath="$PROJECT_DIR$/src/main/resources/styles/reservationsystemui.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackageListViewCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackageListViewCell.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCellKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCellKt.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/styles/reservationsystemui.css" afterPath="$PROJECT_DIR$/target/classes/styles/reservationsystemui.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,10 +21,10 @@
       <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="151" column="52" lean-forward="false" selection-start-line="151" selection-start-column="52" selection-end-line="151" selection-end-column="52" />
+            <state relative-caret-position="329">
+              <caret line="110" column="57" lean-forward="false" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
               <folding>
-                <element signature="e#23#844#0" expanded="true" />
+                <element signature="e#23#876#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +33,8 @@
       <file leaf-file-name="CalenderView.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="161">
+              <caret line="90" column="94" lean-forward="true" selection-start-line="90" selection-start-column="74" selection-end-line="90" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -157,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update</find>
       <find>commit</find>
       <find>textBox</find>
       <find>RED</find>
@@ -187,6 +165,7 @@
       <find>createR</find>
       <find>create</find>
       <find>class</find>
+      <find>parent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -613,12 +592,12 @@
       <workItem from="1520904360963" duration="1272000" />
       <workItem from="1521147666083" duration="9344000" />
       <workItem from="1521219992924" duration="38000" />
-      <workItem from="1521220065778" duration="77418000" />
+      <workItem from="1521220065778" duration="78985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294022000" />
+    <option name="totallyTimeSpent" value="295589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -701,7 +680,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt</url>
-          <line>200</line>
+          <line>202</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
@@ -722,6 +701,12 @@
           <line>125</line>
           <properties />
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java</url>
@@ -766,7 +751,7 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
@@ -1265,18 +1250,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="151" column="52" lean-forward="false" selection-start-line="151" selection-start-column="52" selection-end-line="151" selection-end-column="52" />
+        <state relative-caret-position="329">
+          <caret line="110" column="57" lean-forward="false" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
           <folding>
-            <element signature="e#23#844#0" expanded="true" />
+            <element signature="e#23#876#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="161">
+          <caret line="90" column="94" lean-forward="true" selection-start-line="90" selection-start-column="74" selection-end-line="90" selection-end-column="94" />
           <folding />
         </state>
       </provider>

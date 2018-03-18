@@ -15,6 +15,7 @@ import javafx.collections.ObservableList
 import javafx.scene.control.*
 import javafx.scene.layout.*
 import javafx.geometry.Orientation
+import javafx.scene.web.WebView
 import mainhotelapp.customCells.NotesTableCell
 import mainhotelapp.customCells.PackagesTableViewCell
 import mainhotelapp.customCells.StayDurationTableCell
@@ -62,6 +63,7 @@ class ReservationView : View()
 
 
     val availableRoomsLabelWithDivider: HBox by fxid()
+    var roomResWebView = WebView()
 
 
     init {
@@ -106,10 +108,10 @@ class ReservationView : View()
 
 
             //add calender to the HBox
-            add(CalenderView(list, this))
+            add(CalenderView(list, this@ReservationView))
 
 
-            webview {
+           roomResWebView =  webview {
 
                 //this is referring to the constructor that I am currently in (webview)
                 //this@vbox is referring to a hbox that I have created above it
