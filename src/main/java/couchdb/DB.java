@@ -191,7 +191,6 @@ public class DB
     //the withDocName parameter, or incurs a database error.
     public Map<String, Object> permenantlyRemoveDoc(String withDocName)
     {
-        Document removedDoc = null;
         if((withDocName == "")||(withDocName == null))
         {
             //create formatted params string to display in console
@@ -202,22 +201,24 @@ public class DB
         else{
 
             Document currentDoc = allDB.getExistingDocument(withDocName);
-            removedDoc = currentDoc ;
+
             if(currentDoc == null)
             {
-                System.out.println(ConsoleColors.yellowText("A CouchBase Document with the name: "+withDocName+" already exists\nreturning null"));
+                System.out.println(ConsoleColors.yellowText("A CouchBase Document with the name: "+withDocName+" does not exist\nreturning null"));
 
 
 
-                Map<String, Object> mutableCopy = new HashMap<String, Object>();
 
-                mutableCopy.putAll(removedDoc.getProperties());
-                return mutableCopy;
+                return null;
             }
             else
             {
+                Map<String, Object> mutableCopy = new HashMap<String, Object>();
+                mutableCopy.putAll(currentDoc.getProperties());
+
                 try {
                     currentDoc.purge();
+                    return  mutableCopy;
                 }
                 catch (CouchbaseLiteException e)
                 {
@@ -237,7 +238,7 @@ public class DB
     //param, if no argument is specified this function will throw. If successfully found,
     //a document will return the Map<K,V> form of the document in the database
    public Map<String, Object> readDocInDB(String withDocName) {
-        Document removedDoc = null;
+
         if ((withDocName == "") || (withDocName == null)) {
             //create formatted params string to display in console
             String params = "--- Arguments ---\n\twithDocName: " + withDocName;
@@ -248,8 +249,8 @@ public class DB
             Document currentDoc = allDB.getExistingDocument(withDocName);
 
             if (currentDoc == null) {
-                System.out.println(ConsoleColors.yellowText("A CouchBase Document with the name: " + withDocName + " already exists\nreturning null"));
-                return removedDoc.getProperties();
+                System.out.println(ConsoleColors.yellowText("A CouchBase Document with the name: " + withDocName + " doesn't exists\nreturning null"));
+                return null;
             }
             else
             {

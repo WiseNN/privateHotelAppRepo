@@ -1,11 +1,12 @@
 package mainhotelapp.customCells
 
+import couchdb.Room
 import javafx.scene.control.TableCell
 import javafx.scene.control.TableColumn
 import mainhotelapp.AvailableRooms
 import tornadofx.*
 
-class SubmitBtnTableViewCell (submitBtnColumn: TableColumn<AvailableRooms, String>): TableCell<AvailableRooms, String>()
+class SubmitBtnTableViewCell (submitBtnColumn: TableColumn<Room, String>): TableCell<Room, String>()
 {
 
 

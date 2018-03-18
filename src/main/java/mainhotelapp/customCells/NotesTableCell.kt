@@ -1,5 +1,6 @@
 package mainhotelapp.customCells
 
+import couchdb.Room
 import javafx.scene.control.TableCell
 import javafx.scene.control.TableColumn
 import javafx.scene.control.TextArea
@@ -12,7 +13,7 @@ import java.time.LocalDate
 import java.util.*
 
 //cell factory for notes in the tableView
-class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<AvailableRooms, String>): TableCell<AvailableRooms, String>()
+class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Room, String>): TableCell<Room, String>()
 {
 
     var isEditingActive = false

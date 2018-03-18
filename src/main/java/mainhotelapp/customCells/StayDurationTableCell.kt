@@ -1,5 +1,6 @@
 package mainhotelapp.customCells
 
+import couchdb.Room
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -14,7 +15,7 @@ import javafx.scene.text.TextAlignment
 import mainhotelapp.AvailableRooms
 import tornadofx.*
 
-class StayDurationTableCell (durationColumn : TableColumn<AvailableRooms, String>): TableCell<AvailableRooms, String>()
+class StayDurationTableCell (durationColumn : TableColumn<Room, String>): TableCell<Room, String>()
 {
     val fromDateProperty = SimpleStringProperty()
     val toDateProperty = SimpleStringProperty()

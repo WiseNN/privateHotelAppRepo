@@ -1,5 +1,6 @@
 package mainhotelapp.customCells
 
+import couchdb.Room
 import javafx.scene.control.*
 import javafx.scene.text.Text
 import tornadofx.*
@@ -11,7 +12,7 @@ import mainhotelapp.AvailableRooms
 //create listView singleton
 var addPackagesList by singleAssign<ListView<String>>()
 
-class PackagesTableViewCell (packagesColumn: TableColumn<AvailableRooms, String>): TableCell<AvailableRooms, String>()
+class PackagesTableViewCell (packagesColumn: TableColumn<Room, String>): TableCell<Room, String>()
 {
     val tableCellHeight = 50.0
 

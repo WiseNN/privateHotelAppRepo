@@ -3,92 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="5e20bf3d-5dc8-4883-857d-f7321037781f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
+      <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
+      <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
       <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/DB.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/DB.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackend.java" afterPath="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackend.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java" afterPath="$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/hotelapp.kotlin_module" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/CouchbaseSingleton$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/CouchbaseSingleton.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/DB.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/DBNames.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/DBTester.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$amenities.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$bedType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$hasPet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$isSmoking.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$roomType.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$typeKey.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/devutil/ConsoleColors.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hotelbackend/HotelBackend.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hotelbackend/Sqllc.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms$hasPetProperty$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms$roomNumberProperty$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/FirstKotlinKt.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$2$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$3$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$4$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$5$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$6$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$6.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationFXMLControllerLogic.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationSystemUIController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$6.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$7.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$8.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4$9.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackageListViewCell.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCellKt.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/StayDurationTableCell.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/StayDurationView.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/TestApp.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSystemUIController.java" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSystemUIController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/StayDurationTableCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/StayDurationTableCell.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,24 +28,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="133" column="54" lean-forward="false" selection-start-line="133" selection-start-column="54" selection-end-line="133" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="226">
+              <caret line="193" column="53" lean-forward="false" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+              <folding>
+                <element signature="e#23#692#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelBackend.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackend.java">
+      <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-              <folding>
-                <element signature="docComment;class#HotelBackend#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="117">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,8 +53,8 @@
       <file leaf-file-name="HotelBackEndNorris.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            <state relative-caret-position="313">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,17 +62,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="176" column="17" lean-forward="false" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+            <state relative-caret-position="141">
+              <caret line="391" column="0" lean-forward="false" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1107#1128#0" expanded="true" />
-                <element signature="e#3088#3104#0" expanded="true" />
-                <element signature="e#13606#13621#0" expanded="true" />
-                <element signature="e#13874#13890#0" expanded="true" />
+                <element signature="e#4696#4712#0" expanded="true" />
+                <element signature="e#6123#6139#0" expanded="true" />
+                <element signature="e#17402#17417#0" expanded="true" />
+                <element signature="e#17670#17686#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,60 +81,38 @@
       <file leaf-file-name="Reservation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-711">
-              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBTester.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DBTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-233">
-              <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+            <state relative-caret-position="302">
+              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
+      <file leaf-file-name="MyUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devutil/MyUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-992">
-              <caret line="191" column="11" lean-forward="false" selection-start-line="191" selection-start-column="11" selection-end-line="191" selection-end-column="11" />
+            <state relative-caret-position="328">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBNames.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DBNames.java">
+      <file leaf-file-name="DefaultErrorHandler.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/DefaultErrorHandler.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+            <state relative-caret-position="309">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Customers.java">
+      <file leaf-file-name="ConsoleColors.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devutil/ConsoleColors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreditCardInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/CreditCardInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="358">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -251,6 +157,7 @@
       <find>bookingC</find>
       <find>roomBooking</find>
       <find>amenities</find>
+      <find>reserveR</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -292,13 +199,19 @@
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationFXMLControllerLogic.kt" />
         <option value="$PROJECT_DIR$/src/main/java/hotelbackend/CreditCardInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/hotelbackend/Customers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/couchdb/DB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java" />
         <option value="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/StayDurationTableCell.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSystemUIController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/devutil/MyUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/couchdb/DB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
       </list>
     </option>
   </component>
@@ -315,9 +228,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="572" />
+    <option name="y" value="23" />
+    <option name="width" value="868" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -641,16 +556,15 @@
       <workItem from="1520904360963" duration="1272000" />
       <workItem from="1521147666083" duration="9344000" />
       <workItem from="1521219992924" duration="38000" />
-      <workItem from="1521220065778" duration="24272000" />
+      <workItem from="1521220065778" duration="52351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240876000" />
+    <option name="totallyTimeSpent" value="268955000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="572" y="23" width="868" height="813" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -660,12 +574,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25272068" sideWeight="0.6230329" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3470375" sideWeight="0.3769671" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39972144" sideWeight="0.3769671" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18526466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31355932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -697,7 +611,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28174123" sideWeight="0.37911302" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28174123" sideWeight="0.37911302" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -706,7 +620,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3470375" sideWeight="0.3769671" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18526466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -723,120 +637,161 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt</url>
-          <line>15</line>
+          <line>16</line>
           <properties myFieldName="tableCellHeight" myClassName="mainhotelapp.customCells.PackagesTableViewCell" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt</url>
-          <line>135</line>
+          <line>136</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt</url>
+          <line>189</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/DB.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/DB.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>261</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>313</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>303</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>320</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>327</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>422</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>435</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
+          <line>333</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="40" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="oneRoom.roomType" language="JAVA" />
+        <watch expression="entry.getKey()" language="JAVA" />
+        <watch expression="reservationsMap" language="JAVA" />
+        <watch expression="reservationsMapForServiceTypeFromDB" language="JAVA" />
+        <watch expression="reservation" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>reservation</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>reservationsMapForServiceTypeFromDB</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>reservationsMap</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>entry.getKey()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>oneRoom.roomType</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hs_err_pid7099.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9785">
-          <caret line="117" column="16" lean-forward="false" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/DataGrid.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="34" column="82" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="881" column="40" lean-forward="false" selection-start-line="881" selection-start-column="40" selection-end-line="881" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/PropertiesKt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/FXKt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/PropertyHolder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.21/kotlin-stdlib-1.2.21.jar!/kotlin/reflect/KProperty1.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/UIComponent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3876">
-          <caret line="204" column="67" lean-forward="false" selection-start-line="204" selection-start-column="67" selection-end-line="204" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/ItemControlsKt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2489">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/cell/ComboBoxTableCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="84" column="82" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/text/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="580" column="6" lean-forward="false" selection-start-line="580" selection-start-column="6" selection-end-line="580" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/VBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="213" column="11" lean-forward="false" selection-start-line="213" selection-start-column="11" selection-end-line="213" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/StayDurationTableCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/Border.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -859,23 +814,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/SubmitButtonTableViewCell.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="22" column="71" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="22" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
-          <folding>
-            <element signature="e#22#246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/styles/RectBtnStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -912,31 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/Document.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/store/SQLiteStore.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
           <caret line="1256" column="0" lean-forward="false" selection-start-line="1256" selection-start-column="0" selection-end-line="1256" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/Database.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="1702" column="0" lean-forward="false" selection-start-line="1702" selection-start-column="0" selection-end-line="1702" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devutil/ConsoleColors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1137">
-          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -953,13 +870,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="135" column="53" lean-forward="false" selection-start-line="135" selection-start-column="48" selection-end-line="135" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -995,14 +905,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSystemUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="99" column="9" lean-forward="false" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/RoomBillingUI.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1023,34 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/AvailableRooms.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="16" column="205" lean-forward="false" selection-start-line="16" selection-start-column="205" selection-end-line="16" selection-end-column="205" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelRoom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/function/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-992">
-          <caret line="191" column="11" lean-forward="false" selection-start-line="191" selection-start-column="11" selection-end-line="191" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1071,70 +949,269 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DBNames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DBTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="133" column="54" lean-forward="false" selection-start-line="133" selection-start-column="54" selection-end-line="133" selection-end-column="54" />
+        <state relative-caret-position="150">
+          <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="277">
+          <caret line="143" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="705" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#HotelBackend#0" expanded="false" />
+            <marker date="1521251659056" expanded="false" signature="9224:9240" ph="&lt;~&gt;" />
+            <marker date="1521251659056" expanded="false" signature="9732:9748" ph="&lt;~&gt;" />
+            <marker date="1521251659056" expanded="false" signature="9813:9829" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/StayDurationTableCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="15" column="108" lean-forward="false" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DBNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="75" lean-forward="false" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/AvailableRooms.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="56" column="72" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="56" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="89" lean-forward="false" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSystemUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="160" column="37" lean-forward="false" selection-start-line="160" selection-start-column="37" selection-end-line="160" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="150" column="31" lean-forward="false" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/internal/Body.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/internal/RevisionInternal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/Document.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/couchbase/lite/couchbase-lite-java-core/1.4.0/couchbase-lite-java-core-1.4.0.jar!/com/couchbase/lite/Database.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2009">
+          <caret line="1750" column="0" lean-forward="false" selection-start-line="1750" selection-start-column="0" selection-end-line="1750" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/FXKt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/App.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/UIComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/stream/ReferencePipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="1695" column="0" lean-forward="false" selection-start-line="1695" selection-start-column="0" selection-end-line="1695" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/stream/AbstractPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="480" column="0" lean-forward="false" selection-start-line="480" selection-start-column="0" selection-end-line="480" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devutil/ConsoleColors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/DefaultErrorHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devutil/MyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="391" column="0" lean-forward="false" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4696#4712#0" expanded="true" />
+            <element signature="e#6123#6139#0" expanded="true" />
+            <element signature="e#17402#17417#0" expanded="true" />
+            <element signature="e#17670#17686#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="313">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="176" column="17" lean-forward="false" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+        <state relative-caret-position="-1242">
+          <caret line="2494" column="0" lean-forward="false" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1107#1128#0" expanded="true" />
-            <element signature="e#3088#3104#0" expanded="true" />
-            <element signature="e#13606#13621#0" expanded="true" />
-            <element signature="e#13874#13890#0" expanded="true" />
+            <element signature="e#66617#66618#0" expanded="false" />
+            <element signature="e#66663#66664#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="193" column="53" lean-forward="false" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+          <folding>
+            <element signature="e#23#692#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -10,8 +10,8 @@ package mainhotelapp;
 
 
 
-import couchdb.Room.roomType;
-import hotelbackend.HotelBackend;
+import couchdb.Room.allRoomTypes;
+//import hotelbackend.HotelBackend;
 import hotelbackend.Sqllc;
 import java.net.URL;
 import java.time.LocalDate;
@@ -129,7 +129,7 @@ public class ReservationSystemUIController implements Initializable
             System.out.println("num of selected rooms: "+numOfBookedRoomsComboBox.getValue());
 
             
-            HotelBackend myHotelRoom = new HotelBackend();
+
 
 
 
@@ -156,9 +156,9 @@ public class ReservationSystemUIController implements Initializable
     {
         //instantiate combobox for roomTypeSelection
          ObservableList<String> roomTypes = FXCollections.observableArrayList(
-        roomType.reg.toString(),
-        roomType.suite.toString(),
-        roomType.handi.toString()
+        allRoomTypes.reg.toString(),
+        allRoomTypes.suite.toString(),
+        allRoomTypes.handi.toString()
     );
 
          roomBookingTypeComboBox.setItems(roomTypes);

@@ -1,8 +1,11 @@
 package mainhotelapp
 
+
+import couchdb.DB
+import couchdb.DBNames
 import couchdb.Room
 import hotelbackend.HotelBackEndNorris
-import hotelbackend.HotelBackend
+//import hotelbackend.HotelBackend
 import javafx.application.Application
 import javafx.beans.property.SimpleStringProperty
 import javafx.collections.ObservableList
@@ -59,6 +62,15 @@ class ReservationView : View()
 
 
     init {
+
+
+        //create sample data
+        val roomsClass = Room()
+        val db = DB()
+        db.permenantlyRemoveDoc(DBNames.rooms)
+        db.permenantlyRemoveDoc(DBNames.reservations)
+        roomsClass.createRooms()
+        db.createDoc(DBNames.reservations, HashMap<String, Any>())
 
         root.minWidth = 699.0
         root.minHeight = 714.0
@@ -124,43 +136,45 @@ class ReservationView : View()
 
 
 
-        tableview<Room>() {
+        tableview<Room>{
 
 
             //            column<AvailableRooms, Int>("Room No.", AvailableRooms::roomNumberProperty)
 
             val roomNumCol = TableColumn<Room, Int>("Room Number")
 
-            roomNumCol.setCellValueFactory { it.value. }
+            roomNumCol.setCellValueFactory { it.value.roomNumberProperty.observable() }
 
 
-            val durationColumn = TableColumn<AvailableRooms, String>("Duration")
+            val durationColumn = TableColumn<Room, String>("Duration")
+            val durationDateString : String = (fromBookingDatePicker.valueProperty().toString()+"-"+toBookingDatePicker.valueProperty().toString())
+
             durationColumn.prefWidthProperty().set(120.0)
             durationColumn.minWidthProperty().set(durationColumn.prefWidth)
             durationColumn.setCellFactory { StayDurationTableCell(durationColumn) }
-            durationColumn.setCellValueFactory { it.value.stayDurationProperty }
+            durationColumn.setCellValueFactory {SimpleStringProperty(durationDateString)}
 
 
-            val notesColumn = TableColumn<AvailableRooms, String>("Notes")
+            val notesColumn = TableColumn<Room, String>("Notes")
             notesColumn.prefWidthProperty().set(100.0)
             notesColumn.minWidthProperty().set(notesColumn.prefWidth)
             notesColumn.resizableProperty().set(true)
             notesColumn.setCellFactory { NotesTableCell("WiseNN", notesColumn) }
             notesColumn.setCellValueFactory { it.value.notesProperty }
 
-            val addPackagesColumn = TableColumn<AvailableRooms, String>("Add. Packages")
+            val addPackagesColumn = TableColumn<Room, String>("Add. Packages")
             addPackagesColumn.prefWidthProperty().set(130.0)
 
 //            addPackagesColumn.minWidthProperty().set(addPackagesColumn.prefWidth)
 
 //            addPackagesColumn.resizableProperty().set(true)
             addPackagesColumn.setCellFactory { PackagesTableViewCell(addPackagesColumn) }
-            addPackagesColumn.setCellValueFactory { it.value.addPackagesStringProperty}
+            addPackagesColumn.setCellValueFactory { it.value.additionalPackagesProperty}
 
 
 
 
-            val submitButtonColumn = TableColumn<AvailableRooms, String>("Submit")
+            val submitButtonColumn = TableColumn<Room, String>("Submit")
             submitButtonColumn.setCellFactory { SubmitBtnTableViewCell(submitButtonColumn) }
 //            submitButtonColumn.prefWidthProperty().set(150.0)
             submitButtonColumn.setCellValueFactory { SimpleStringProperty("Submit") }
@@ -175,6 +189,10 @@ class ReservationView : View()
         searchBookingBtn.setOnMouseClicked {
             val rez =  HotelBackEndNorris().bookRoomNorris(Date.valueOf(fromBookingDatePicker.value), Date.valueOf(toBookingDatePicker.value), roomBookingTypeComboBox.value, numOfBookedRoomsComboBox.value)
             println("rez: $rez")
+
+            rez.forEach {
+                println("Room Number: ${it.roomNumber}")
+            }
 
 
 

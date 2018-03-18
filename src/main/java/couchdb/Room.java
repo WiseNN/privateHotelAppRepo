@@ -1,11 +1,17 @@
 package couchdb;
 
 import devutil.ConsoleColors;
+import devutil.MyUtil;
 import hotelbackend.Reservation;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import org.omg.CORBA.Any;
 
+import javax.rmi.CORBA.Util;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,21 +19,42 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Room
+public class Room implements Serializable
 {
 
 
-    public SimpleIntegerProperty roomNumber = new SimpleIntegerProperty(this, "roomNumber");
-    public SimpleObjectProperty<allRoomTypes> roomType = new SimpleObjectProperty<>(this, "roomType");
-    public SimpleObjectProperty<allBedTypes> bedType = new SimpleObjectProperty<>(this, "bedType");
-    public SimpleBooleanProperty isSmoking = new SimpleBooleanProperty(this, "isSmoking");
-    public SimpleBooleanProperty hasPet = new SimpleBooleanProperty(this, "hasPet");
-    public SimpleBooleanProperty isAvailableForOccupancy = new SimpleBooleanProperty(this, "isAvailableForOccupancy");
-    public SimpleObjectProperty<Map<String, Object>> amenities = new SimpleObjectProperty<Map<String, Object>>(this, "amenities");
+    public int roomNumber;
+    public transient SimpleIntegerProperty roomNumberProperty;
+
+    public allRoomTypes roomType;
+    public transient SimpleObjectProperty<allRoomTypes> roomTypeProperty;
+
+    public allBedTypes bedType;
+    public transient SimpleObjectProperty<allBedTypes> bedTypeProperty;
+
+    public Boolean isSmoking;
+    public transient SimpleBooleanProperty isSmokingProperty;
+
+    public Boolean hasPet;
+    public transient SimpleBooleanProperty hasPetProperty;
+
+    public Boolean isAvailableForOccupancy;
+    public transient SimpleBooleanProperty isAvailableForOccupancyProperty;
+
+    public String notes;
+    public transient SimpleStringProperty notesProperty;
+
+    public Map<String, Object> amenities;
+    public transient SimpleObjectProperty<Map<String, Object>> amenitiesProperty;
+
+    public String additionalPackages;
+    public transient SimpleStringProperty additionalPackagesProperty;
+
     public ArrayList<String> reservations;
 
-    public final HashMap<String, Object> regAmenities = getRegAmenities();
-    public final HashMap<String, Object> suiteAmenities = getSuiteAmenities();
+
+    public transient final HashMap<String, Object> regAmenities = getRegAmenities();
+    public transient final HashMap<String, Object> suiteAmenities = getSuiteAmenities();
 
     //HashMap keys
     private final String bedTypeKey = "bedType";
@@ -44,25 +71,67 @@ public class Room
     public Room(int roomNumber, allRoomTypes roomType, allBedTypes bedType, Boolean isSmoking,
                 Boolean hasPet, Boolean isAvailableForOccupancy, Map<String, Object> amenities)
     {
-        this.roomNumber.set(roomNumber);
-        this.roomType.set(roomType);
-        this.bedType.set(bedType);
-        this.isSmoking.set(isSmoking);
-        this.hasPet.set(hasPet);
-        this.isAvailableForOccupancy.set(isAvailableForOccupancy);
-        this.amenities.set(amenities);
+        this.roomNumber = roomNumber;
+        this.roomNumberProperty = new SimpleIntegerProperty(roomNumber);
+
+        this.roomType = roomType;
+        this.roomTypeProperty = new SimpleObjectProperty<allRoomTypes>(roomType);
+
+
+
+        this.bedType = bedType;
+        this.bedTypeProperty = new SimpleObjectProperty<>(bedType);
+
+        this.isSmoking = isSmoking;
+        this.isSmokingProperty = new SimpleBooleanProperty(isSmoking);
+
+        this.hasPet = hasPet;
+        this.hasPetProperty = new SimpleBooleanProperty(hasPet);
+
+        this.isAvailableForOccupancy = isAvailableForOccupancy;
+        this.isAvailableForOccupancyProperty  = new SimpleBooleanProperty(isAvailableForOccupancy);
+
+        this.amenities = amenities;
+        this.amenitiesProperty = new SimpleObjectProperty<Map<String, Object>>(amenities);
+
+        this.notes = "";
+        this.notesProperty = new SimpleStringProperty(notes);
+
         this.reservations = new ArrayList<String>();
+
+
+
+        //set additional packages
+        DB db = new DB();
+        Map<String, Object> roomPkgsObj = db.readDocInDB(DBNames.additionalRoomPackages);
+
+
+        if(roomPkgsObj != null)
+        {
+            //convert arrayList of additional Packages to string with ";" delimiter
+            ArrayList<String> addPkgsList = (ArrayList<String>) roomPkgsObj.get("additionPackages");
+
+            this.additionalPackages = String.join(";", addPkgsList);
+            this.additionalPackagesProperty = new SimpleStringProperty(additionalPackages);
+        }
+
+
+
+
+
+
+
     }
 
     //constructor - call to use Room class's Helper functions (utility)
     public Room()
     {
-        this.roomNumber.set(000);
-        this.roomType.set(null);
-        this.bedType.set(null);
-        this.isSmoking.set(false);
-        this.hasPet.set(false);
-        this.isAvailableForOccupancy.set(true);
+        this.roomNumber = 000;
+        this.roomType = null;
+        this.bedType = null;
+        this.isSmoking = false;
+        this.hasPet = false;
+        this.isAvailableForOccupancy = true;
         this.amenities = null;
         this.reservations = null;
 
@@ -138,7 +207,7 @@ public class Room
             }
 
             //create an object of multiple rooms
-            HashMap<String, Object> roomsMap = new HashMap<>(); //track all rooms of HashMap (Object)
+            Map<String, Object> roomsMap = new HashMap<String, Object>(); //track all rooms of HashMap (Object)
 
             //create one room
             Room oneRoom = null;
@@ -150,7 +219,7 @@ public class Room
                 HashMap<String, Object> roomObj = new HashMap<>();
 
                 //if i is even, make isEven true, else make false
-                int isEven = ((i % 201) == 0) ? 1 : 0;
+                int isEven = ((200 % i) == 0) ? 1 : 0;
 
                 //if isEven is 1, create different room, than if isEven is 0
                 switch(isEven)
@@ -158,23 +227,43 @@ public class Room
                     //set even even rooms to different properties than odd rooms
                     case 1:
                          oneRoom = new Room(i, allRoomTypes.reg,allBedTypes.king, false, false, true, regAmenities);
+
                         break;
 
                     //set odd rooms to different properties than even rooms
                     case 0:
 
                         oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, suiteAmenities);
+
+
+
+
                         break;
 
                 }
 
-                //i is room number, one room is Room object
-                roomsMap.put(i.toString(), oneRoom);
+                MyUtil util = new MyUtil();
+                String serializedRoom = null;
+
+                try{
+                    serializedRoom = util.serializeObject(oneRoom);
+                }
+                catch(Exception e)
+                {
+                    System.out.println(e.getLocalizedMessage());
+                }
+
+                System.out.println("serialized: "+serializedRoom.toString());
+
+                //i is room number, one room is Room object (cast to Object)
+                roomsMap.put(i.toString(), serializedRoom);
             }
 
 
                 //create rooms database
                 db.createDoc(DBNames.rooms, roomsMap);
+
+
 
 
         }
@@ -187,17 +276,30 @@ public class Room
         DB dbRef = new DB();
         Map<String, Object> roomsMap = dbRef.readDocInDB(DBNames.rooms);
 
+        MyUtil util = new MyUtil();
+        Room copyRoom = null;
+
         Map<String, Object> roomsListWithinRoomType = roomsMap.entrySet().stream().filter((entry -> {
 
-            Room oneRoom = (Room) entry.getValue();
+            Room oneRoom = null;
 
-            if(oneRoom.roomType.get() == currentRoomType)
+            try{
+                oneRoom = util.deserializeObject(Room.class, (String) entry.getValue());
+            }catch(Exception e)
+            {
+                System.out.println(e.getLocalizedMessage());
+            }
+
+
+            if(oneRoom != null && oneRoom.roomType == currentRoomType)
+            {
+                entry.setValue(oneRoom);
                 return true;
-
+            }
             else
                 return false;
 
-        })).collect(Collectors.toMap(result -> result.getKey(), result -> result.getValue()));
+        })).collect(Collectors.toMap((result) -> result.getKey(), (result) -> result.getValue()));
 
         return roomsListWithinRoomType;
 
@@ -207,6 +309,7 @@ public class Room
     public ArrayList<Room> reserveRoom(int roomCount, allRoomTypes roomType, Reservation pendingReservation)
     {
         DB db = new DB();
+        MyUtil util = new MyUtil();
         //get rooms map from the database
         Map<String, Object> roomsMap = getRoomsMapForRoomType(roomType);
 
@@ -223,6 +326,7 @@ public class Room
 
                 System.out.println(ConsoleColors.cyanText("Watching Reservation process..."));
                 System.out.println(ConsoleColors.cyanText("is Room: " + roomEntry.getKey() + " available?"));
+
 
                 //create Room object of Room class from Entry value
                 Room room = (Room) roomEntry.getValue();
@@ -241,11 +345,34 @@ public class Room
                     //re-attach the updated list of reservationID's to the room
                     room.reservations = roomReservationsList;
 
-                    //put the updated room back in the roomsMap
-                    roomsMap.put(roomEntry.getKey(), room);
+                    //put the updated room back in the roomsMap the database
+                    Map<String, Object> roomsMapFromDB = db.readDocInDB(DBNames.rooms);
+                    //serialize
+                    String serializedRoom = null;
+                    try{
+                        serializedRoom = util.serializeObject(room);
 
-                    //save the updated roomsMap to the database
-                    db.updateDocInDB(DBNames.rooms, roomsMap);
+                        if(roomsMapFromDB != null)
+                        {
+                            roomsMapFromDB.replace(roomEntry.getKey(), serializedRoom);
+
+                            //save the updated roomsMap to the database
+                            db.updateDocInDB(DBNames.rooms, roomsMapFromDB);
+
+                            //add pendingReservation to the reservationsMap in the database
+                            Reservation reservation = new Reservation();
+                            reservation.addToReservationsMapInDB(pendingReservation);
+                        }else{
+                            System.out.println(ConsoleColors.yellowText("roomsMapFromDB is null check reserveRoom() in Class: Room"));
+                        }
+                    }catch (Exception e)
+                    {
+                        System.out.println(e.getLocalizedMessage());
+                    }
+
+
+
+
 
                     //return true, as room has been found and is available for booking
                     return true;
@@ -293,7 +420,7 @@ public class Room
         ArrayList<String> reservationsIDList = forRoom.reservations;
 
         //if there is no reservationsID list, then there are no reservaitons, return true
-        if(reservationsIDList == null)
+        if(reservationsIDList.size() == 0)
         {
             return true;
         }
@@ -321,6 +448,11 @@ public class Room
                 //room is unavailable, else return true (Available)
                 if( (pendingReservation.fromDate.after(reservationFromDBMap.fromDate) && pendingReservation.fromDate.before(reservationFromDBMap.toDate)) ||
                         (pendingReservation.toDate.after(reservationFromDBMap.fromDate) && pendingReservation.toDate.before(reservationFromDBMap.toDate)))
+                {
+                    return false;
+                }
+                else if( (pendingReservation.fromDate.equals(reservationFromDBMap.fromDate) || pendingReservation.toDate.equals(reservationFromDBMap.toDate)) ||
+                        (pendingReservation.fromDate.equals(reservationFromDBMap.toDate) ))
                 {
                     return false;
                 }
@@ -403,16 +535,16 @@ public class Room
             Map<String, Object> prinatbleRoomMap = new HashMap<String, Object>();
 
             //create mapping
-            prinatbleRoomMap.put(bedTypeKey, oneRoom.bedType.get().toString());
-            prinatbleRoomMap.put(isAvailabeKey, oneRoom.isAvailableForOccupancy.get());
-            prinatbleRoomMap.put(petKey, oneRoom.hasPet.get());
-            prinatbleRoomMap.put(isSmokingKey, oneRoom.isSmoking.get());
-            prinatbleRoomMap.put(roomTypeKey, oneRoom.roomType.get().toString());
-            prinatbleRoomMap.put(roomNumberKey, oneRoom.roomNumber.get());
+            prinatbleRoomMap.put(bedTypeKey, oneRoom.bedType.toString());
+            prinatbleRoomMap.put(isAvailabeKey, oneRoom.isAvailableForOccupancy);
+            prinatbleRoomMap.put(petKey, oneRoom.hasPet);
+            prinatbleRoomMap.put(isSmokingKey, oneRoom.isSmoking);
+            prinatbleRoomMap.put(roomTypeKey, oneRoom.roomType.toString());
+            prinatbleRoomMap.put(roomNumberKey, oneRoom.roomNumber);
             prinatbleRoomMap.put(amenitiesKey, oneRoom.amenities);
 
             //put printable room into printable rooms map
-            printableRoomsMap.put(oneRoom.roomNumber.get() +"", prinatbleRoomMap);
+            printableRoomsMap.put(oneRoom.roomNumber +"", prinatbleRoomMap);
 
 
         }));
