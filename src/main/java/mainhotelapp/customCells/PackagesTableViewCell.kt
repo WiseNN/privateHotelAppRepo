@@ -1,6 +1,9 @@
 package mainhotelapp.customCells
 
 import couchdb.Room
+import javafx.geometry.Insets
+import javafx.geometry.NodeOrientation
+import javafx.geometry.Pos
 import javafx.scene.control.*
 import javafx.scene.text.Text
 import tornadofx.*
@@ -15,6 +18,8 @@ var addPackagesList by singleAssign<ListView<String>>()
 class PackagesTableViewCell (packagesColumn: TableColumn<Room, String>): TableCell<Room, String>()
 {
     val tableCellHeight = 50.0
+    val myCol = packagesColumn
+
 
     init{
         isEditable = false
@@ -24,6 +29,7 @@ class PackagesTableViewCell (packagesColumn: TableColumn<Room, String>): TableCe
 
 
         this.prefWidthProperty().bind(packagesColumn.widthProperty())
+
 
         this.prefHeightProperty().set(tableCellHeight)
         this.maxHeightProperty().set(tableCellHeight)
@@ -55,28 +61,40 @@ class PackagesTableViewCell (packagesColumn: TableColumn<Room, String>): TableCe
         scrollPane.hmax = this.prefWidthProperty().get()
 
 
+
         val vbox = VBox()
-        vbox.fitToParentWidth()
+        vbox.prefWidthProperty().bind(scrollPane.widthProperty().minus(15.0))
+
 
 
         pkgListAry.forEachIndexed { index, s ->
 
-            val hbox = HBox()
-            hbox.vgrow = Priority.NEVER
-            hbox.paddingAll = 5
-            hbox.fitToParentWidth()
-
-
-            val text = Text()
-            text.text = s
+            val pkgKVList = s!!.split("=".toRegex())
 
             val checkbox = CheckBox()
-            checkbox.isSelected = false
+            checkbox.nodeOrientation = NodeOrientation.RIGHT_TO_LEFT
+            checkbox.alignment = Pos.TOP_RIGHT
+            checkbox.prefWidthProperty().bind(vbox.widthProperty())
+
+            checkbox.styleClass.add("tableViewCheckBox")
+            checkbox.isSelected = pkgKVList[1].toBoolean()
+
+            checkbox.text = pkgKVList[0]
+
+            checkbox.padding = Insets(5.0,5.0,5.0,8.0)
+//            checkbox.paddingProperty().set(Insets(0.0,0.0,0.0,myCol.width.minus(checkbox.width)))
 
 
-            hbox.add(text)
-            hbox.add(checkbox)
-            vbox.add(hbox)
+
+
+
+            checkbox.setOnMouseClicked {
+                println("clicked!")
+                println("colWidth: "+myCol.widthProperty().get())
+                println("who is this: ${it.target}")
+            }
+
+            vbox.add(checkbox)
 
             scrollPane.content = vbox
 

@@ -149,6 +149,7 @@ class ReservationView : View()
             val roomNumCol = TableColumn<Room, String>("Room Number")
 
             roomNumCol.setCellValueFactory { it.value.roomNumberProperty }
+            roomNumCol.minWidthProperty().set(100.0)
 
 
             val durationColumn = TableColumn<Room, String>("Duration")
@@ -169,13 +170,14 @@ class ReservationView : View()
             notesColumn.setCellValueFactory { it.value.notesProperty }
 
             val addPackagesColumn = TableColumn<Room, String>("Add. Packages")
-            addPackagesColumn.prefWidthProperty().set(130.0)
+            addPackagesColumn.prefWidthProperty().set(135.0)
+            addPackagesColumn.minWidthProperty().set(135.0)
 
 //            addPackagesColumn.minWidthProperty().set(addPackagesColumn.prefWidth)
 
 //            addPackagesColumn.resizableProperty().set(true)
             addPackagesColumn.setCellFactory { PackagesTableViewCell(addPackagesColumn) }
-            addPackagesColumn.setCellValueFactory { it.value.additionalPackagesProperty}
+            addPackagesColumn.setCellValueFactory { it.value.additionalPackagesProperty }
 
 
 
@@ -208,6 +210,9 @@ class ReservationView : View()
                 it.notesProperty = SimpleStringProperty(it.notes)
                 it.amenitiesProperty  = SimpleObjectProperty(it.amenities)
                 it.notesProperty = SimpleStringProperty(it.notes)
+
+                it.additionalPackagesProperty = SimpleStringProperty(it.additionalPackages)
+
 
 
 

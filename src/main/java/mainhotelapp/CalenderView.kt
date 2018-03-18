@@ -22,13 +22,14 @@ class CalenderView constructor(listOfDays : List<Int>, parentView : SplitPane) :
 
         //makes calender resizable with constraints (to a small degree)
         root.minWidth = calenderMinWidth
-        root.maxWidth = calenderMaxWidth
+        root.maxWidth = calenderMinWidth
 
 
         //displays the calender month
         val calenderMonthBtn = button {
             text = "April"
             minHeightProperty().set(27.0)
+//            maxHeightProperty().set(35.0)
             maxHeightProperty().set(35.0)
 
             prefWidthProperty().bind(root.widthProperty())

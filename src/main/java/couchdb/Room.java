@@ -47,7 +47,7 @@ public class Room implements Serializable
     public Map<String, Object> amenities;
     public transient SimpleObjectProperty<Map<String, Object>> amenitiesProperty = new SimpleObjectProperty<Map<String, Object>>(this, "amenities");
 
-    public String additionalPackages;
+    public String additionalPackages = getAdditionalPackages();
     public transient SimpleStringProperty additionalPackagesProperty = new SimpleStringProperty(this, "additionalPackages");;
 
     public String stayDuration;
@@ -73,7 +73,7 @@ public class Room implements Serializable
 
     //constructor - call to create a room
     public Room(int roomNumber, allRoomTypes roomType, allBedTypes bedType, Boolean isSmoking,
-                Boolean hasPet, Boolean isAvailableForOccupancy, Map<String, Object> amenities)
+                Boolean hasPet, Boolean isAvailableForOccupancy, Map<String, Object> amenities, String additionalPackages)
     {
         this.roomNumber = roomNumber;
         this.roomNumberProperty = new SimpleStringProperty(""+roomNumber);
@@ -111,14 +111,9 @@ public class Room implements Serializable
         Map<String, Object> roomPkgsObj = db.readDocInDB(DBNames.additionalRoomPackages);
 
 
-        if(roomPkgsObj != null)
-        {
-            //convert arrayList of additional Packages to string with ";" delimiter
-            ArrayList<String> addPkgsList = (ArrayList<String>) roomPkgsObj.get("additionPackages");
 
-            this.additionalPackages = String.join(";", addPkgsList);
-            this.additionalPackagesProperty = new SimpleStringProperty(additionalPackages);
-        }
+
+
 
 
 
@@ -194,19 +189,27 @@ public class Room implements Serializable
         return suiteRoomAmenities;
     }
 
+    private String getAdditionalPackages()
+    {
+        //additionalPackages String (to be parsed for viewing in the tableView)
+        String addPkgsString = "Spa=false;Casino=false;Meal Ticket=false;Free Valet=false";
+
+        return  addPkgsString;
+    }
 
 
 
 
 
-        //creating sample rooms map, cannot access created rooms directly, only through database: DBNames.rooms
+
+
+    //creating sample rooms map, cannot access created rooms directly, only through database: DBNames.rooms
         public void createRooms()
         {
 
             DB db = new DB();
 
-            //additionalPackages String (to be parsed for viewing in the tableView)
-            String addPkgs = "";
+
 
             //if the rooms database exists, do not create one
             if(db.readDocInDB(DBNames.rooms) != null)
@@ -234,14 +237,14 @@ public class Room implements Serializable
                 {
                     //set even even rooms to different properties than odd rooms
                     case 1:
-                         oneRoom = new Room(i, allRoomTypes.reg,allBedTypes.king, false, false, true, regAmenities);
+                         oneRoom = new Room(i, allRoomTypes.reg,allBedTypes.king, false, false, true, regAmenities, additionalPackages);
 
                         break;
 
                     //set odd rooms to different properties than even rooms
                     case 0:
 
-                        oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, suiteAmenities);
+                        oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, suiteAmenities, additionalPackages);
 
 
 
@@ -275,6 +278,8 @@ public class Room implements Serializable
 
 
         }
+
+
 
 
 
@@ -312,6 +317,9 @@ public class Room implements Serializable
         return roomsListWithinRoomType;
 
     }
+
+
+
 
     //reserves a room, and returns the arrayList<Room> of reserved Rooms
     public ArrayList<Room> reserveRoom(int roomCount, allRoomTypes roomType, Reservation pendingReservation)
