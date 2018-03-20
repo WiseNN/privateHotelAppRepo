@@ -1,11 +1,16 @@
 package mainhotelapp
 
-import com.sun.javafx.scene.control.skin.LabeledText
+import hotelbackend.HotelBackEndNorris
 import javafx.scene.control.Button
-import javafx.scene.control.SplitPane
+import javafx.scene.control.TextField
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.Priority
 import tornadofx.*
+import javafx.scene.layout.VBox
+import javafx.scene.text.Text
+import javafx.stage.StageStyle
+import java.net.URL
+
 
 class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationView) : View()
 {
@@ -13,6 +18,7 @@ class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationV
 
     //holds days of month and month button (with string "April")
     override  val root = BorderPane()
+
 
 
 
@@ -79,20 +85,39 @@ class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationV
 
                     text = "$it"
 
+
                     setOnMouseClicked {
 
-                        val calBtn = it.source as Button
 
-                        println("Calender Button with text: "+calBtn.text)
-
-                        when(calBtn.text)
+                        println("clickCount: "+it.clickCount)
+                        if(it.clickCount == 1)
                         {
-                            "1" -> parentView.roomResWebView.engine.load("http://facebook.com")
-                            "7" -> parentView.roomResWebView.engine.load("http://instagram.com")
+                            val calBtn = it.source as Button
+
+                            println("Calender Button with text: "+calBtn.text)
+
+                            val backend = HotelBackEndNorris()
+                            val url =  backend.getCalenderEventForDay(calBtn.text.toInt()) as? URL
+
+                            if(url != null) parentView.roomResWebView.engine.load(url.toString())
+
+
+
+
+                        }
+                        else if(it.clickCount == 2)
+                        {
+                            CalenderEventPopUpWindow(text).openModal(stageStyle = StageStyle.UTILITY)
+
+
+//                            val backEnd = HotelBackEndNorris()
+//                            backEnd.processCalenderEvent(text, );
 
                         }
 
                     }
+
+
 
                 }
 
@@ -106,3 +131,7 @@ class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationV
     }
 
 }
+
+
+
+

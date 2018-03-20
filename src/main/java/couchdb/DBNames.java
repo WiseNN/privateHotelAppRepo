@@ -7,5 +7,6 @@ public class DBNames {
     public static String sampleDocName = "sampleDoc";
     public static String reservations = "reservations";
     public static String additionalRoomPackages = "additionalRoomPackages";
+    public static String hotelCalenderEvents = "hotelCalenderEvents";
 
 }

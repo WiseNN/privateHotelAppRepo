@@ -14,6 +14,9 @@ import mainhotelapp.AvailableRooms
 import tornadofx.*
 import java.time.LocalDate
 import java.util.*
+import java.text.SimpleDateFormat
+
+
 
 //cell factory for notes in the tableView
 class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Room, String>): TableCell<Room, String>()
@@ -105,49 +108,66 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
             //process notes tableCell value
 
             print("this index from row: "+tableRow.index)
-            val hour = Date().time.hours.toString()
-            val min = Date().time.minutes.toString()
-            val sec = Date().time.seconds.toString()
-
-            wrappingText.text = notesTextArea.text+
-                    "\n --${LocalDate.now()} ~ $employeedID--"
 
 
+            val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+            val date = Date()
+
+
+            println(formatter.format(date))
+
+            val updatedText = newValue+"\n--${date}--\n~~$employeedID~~"
+
+             saveNote(updatedText).apply {
+
+                wrappingText.text = updatedText
+
+
+                graphic = wrappingText
+            }
 
 
 
 
-            //get room number for corresponding row
-            val roomNumberCell = tableRow.getChildList()!![0] as? TableCell<Room, String>
 
-            val roomNumber = roomNumberCell!!.item
 
-            //update the notes property in the database
-            val db = DB()
-            val roomsMap = db.readDocInDB(DBNames.rooms)
-            val serializedRoom = roomsMap[roomNumber] as String
 
-            val util = MyUtil()
-            val deSerializedRoom = util.deserializeObject(Room::class.java,serializedRoom)
-            deSerializedRoom.notes = wrappingText.text
 
-            //re-serialize room
-            val reSerializedRoom = util.serializeObject(deSerializedRoom)
 
-            //put room back into roomsMap
-            roomsMap[roomNumber] = reSerializedRoom
-
-            //save updated roomsMap to DB
-            db.updateDocInDB(DBNames.rooms, roomsMap)
-
-            graphic = wrappingText
-
-            tableView.refresh()
 
 
         }
 
 
+
+    }
+
+    private fun saveNote(withText: String) : String
+    {
+        //get room number for corresponding row
+        val roomNumberCell = tableRow.getChildList()!![0] as? TableCell<Room, String>
+
+        val roomNumber = roomNumberCell!!.item
+
+        //update the notes property in the database
+        val db = DB()
+        val roomsMap = db.readDocInDB(DBNames.rooms)
+        val serializedRoom = roomsMap[roomNumber] as String
+
+        val util = MyUtil()
+        val deSerializedRoom = util.deserializeObject(Room::class.java,serializedRoom)
+        deSerializedRoom.notes = wrappingText.text
+
+        //re-serialize room
+        val reSerializedRoom = util.serializeObject(deSerializedRoom)
+
+        //put room back into roomsMap
+        roomsMap[roomNumber] = reSerializedRoom
+
+        //save updated roomsMap to DB
+        db.updateDocInDB(DBNames.rooms, roomsMap)
+
+        return withText
 
     }
 
@@ -187,10 +207,11 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
                 cancelEdit()
         }
 
+
         textArea.setOnKeyPressed { e ->
             println("char: "+e.code.toString())
 
-            if (e.code.toString() == "ENTER")
+            if (e.isShiftDown && e.code.toString() == "ENTER")
                 commitEdit(notesTextArea.text)
             else
                 println("not committing...")

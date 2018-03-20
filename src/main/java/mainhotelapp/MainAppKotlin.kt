@@ -37,6 +37,7 @@ val calenderMaxHeight = 255.0
 val calenderFramePadding = 5.0
 
 val barBtnSizeDiviser = 8
+var isInitialized = false
 
 //mainView for Reservation Screen
 class ReservationView : View()
@@ -74,8 +75,10 @@ class ReservationView : View()
         val db = DB()
         db.permenantlyRemoveDoc(DBNames.rooms)
         db.permenantlyRemoveDoc(DBNames.reservations)
+        db.permenantlyRemoveDoc(DBNames.hotelCalenderEvents)
         roomsClass.createRooms()
         db.createDoc(DBNames.reservations, HashMap<String, Any>())
+        db.createDoc(DBNames.hotelCalenderEvents, HashMap<String, Any>())
 
         root.minWidth = 699.0
         root.minHeight = 714.0
@@ -102,6 +105,8 @@ class ReservationView : View()
 
 
             add(bookingContainer)
+
+
 
 
             val list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
@@ -196,9 +201,16 @@ class ReservationView : View()
         //room booking request params: fromDate, toDate, roomType, numOfRooms
         roomBookingTypeComboBox.items.addAll(Room.allRoomTypes.reg,Room.allRoomTypes.handi,Room.allRoomTypes.suite)
         numOfBookedRoomsComboBox.items.addAll(1,2,3,4,5)
+
+
+
         searchBookingBtn.setOnMouseClicked {
+
+            listOfAvailableRooms.clear()
+
             val rez =  HotelBackEndNorris().bookRoomNorris(Date.valueOf(fromBookingDatePicker.value), Date.valueOf(toBookingDatePicker.value), roomBookingTypeComboBox.value, numOfBookedRoomsComboBox.value)
-            println("rez: $rez")
+            println(" rez: $rez")
+
 
             rez.forEach {
 
@@ -219,9 +231,9 @@ class ReservationView : View()
 
 
             }.apply {
-                listOfAvailableRooms.removeAll()
 
-                listOfAvailableRooms.addAll(rez)
+                    listOfAvailableRooms.addAll(rez)
+
             }
 
 

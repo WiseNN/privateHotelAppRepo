@@ -220,6 +220,7 @@ public class Room implements Serializable
             //create an object of multiple rooms
             Map<String, Object> roomsMap = new HashMap<String, Object>(); //track all rooms of HashMap (Object)
 
+
             //create one room
             Room oneRoom = null;
 
@@ -296,15 +297,18 @@ public class Room implements Serializable
 
             Room oneRoom = null;
 
+
             try{
                 oneRoom = util.deserializeObject(Room.class, (String) entry.getValue());
             }catch(Exception e)
             {
                 System.out.println(e.getLocalizedMessage());
             }
+            Map<String, Object> room = new HashMap<String, Object>();
 
 
-            if(oneRoom != null && oneRoom.roomType == currentRoomType)
+
+            if(oneRoom != null && oneRoom.roomType.equals(currentRoomType))
             {
                 entry.setValue(oneRoom);
                 return true;
@@ -346,6 +350,7 @@ public class Room implements Serializable
 
                 //create Room object of Room class from Entry value
                 Room room = (Room) roomEntry.getValue();
+
 
                 if (isBookingAvailable(room, pendingReservation))
                 {
