@@ -79,6 +79,8 @@ class ReservationView : View()
         roomsClass.createRooms()
         db.createDoc(DBNames.reservations, HashMap<String, Any>())
         db.createDoc(DBNames.hotelCalenderEvents, HashMap<String, Any>())
+//        ------------------//------------------//------------------//------------------
+
 
         root.minWidth = 699.0
         root.minHeight = 714.0
