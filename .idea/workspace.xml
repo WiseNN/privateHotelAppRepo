@@ -4,48 +4,7 @@
     <list default="true" id="5e20bf3d-5dc8-4883-857d-f7321037781f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java" afterPath="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSystemUI.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/DBNames.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/DBNames.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hotelbackend/HotelBackEndNorris.class" afterPath="$PROJECT_DIR$/target/classes/hotelbackend/HotelBackEndNorris.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$3.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$4.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$4.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$5.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$5.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$6.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$6.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$7.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$7.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$8.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$8.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$9.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$9.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +31,7 @@
       <file leaf-file-name="HotelBackEndNorris.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-186">
+            <state relative-caret-position="-594">
               <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -639,16 +598,15 @@
       <workItem from="1521219992924" duration="38000" />
       <workItem from="1521220065778" duration="92586000" />
       <workItem from="1521506933490" duration="1453000" />
-      <workItem from="1521514248749" duration="15004000" />
+      <workItem from="1521514248749" duration="15198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325647000" />
+    <option name="totallyTimeSpent" value="325841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -659,8 +617,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25272068" sideWeight="0.6230329" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45586458" sideWeight="0.3769671" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45586458" sideWeight="0.3769671" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18955651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1322,7 +1280,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
+        <state relative-caret-position="-594">
           <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
