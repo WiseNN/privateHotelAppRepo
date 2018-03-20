@@ -62,6 +62,8 @@ class ReservationView : View()
     //------ fxmlControllerLogic include ------- fxmlControllerLogic include -------
 
 
+    //Observable values
+    var listOfAvailableRooms = mutableListOf<Room>().observable()
 
     val availableRoomsLabelWithDivider: HBox by fxid()
     var roomResWebView = WebView()
@@ -142,7 +144,7 @@ class ReservationView : View()
 
 
 
-        var listOfAvailableRooms = mutableListOf<Room>().observable()
+
 
 
 
