@@ -1,0 +1,209 @@
+/*<link rel="stylesheet" type="text/css" href="billingStyle.css">*/
+
+.bgStyle{
+	background-image: url("hotelRoom.jpg");
+opacity: 0.2;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+}
+.descrTableDataStyle{
+	width:310.5pt;
+	height:24.7542pt;
+	/*width:414pt; 
+	height:33pt; */
+	padding-left: 5.7528pt;
+	padding-right:5.7528pt;
+	padding-top:2.1528pt;
+	padding-bottom:2.1528pt;
+  border-left:solid black .5pt;
+  border-top:solid black .5pt;
+  border-right:solid black .5pt;
+  border-bottom:solid black 1.0pt;
+}
+
+.spanStyleHighLineHeight{
+	font-size:14.0pt;
+	line-height:119%;
+  font-family:Candara;
+}
+.spanStyleLowLineHeight{
+	font-size:14.0pt;
+	line-height:110%;
+  font-family:Tahoma;
+}
+
+.smallTableDateStyle{
+	width:76.5pt;
+	height:24.7542pt;
+	padding-left:10.8pt;
+	padding-right:10.8pt;
+	padding-top:2.1528pt;
+	padding-bottom:2.1528pt;
+  border-left:solid black .5pt;
+  border-top:solid black .5pt;
+  border-right:solid black .5pt;
+  border-bottom:solid black 1.0pt;
+}
+
+#roomDescriptionTextBlock{
+	color: red;
+	
+}
+
+ #notesSpanText{
+ 	color: blue;
+ }
+
+ #totalSpanText{
+ 	color: orange;
+ }
+
+ #amountSpanText{
+ 	color: purple;
+ }
+
+ #rateSpanText{
+ 	color: green;
+ }
+
+ #hoursSpanText{
+ 	color: brown;
+ }
+
+ #lineItemDescription{
+ 	color: magenta;
+ 	font-size: 13px;
+ }
+
+
+
+ /*REQUIRED HTML STYLING*/
+ <style>
+
+ /* Font Definitions */
+@font-face
+	{font-family:Candara;
+	panose-1:2 14 5 2 3 3 3 2 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:119%;
+	text-align:right;
+	font-family:Candara;
+	font-size:10.0pt;
+	color:black;}
+h4
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:16.0pt;
+	line-height:119%;
+	text-align:left;
+	font-family:Candara;
+	font-size:12.0pt;
+	color:black;
+	font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:6.0pt;
+	line-height:110%;
+	text-align:left;
+	font-family:Candara;
+	font-size:10.0pt;
+	color:black;}
+p.MsoAccentText2, li.MsoAccentText2, div.MsoAccentText2
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:4.0pt;
+	line-height:119%;
+	text-align:left;
+	font-family:Candara;
+	font-size:9.0pt;
+	color:black;}
+p.MsoAddress, li.MsoAddress, div.MsoAddress
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:119%;
+	text-align:left;
+	font-family:Candara;
+	font-size:9.0pt;
+	color:black;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:6.0pt;
+	line-height:110%;
+	text-align:left;
+	font-family:Candara;
+	font-size:12.0pt;
+	color:black;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:119%;
+	text-align:right;
+	font-family:Candara;
+	font-size:24.0pt;
+	color:black;}
+h1
+	{margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:119%;
+	text-align:left;
+	font-family:Candara;
+	font-size:14.0pt;
+	color:black;
+	font-weight:normal;}
+p.Columnheading, li.Columnheading, div.Columnheading
+	{mso-style-name:"Column heading";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:16.0pt;
+	line-height:119%;
+	text-align:center;
+	font-family:Candara;
+	font-size:10.0pt;
+	color:black;}
+p.Amount, li.Amount, div.Amount
+	{mso-style-name:Amount;
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	line-height:110%;
+	text-align:right;
+	font-family:Tahoma;
+	font-size:8.5pt;
+	color:black;
+	letter-spacing:.2pt;}
+ol
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+@page
+	{size:8.0302in 11.0in;}
+
