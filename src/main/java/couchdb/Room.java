@@ -456,7 +456,9 @@ public class Room implements Serializable
         //search through the list of reservationID's,
         //if the booking dates are not in between the reservation dates for this current
         //  room, return true, else return false
-        Boolean isRoomAvailable =  reservationsIDList.stream().anyMatch((String reservationID) -> {
+
+        //returns the first none match on the room, ** >> ! << flips Boolean value (true >> false in a success case)
+        Boolean isRoomAvailable =  reservationsIDList.stream().noneMatch((String reservationID) -> {
 
             //***** CURRENT ISSUE *****
             /*
@@ -489,17 +491,18 @@ public class Room implements Serializable
                 if( (pendingReservation.fromDate.after(reservationFromDBMap.fromDate) && pendingReservation.fromDate.before(reservationFromDBMap.toDate)) ||
                         (pendingReservation.toDate.after(reservationFromDBMap.fromDate) && pendingReservation.toDate.before(reservationFromDBMap.toDate)))
                 {
-                    return false;
+                    return true;
                 }//if the dates are equal, room is unavailable
                 else if( (pendingReservation.fromDate.equals(reservationFromDBMap.fromDate) || pendingReservation.toDate.equals(reservationFromDBMap.toDate)) ||
                         (pendingReservation.fromDate.equals(reservationFromDBMap.toDate) ))
                 {
-                    return false;
+                    return true;
                 }
                 else
                 {
+                    //will return false if the room is currently available
 
-                    return true;
+                    return false;
                 }
             }
             else{

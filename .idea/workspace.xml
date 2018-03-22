@@ -2,71 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e20bf3d-5dc8-4883-857d-f7321037781f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
-      <change beforePath="$PROJECT_DIR$/src/main/html/billing/BillingSummary.html" afterPath="$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/html/billing/billingScript.js" afterPath="$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/html/billing/billingStyle.css" afterPath="$PROJECT_DIR$/src/main/resources/html/billing/billingStyle.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/html/billing/hotelRoom.jpg" afterPath="$PROJECT_DIR$/src/main/resources/html/billing/hotelRoom.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/main/html/billing/samplePublisher3.htm" afterPath="$PROJECT_DIR$/src/main/resources/html/billing/samplePublisher3.htm" />
       <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RoomBillingUI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RoomBillingUI.fxml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/hotelapp.kotlin_module" afterPath="$PROJECT_DIR$/target/classes/META-INF/hotelapp.kotlin_module" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/RoomBillingUI.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/RoomBillingUI.fxml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$Companion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$2$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$3$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$4$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$5$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$6$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1$6.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$root$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$5.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$6.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$7.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$8.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3$9.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView$4.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationView.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/RoomBillingView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/RoomBillingView.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,8 +21,8 @@
       <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="54">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -91,8 +31,8 @@
       <file leaf-file-name="HotelRoomReservationView.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+            <state relative-caret-position="131">
+              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
               <folding>
                 <element signature="e#22#719#0" expanded="true" />
               </folding>
@@ -135,8 +75,8 @@
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="477" column="14" lean-forward="false" selection-start-line="477" selection-start-column="14" selection-end-line="477" selection-end-column="14" />
+            <state relative-caret-position="378">
+              <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,8 +95,8 @@
       <file leaf-file-name="HotelBackEndNorris.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -631,16 +571,15 @@
       <workItem from="1521681684934" duration="72000" />
       <workItem from="1521686399070" duration="252000" />
       <workItem from="1521689729340" duration="398000" />
-      <workItem from="1521736697694" duration="2581000" />
+      <workItem from="1521736697694" duration="3898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358045000" />
+    <option name="totallyTimeSpent" value="359362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -663,7 +602,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -947,7 +886,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>480</line>
+          <line>482</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -1382,27 +1321,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+        <state relative-caret-position="131">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
           <folding>
             <element signature="e#22#719#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,8 +1355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="477" column="14" lean-forward="false" selection-start-line="477" selection-start-column="14" selection-end-line="477" selection-end-column="14" />
+        <state relative-caret-position="378">
+          <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
           <folding />
         </state>
       </provider>
