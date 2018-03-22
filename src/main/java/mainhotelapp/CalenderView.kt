@@ -2,17 +2,14 @@ package mainhotelapp
 
 import hotelbackend.HotelBackEndNorris
 import javafx.scene.control.Button
-import javafx.scene.control.TextField
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.Priority
 import tornadofx.*
-import javafx.scene.layout.VBox
-import javafx.scene.text.Text
 import javafx.stage.StageStyle
 import java.net.URL
 
 
-class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationView) : View()
+class CalenderView constructor(listOfDays : List<Int>, parentViewHotelRoom: HotelRoomReservationView) : View()
 {
 
 
@@ -99,7 +96,7 @@ class CalenderView constructor(listOfDays : List<Int>, parentView : ReservationV
                             val backend = HotelBackEndNorris()
                             val url =  backend.getCalenderEventForDay(calBtn.text.toInt()) as? URL
 
-                            if(url != null) parentView.roomResWebView.engine.load(url.toString())
+                            if(url != null) parentViewHotelRoom.roomResWebView.engine.load(url.toString())
 
 
 

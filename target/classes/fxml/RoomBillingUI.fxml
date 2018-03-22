@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="762.0" style="-fx-background-color: rgba(219, 212, 181);" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <WebView fx:id="billingWebView" layoutY="52.0" prefHeight="366.0" prefWidth="762.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0" />
       <TextField fx:id="firstNameTextField" layoutX="24.0" layoutY="489.0" prefHeight="27.0" prefWidth="154.0" promptText="first name" />
@@ -37,5 +37,6 @@
       <ComboBox fx:id="cardTypeComboBox" layoutX="402.0" layoutY="626.0" minWidth="49.0" prefHeight="27.0" prefWidth="77.0" promptText="VISA" />
       <Text layoutX="402.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card Type:" />
       <Button fx:id="proceedBillingBtn" layoutX="607.0" layoutY="668.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="121.0" text="Proceed" />
+      <Button layoutX="668.0" layoutY="14.0" mnemonicParsing="false" onAction="#print" prefHeight="27.0" prefWidth="63.0" text="Print" />
    </children>
 </AnchorPane>

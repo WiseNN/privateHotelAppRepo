@@ -1,12 +1,11 @@
 package mainhotelapp.customCells
 
 import couchdb.Room
-import javafx.collections.ObservableList
 import javafx.scene.control.TableCell
 import javafx.scene.control.TableColumn
 import javafx.stage.StageStyle
-import mainhotelapp.AvailableRooms
-import mainhotelapp.ReservationView
+import mainhotelapp.HotelRoomReservationView
+import mainhotelapp.MyButtonBarView
 import mainhotelapp.RoomBillingView
 import tornadofx.*
 
@@ -15,10 +14,11 @@ class SubmitBtnTableViewCell (submitBtnColumn: TableColumn<Room, String>): Table
 
 
 
-    val reservationView = find(ReservationView::class)
+    val reservationView = find(MyButtonBarView::class).rezView as HotelRoomReservationView
 
     init {
         this.prefWidthProperty().bind(submitBtnColumn.widthProperty())
+
 
 
 

@@ -42,10 +42,10 @@ public class Room implements Serializable
     public transient SimpleBooleanProperty isAvailableForOccupancyProperty = new SimpleBooleanProperty(this, "isAvailableForOccupancy");;
 
     public String notes = "";
-    public transient SimpleStringProperty notesProperty = new SimpleStringProperty(this, "notes");;
+    public transient SimpleStringProperty notesProperty = new SimpleStringProperty(this, "notes");
 
-    public Map<String, Object> amenities;
-    public transient SimpleObjectProperty<Map<String, Object>> amenitiesProperty = new SimpleObjectProperty<Map<String, Object>>(this, "amenities");
+    public String amenities;
+    public transient SimpleStringProperty amenitiesProperty = new SimpleStringProperty(this,"amenities");
 
     public String additionalPackages = getAdditionalPackages();
     public transient SimpleStringProperty additionalPackagesProperty = new SimpleStringProperty(this, "additionalPackages");;
@@ -57,8 +57,8 @@ public class Room implements Serializable
     public ArrayList<String> reservations;
 
 
-    public  final HashMap<String, Object> regAmenities = getRegAmenities();
-    public  final HashMap<String, Object> suiteAmenities = getSuiteAmenities();
+    public  final String regAmenities = getRegAmenities();
+    public  final String suiteAmenities = getSuiteAmenities();
 
     //HashMap keys
     private final String bedTypeKey = "bedType";
@@ -73,7 +73,7 @@ public class Room implements Serializable
 
     //constructor - call to create a room
     public Room(int roomNumber, allRoomTypes roomType, allBedTypes bedType, Boolean isSmoking,
-                Boolean hasPet, Boolean isAvailableForOccupancy, Map<String, Object> amenities, String additionalPackages)
+                Boolean hasPet, Boolean isAvailableForOccupancy, String additionalPackages)
     {
         this.roomNumber = roomNumber;
         this.roomNumberProperty = new SimpleStringProperty(""+roomNumber);
@@ -95,8 +95,19 @@ public class Room implements Serializable
         this.isAvailableForOccupancy = isAvailableForOccupancy;
         this.isAvailableForOccupancyProperty  = new SimpleBooleanProperty(isAvailableForOccupancy);
 
-        this.amenities = amenities;
-        this.amenitiesProperty = new SimpleObjectProperty<Map<String, Object>>(amenities);
+
+        if(roomType == allRoomTypes.suite)
+        {
+            this.amenities = getSuiteAmenities();
+            this.amenitiesProperty = new SimpleStringProperty(this.amenities);
+        }
+        else if((roomType == allRoomTypes.reg)||(roomType == allRoomTypes.handi))
+        {
+            this.amenities = getRegAmenities();
+            this.amenitiesProperty = new SimpleStringProperty(this.amenities);
+
+        }
+
 
         this.notes = "";
         this.notesProperty = new SimpleStringProperty(notes);
@@ -162,29 +173,17 @@ public class Room implements Serializable
 
 
 
-    private final HashMap<String, Object> getRegAmenities()
+    private final String getRegAmenities()
     {
+        String regAmenititesStr = "Fridge=true;Microwave=true;couch=true;Digital Phone=True;Iron=true;Safe=true";
 
-        HashMap<String, Object> regRoomAmenities = new HashMap<String, Object>();
-
-        //create reg amenities object with boolean values to change if room as amenity available
-        regRoomAmenities.put(allAmenities.fridge.toString(), true);
-        regRoomAmenities.put(allAmenities.microwave.toString(), true);
-        regRoomAmenities.put(allAmenities.couch.toString(), true);
-        regRoomAmenities.put(allAmenities.telephone.toString(), true);
-        regRoomAmenities.put(allAmenities.iron.toString(), true);
-        regRoomAmenities.put(allAmenities.safe.toString(), true);
-
-        return regRoomAmenities;
+        return regAmenititesStr;
     }
 
-    private HashMap<String, Object> getSuiteAmenities()
+    private String getSuiteAmenities()
     {
-        HashMap<String, Object> suiteRoomAmenities = getRegAmenities();
-
-        suiteRoomAmenities.put(allAmenities.cofferMaker.toString(), true);
-        suiteRoomAmenities.put(allAmenities.stereo.toString(), true);
-        suiteRoomAmenities.put(allAmenities.miniBar.toString(), true);
+        String suiteRoomAmenities = getRegAmenities();
+        suiteRoomAmenities += "Coffee Maker=true;Stereo=true;Mini-Bar=true";
 
         return suiteRoomAmenities;
     }
@@ -238,14 +237,14 @@ public class Room implements Serializable
                 {
                     //set even even rooms to different properties than odd rooms
                     case 1:
-                         oneRoom = new Room(i, allRoomTypes.reg,allBedTypes.king, false, false, true, regAmenities, additionalPackages);
+                         oneRoom = new Room(i, allRoomTypes.reg,allBedTypes.king, false, false, true, additionalPackages);
 
                         break;
 
                     //set odd rooms to different properties than even rooms
                     case 0:
 
-                        oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, suiteAmenities, additionalPackages);
+                        oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, additionalPackages);
 
 
 
@@ -459,7 +458,24 @@ public class Room implements Serializable
         //  room, return true, else return false
         Boolean isRoomAvailable =  reservationsIDList.stream().anyMatch((String reservationID) -> {
 
-
+            //***** CURRENT ISSUE *****
+            /*
+            * Situation:
+            * ----------
+            * The reservation alagorithm will check the pending reservation against all reservations in the list, it will
+            * return true on the first no conflict that it finds when comparing dates (truthy predicate).
+            *Issue:
+            * -----
+             *  The issue is, whenever we are comparing reservation dates, there might be another reservation that conflicts
+            * with the current pending reservation dates. However, we wont find this out because the conditional statement will
+            * return true on the first match that it finds to pass the test.
+            *
+            * Conflict Resolution Proposition:
+            * --------------------------------
+            *
+            * We have to find a way to compare all reservation dates to make sure that there are no conflicts with ANY
+            * reservation.....not just the first reservation
+            * */
 
             //get the reservationFromDBMap (with specific service type) from the reservations map
             Reservation reservationFromDBMap = (Reservation) reservationsMapForServiceTypeFromDB.get(reservationID);
@@ -474,7 +490,7 @@ public class Room implements Serializable
                         (pendingReservation.toDate.after(reservationFromDBMap.fromDate) && pendingReservation.toDate.before(reservationFromDBMap.toDate)))
                 {
                     return false;
-                }
+                }//if the dates are equal, room is unavailable
                 else if( (pendingReservation.fromDate.equals(reservationFromDBMap.fromDate) || pendingReservation.toDate.equals(reservationFromDBMap.toDate)) ||
                         (pendingReservation.fromDate.equals(reservationFromDBMap.toDate) ))
                 {
