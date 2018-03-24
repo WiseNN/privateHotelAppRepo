@@ -6,7 +6,97 @@
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
+      <change beforePath="$PROJECT_DIR$/hotelapp.iml" afterPath="$PROJECT_DIR$/hotelapp.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html" afterPath="$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/html/billing/billingStyle.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/html/billing/hotelRoom.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/html/billing/samplePublisher3.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allAmenities.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allBedTypes.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room$allRoomTypes.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/html/billing/BillingSummary.html" afterPath="$PROJECT_DIR$/target/classes/html/billing/BillingSummary.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/html/billing/billingScript.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/html/billing/billingStyle.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/html/billing/hotelRoom.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/html/billing/samplePublisher3.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms$hasPetProperty$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms$hasPetProperty$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms$roomNumberProperty$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms$roomNumberProperty$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/AvailableRooms.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderEventPopUpWindow$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderEventPopUpWindow$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderEventPopUpWindow.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderEventPopUpWindow.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderDays$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView$calenderMonthBtn$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/CalenderView.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/FirstKotlinKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/FirstKotlinKt.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$2$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$2$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$3.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$4.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$5.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$5.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$6.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$6.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$7.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$7.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$8.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$8.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$9.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3$9.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$4.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationView.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationViewKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/HotelRoomReservationViewKt.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlin.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MainAppKotlinKt.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$2$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$2$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$3$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$3$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$3.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$3.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$4$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$4$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$4.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$4.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$5$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$5$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$5.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$5.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$6$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$6$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$6.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1$6.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyButtonBarView.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyController.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1$root$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2$root$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/MyView2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationFXMLControllerLogic.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/ReservationFXMLControllerLogic.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/RoomBillingView$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/RoomBillingView$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/RoomBillingView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/RoomBillingView.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell$createTextArea$2.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/NotesTableCell.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackageListViewCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackageListViewCell.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell$updateItem$$inlined$forEachIndexed$lambda$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell$updateItem$$inlined$forEachIndexed$lambda$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCell.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCellKt.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/PackagesTableViewCellKt.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/StayDurationTableCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/StayDurationTableCell.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/StayDurationView.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/StayDurationView.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell$updateItem$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/SubmitBtnTableViewCell.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/TestApp.class" afterPath="$PROJECT_DIR$/target/classes/mainhotelapp/customCells/TestApp.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,21 +108,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HotelRoomReservationView.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+            <state relative-caret-position="169">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#22#719#0" expanded="true" />
               </folding>
@@ -40,31 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComboBoxBase.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="150" column="31" lean-forward="false" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIComponent.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/UIComponent.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SubmitBtnTableViewCell.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="90" lean-forward="false" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
+            <state relative-caret-position="242">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#34#298#0" expanded="true" />
               </folding>
@@ -72,51 +132,160 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
+      <file leaf-file-name="IndexedCell.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/IndexedCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
+            <state relative-caret-position="176">
+              <caret line="87" column="33" lean-forward="false" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyButtonBarView.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
+      <file leaf-file-name="RoomBillingView.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+            <state relative-caret-position="229">
+              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibKt.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/LibKt.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelBackEndNorris.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
+      <file leaf-file-name="billingScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/js/billingScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="295" column="83" lean-forward="false" selection-start-line="294" selection-start-column="8" selection-end-line="295" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reservation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java">
+      <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="91">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
+      <file leaf-file-name="InlineStyles2.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/css/InlineStyles2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="114">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BillingSummary.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="157" column="94" lean-forward="false" selection-start-line="157" selection-start-column="94" selection-end-line="157" selection-end-column="94" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#1;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#2;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#3;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#td#1;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h4#0;n#td#1;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#2;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h1#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h1#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#1;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#2;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h4#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h4#0;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#2;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#5;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1521876788392" expanded="true" signature="762:948" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,36 +304,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>height</find>
-      <find>bookingContain</find>
-      <find>HANDI</find>
-      <find>Document</find>
-      <find>catch</find>
-      <find>HashMap</find>
-      <find>readD</find>
-      <find>print</find>
-      <find>perm</find>
-      <find>bookingC</find>
-      <find>roomBooking</find>
-      <find>date</find>
-      <find>hit</find>
-      <find>for</find>
-      <find>index</find>
-      <find>createR</find>
-      <find>create</find>
-      <find>class</find>
-      <find>parent</find>
-      <find>reser</find>
-      <find>BOOKRO</find>
-      <find>reserveR</find>
-      <find>tablev</find>
-      <find>listOfAvail</find>
       <find>fromDate</find>
       <find>web source data</find>
       <find>HOURS</find>
       <find>amenities</find>
       <find>One Beautiful</find>
       <find>Billing</find>
+      <find>notes</find>
+      <find>descriptionT</find>
+      <find>#</find>
+      <find>fin</find>
+      <find>background</find>
+      <find>cityStateZip</find>
+      <find>lineDescrText</find>
+      <find>exprDate</find>
+      <find>cardNumber</find>
+      <find>paymentName</find>
+      <find>aymentCardNumber</find>
+      <find>billingAddress1</find>
+      <find>notesSpecialRequests</find>
+      <find>room descr text block</find>
+      <find>123456789</find>
+      <find>table</find>
+      <find>width</find>
+      <find>TOTAL</find>
+      <find>descr</find>
+      <find>TD</find>
+      <find>Mangz’elia</find>
+      <find>Mangz</find>
+      <find>Mang</find>
+      <find>checks</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,9 +347,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationScreenView.kt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/FirstKotlin.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/Styles.css" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/StayDurationCell.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/NotesTableCell.kt" />
@@ -194,7 +360,6 @@
         <option value="$PROJECT_DIR$/src/main/java/couchdb/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/SysConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/SysConstants2.kt" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/MyUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/ConsoleTextColors.java" />
         <option value="$PROJECT_DIR$/src/main/java/ConsoleColors.java" />
@@ -219,16 +384,20 @@
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/CalenderView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/calenderEventPopUpWindow.kt" />
         <option value="$PROJECT_DIR$/src/main/html/billing/billingScript.js" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/html/billing/billingStyle.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.htm" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/html/billing/js/billingScript.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/html/billing/css/InlineStyles2.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt" />
       </list>
     </option>
   </component>
@@ -290,9 +459,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,13 +490,73 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="couchdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="devutil" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mainhotelapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mainhotelapp" type="462c0819:PsiDirectoryNode" />
+              <item name="customCells" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="billing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="billing" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,12 +797,14 @@
       <workItem from="1521681684934" duration="72000" />
       <workItem from="1521686399070" duration="252000" />
       <workItem from="1521689729340" duration="398000" />
-      <workItem from="1521736697694" duration="3898000" />
+      <workItem from="1521736697694" duration="11386000" />
+      <workItem from="1521788503159" duration="1439000" />
+      <workItem from="1521842212101" duration="11372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359362000" />
+    <option name="totallyTimeSpent" value="379661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -591,10 +819,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18863362" sideWeight="0.3769671" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22603719" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23175965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -602,7 +830,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -664,19 +892,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt</url>
-          <line>131</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt</url>
-          <line>96</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt</url>
-          <line>122</line>
+          <line>125</line>
           <properties />
           <option name="timeStamp" value="68" />
         </line-breakpoint>
@@ -706,79 +934,79 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt</url>
-          <line>25</line>
+          <line>28</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt</url>
-          <line>38</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt</url>
-          <line>49</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt</url>
-          <line>50</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt</url>
-          <line>45</line>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>43</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>52</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>59</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>65</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>97</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>63</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>102</line>
+          <line>104</line>
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
-          <line>112</line>
+          <line>114</line>
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
@@ -806,6 +1034,18 @@
           <properties />
           <option name="timeStamp" value="105" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
+          <line>153</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt</url>
+          <line>152</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java</url>
           <line>24</line>
@@ -826,55 +1066,55 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>272</line>
+          <line>271</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>332</line>
+          <line>331</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>319</line>
+          <line>318</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>299</line>
+          <line>298</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>353</line>
+          <line>352</line>
           <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>442</line>
+          <line>441</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>356</line>
+          <line>355</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>381</line>
+          <line>380</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>382</line>
+          <line>381</line>
           <properties />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
@@ -886,19 +1126,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/couchdb/Room.java</url>
-          <line>482</line>
+          <line>481</line>
           <properties />
           <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js</url>
-          <line>194</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js</url>
-          <line>196</line>
-          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt</url>
@@ -912,10 +1142,20 @@
           <properties myFieldName="reservationView" myClassName="mainhotelapp.customCells.SubmitBtnTableViewCell" />
           <option name="timeStamp" value="106" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/resources/html/billing/js/billingScript.js</url>
+          <line>308</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="108" />
+      <option name="time" value="112" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="this.javaClass.getResource(&quot;/html/billing/BillingSummary.htm&quot;)" language="kotlin" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -928,6 +1168,26 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>this.javaClass.getResource(&quot;/html/billing/BillingSummary.htm&quot;)</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.javaClass.getResource(&quot;/html/billing/BillingSummary.html&quot;)</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.javaClass.getResource(&quot;/html/billing&quot;)</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.javaClass.getResource(&quot;/html&quot;)</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>pendingReservation.toDate.after(reservationFromDBMap.fromDate)</expression-string>
         <language-id>JAVA</language-id>
@@ -954,75 +1214,13 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.javaClass.getResource(&quot;/html/billing/BillingSummary.html&quot;)</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
         <expression-string>this.javaClass.getResource(&quot;.&quot;)</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>this.javaClass.getResource(&quot;html&quot;)</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>this.javaClass.getResource(&quot;../&quot;)</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>this.javaClass</expression-string>
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/IndexedCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TableRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Control.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="871" column="0" lean-forward="false" selection-start-line="871" selection-start-column="0" selection-end-line="871" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9156" column="0" lean-forward="false" selection-start-line="9156" selection-start-column="0" selection-end-line="9156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="1092" column="0" lean-forward="false" selection-start-line="1092" selection-start-column="0" selection-end-line="1092" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ScrollPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.21/kotlin-stdlib-1.2.21-sources.jar!/generated/_Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -1183,22 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="116" column="43" lean-forward="false" selection-start-line="112" selection-start-column="12" selection-end-line="116" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1756">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/web/WebEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1227,37 +1409,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1759">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#440#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4940">
-          <caret line="320" column="90" lean-forward="false" selection-start-line="320" selection-start-column="90" selection-end-line="320" selection-end-column="90" />
-          <folding>
-            <marker date="1521673232782" expanded="true" signature="473:624" ph="..." />
-            <marker date="1521673232782" expanded="true" signature="664:1594" ph="..." />
-            <marker date="1521673232782" expanded="true" signature="744:1507" ph="..." />
-            <marker date="1521673232782" expanded="true" signature="889:1222" ph="..." />
-            <marker date="1521673232782" expanded="true" signature="1460:1487" ph="..." />
-            <marker date="1521673232782" expanded="true" signature="1535:1588" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/HotelRoomReservationView.kt" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,29 +1433,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="90" lean-forward="false" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
-          <folding>
-            <element signature="e#34#298#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+        <state relative-caret-position="4313">
+          <caret line="239" column="41" lean-forward="false" selection-start-line="239" selection-start-column="30" selection-end-line="239" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/UIComponent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state relative-caret-position="483">
           <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,53 +1456,222 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/DB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="703">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/NotesTableCell.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="1577">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="228">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/Reservation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="1786">
+          <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="382" column="0" lean-forward="false" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
+        <state relative-caret-position="494">
+          <caret line="484" column="44" lean-forward="false" selection-start-line="484" selection-start-column="44" selection-end-line="484" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/billingScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="164" column="39" lean-forward="false" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/IndexedCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="87" column="33" lean-forward="false" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2755">
+          <caret line="145" column="62" lean-forward="false" selection-start-line="145" selection-start-column="62" selection-end-line="145" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/LibKt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#34#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/js/billingScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="295" column="83" lean-forward="false" selection-start-line="294" selection-start-column="8" selection-end-line="295" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/css/InlineStyles2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/html/billing/BillingSummary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="157" column="94" lean-forward="false" selection-start-line="157" selection-start-column="94" selection-end-line="157" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#1;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#2;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#3;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#td#1;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h4#0;n#td#1;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#2;n#tbody#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h1#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h1#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#1;n#tr#0;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#2;n#td#0;n#tr#1;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h4#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h4#0;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#2;n#td#1;n#tr#2;n#tbody#0;n#table#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#0;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#2;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#3;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#4;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#5;n#td#0;n#tr#0;n#tbody#0;n#table#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1521876788392" expanded="true" signature="762:948" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RoomBillingView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#441#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

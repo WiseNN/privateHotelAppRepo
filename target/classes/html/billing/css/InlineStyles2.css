@@ -1,0 +1,176 @@
+:root {
+    --all-cellHeight: 19px;
+}
+*{
+  language:en-US;
+    /*border-collapse: revert !important;*/
+}
+.docTitle {
+  color: blueviolet;
+}
+#docTitle {
+  color: blueviolet;
+}
+#rezBillingNum {
+  color: brown;
+}
+#rezDate {
+  color: cadetblue;
+}
+#roomDescription {
+  color: chocolate;
+}
+
+#notesSpecialRequests {
+  color: cornflowerblue;
+}
+#itemDescrLineItem {
+  color: crimson;
+  font-size: 14.0pt;
+  line-height: 119%;
+  font-family: Candara;
+
+  /*! language: en-US""; */
+}
+#lengthLineItem {
+  color: darkgreen;
+}
+#rateLineItem {
+  color: deeppink;
+}
+#amountLineItem {
+  color: darkkhaki;
+}
+#totalLineItem {
+  color: steelblue;
+}
+
+
+
+#billingName {
+  color: wheat;
+}
+td {
+}
+
+#billingAddress1 {
+  color: blue;
+}
+#billingAddress2 {
+  color: tomato;
+}
+#cityStateZipcode {
+  color: #009292;
+}
+#paymentName {
+  color: #d76a00;
+}
+#paymentCardNumber {
+  color: #db00f2;
+}
+#paymentCardExprDate {
+  color: #6200ef;
+}
+#finalOutBillingP1 {
+    /*   display: none; */
+    top: 616.67pt !important;
+}
+#finalOutBillingP2 {
+    /*   display: none; */
+    top: 723.54pt !important;
+}
+
+#tableView{
+  /*top: 338.88pt !important;*/
+    border: solid black 1px;
+
+}
+.MsoNormal.billingTextAlign {
+  text-align: left;
+  text-align: left;
+}
+
+/*------Cell Styles-----*/
+
+.descriptionTD {
+    width: 390.143pt;/*433.143pt;*/
+    height: var(--all-cellHeight) !important;
+    padding-left: 5.7528pt;
+    padding-right: 5.7528pt;
+    padding-top: 2.1528pt;
+    padding-bottom: 2.1528pt;
+    /*background: #F3F3F3;*/
+    border-left: solid #646B86 .5pt;
+    border-top: solid gray 1.0pt;
+    border-right: solid gray .5pt;
+    border-bottom: solid #646B86 .5pt;
+}
+
+.lengthTD {
+    width: 95.1062pt;
+    height: 24.944pt;
+    padding-left: 10.8pt;
+    padding-right: 10.8pt;
+    padding-top: 2.1528pt;
+    padding-bottom: 2.1528pt;
+    /*background: #F3F3F3;*/
+    border-left: solid gray .5pt;
+    border-top: solid gray 1.0pt;
+    border-right: solid gray .5pt;
+    border-bottom: solid #646B86 .5pt;
+}
+.rateTD {
+    width: 90.5773pt;
+    height: 24.944pt;
+    padding-left: 10.8pt;
+    padding-right: 10.8pt;
+    padding-top: 2.1528pt;
+    padding-bottom: 2.1528pt;
+    /*background: #F3F3F3;*/
+    border-left: solid gray .5pt;
+    border-top: solid gray 1.0pt;
+    border-right: solid gray .5pt;
+    border-bottom: solid #646B86 .5pt;
+}
+.amountTD {
+    width: 92.8417pt;
+    height: 24.944pt;
+    padding-left: 10.8pt;
+    padding-right: 10.8pt;
+    padding-top: 2.1528pt;
+    padding-bottom: 2.1528pt;
+    /*background: #F3F3F3;*/
+    border-left: solid gray .5pt;
+    border-top: solid gray 1.0pt;
+    border-right: solid gray .5pt;
+    border-bottom: solid #646B86 .5pt;
+}
+.totalTD {
+    width: 92.8417pt;
+    height: 32.7418pt;
+    padding-left: 10.8pt;
+    padding-right: 10.8pt;
+    padding-top: 2.1528pt;
+    padding-bottom: 2.1528pt;
+    border-left: solid #646B86 .5pt;
+    border-top: solid #646B86 .5pt;
+    border-right: solid #646B86 .5pt;
+    border-bottom: solid #646B86 .5pt;
+}
+.hardBorders {
+    border: solid 1px black !important;
+}
+
+/* --------- background image style --------- */
+
+.bgStyle{
+    /*background-image: url("../images/hotelRoom.jpg");*/
+    /*opacity: 0.2;*/
+    /*position: fixed;*/
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-size: 100%;*/
+    /*background-repeat: no-repeat;*/
+}

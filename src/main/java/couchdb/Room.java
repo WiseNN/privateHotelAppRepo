@@ -203,6 +203,7 @@ public class Room implements Serializable
 
 
     //creating sample rooms map, cannot access created rooms directly, only through database: DBNames.rooms
+    //create suite, reg, and (10)handicap rooms
         public void createRooms()
         {
 
@@ -233,25 +234,23 @@ public class Room implements Serializable
                 int isEven = ((200 % i) == 0) ? 1 : 0;
 
                 //if isEven is 1, create different room, than if isEven is 0
-                switch(isEven)
+                if(isEven == 1 && !((i % 10) == 0))
                 {
                     //set even even rooms to different properties than odd rooms
-                    case 1:
-                         oneRoom = new Room(i, allRoomTypes.reg,allBedTypes.king, false, false, true, additionalPackages);
-
-                        break;
-
+                    oneRoom = new Room(i, allRoomTypes.reg, allBedTypes.king, false, false, true, additionalPackages);
+                }
+                else if(isEven == 0 && !((i % 10) == 0))
+                {
                     //set odd rooms to different properties than even rooms
-                    case 0:
-
-                        oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, additionalPackages);
-
-
-
-
-                        break;
+                    oneRoom = new Room(i, allRoomTypes.suite,allBedTypes.queen, false, false, true, additionalPackages);
 
                 }
+                else
+                {
+                    //set odd rooms to different properties than even rooms
+                    oneRoom = new Room(i, allRoomTypes.handi,allBedTypes.queen, false, false, true, additionalPackages);
+                }
+
 
                 MyUtil util = new MyUtil();
                 String serializedRoom = null;

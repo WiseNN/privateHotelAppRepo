@@ -16,8 +16,11 @@ class SubmitBtnTableViewCell (submitBtnColumn: TableColumn<Room, String>): Table
 
     val reservationView = find(MyButtonBarView::class).rezView as HotelRoomReservationView
 
+
+
     init {
         this.prefWidthProperty().bind(submitBtnColumn.widthProperty())
+
 
 
 
@@ -48,6 +51,7 @@ class SubmitBtnTableViewCell (submitBtnColumn: TableColumn<Room, String>): Table
 
 
                 val billingView = RoomBillingView(reservationView.listOfAvailableRooms[this@SubmitBtnTableViewCell.index])
+
                 billingView.openWindow(stageStyle = StageStyle.DECORATED)
 
 

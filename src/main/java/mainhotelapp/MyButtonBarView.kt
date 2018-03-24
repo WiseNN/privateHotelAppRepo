@@ -3,6 +3,7 @@ package mainhotelapp
 import com.sun.javafx.scene.control.skin.LabeledText
 import javafx.scene.control.Button
 import javafx.scene.control.Label
+import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 import tornadofx.*
 
@@ -13,11 +14,13 @@ class MyButtonBarView constructor() : View()
 
     //imported views
     var rezView : View? = null
+    val spaRezFXML: AnchorPane by fxml("/fxml/SpaReservationUI.fxml")
 
 
     var homeBtn : Button? = null
     var rewardsSysBtn : Button? = null
     var roomResBtn : Button? = null
+    var spaRezBtn : Button? = null
 
 
     override val root = VBox()
@@ -40,6 +43,7 @@ class MyButtonBarView constructor() : View()
 
                     roomResBtn!!.disableProperty().set(false)
                     rewardsSysBtn!!.disableProperty().set(false)
+                    spaRezBtn!!.disableProperty().set(false)
 
                     //pass in the parentView to retain a reference
                     root.getChildList()!!.remove(root.getChildList()!!.last())
@@ -58,6 +62,7 @@ class MyButtonBarView constructor() : View()
 
                     homeBtn!!.disableProperty().set(false)
                     rewardsSysBtn!!.disableProperty().set(false)
+                    spaRezBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     //pass in the parentView to retain a reference
@@ -76,18 +81,26 @@ class MyButtonBarView constructor() : View()
 
                     homeBtn!!.disableProperty().set(false)
                     roomResBtn!!.disableProperty().set(false)
+                    spaRezBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     root.getChildList()!!.add(root.getChildList()!!.size,Label("Rewards System"))
                 }
             }
 
-              button("Home"){
+              spaRezBtn = button("Spa Reservation"){
                 this.prefWidthProperty().bind(root.prefWidthProperty())
                 this.prefHeightProperty().bind(root.heightProperty().divide(barBtnSizeDiviser))
                 action{
 
-                    println("Presenting 1 ")
+                    this.disableProperty().set(true)
+
+                    homeBtn!!.disableProperty().set(false)
+                    roomResBtn!!.disableProperty().set(false)
+                    rewardsSysBtn!!.disableProperty().set(false)
+
+                    root.getChildList()!!.remove(root.getChildList()!!.last())
+                    root.getChildList()!!.add(root.getChildList()!!.size,spaRezFXML)
                 }
 
 

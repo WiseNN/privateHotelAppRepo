@@ -10,6 +10,7 @@ import netscape.javascript.*
 import javafx.scene.layout.AnchorPane
 import javafx.scene.web.WebView
 
+
 import tornadofx.*
 import java.awt.event.ActionEvent
 import java.text.SimpleDateFormat
@@ -26,8 +27,6 @@ class RoomBillingView(room : Room) : Fragment()
     override val root =  rootFXML
 
     val room = room
-
-
 
     init{
 
@@ -52,6 +51,8 @@ class RoomBillingView(room : Room) : Fragment()
 
         billingWebView.engine.loadWorker.stateProperty().onChange {
 
+
+
             println("web source data: "+it.toString())
             if(it == Worker.State.SUCCEEDED)
             {
@@ -59,17 +60,18 @@ class RoomBillingView(room : Room) : Fragment()
                 //when page loads, attach this java class to the window as an object
                 val window = billingWebView.engine.executeScript("window") as JSObject
 
+
                 window.setMember("javaApp", this)
 
                 val billingInfo = getBillingInfoForRoom(room)
 
+
+                val compliant_HTML_Notes = parseNotesToHTML(billingInfo[1]);
+
                 billingWebView.engine.executeScript("bill.setRoomDescriptionTextBlock(\"${billingInfo[0]}\")")
-                billingWebView.engine.executeScript("bill.setNotesTextBlock(\"${billingInfo[1]}\")")
+                billingWebView.engine.executeScript("bill.setNotesTextBlock(\"${compliant_HTML_Notes}\")")
                 billingWebView.engine.executeScript("bill.addRowToTable(\"${billingInfo[2]}\", \"${billingInfo[3]}\", \"${billingInfo[4]}\", \"${billingInfo[5]}\")")
                 billingWebView.engine.executeScript("bill.addRowToTable(\"Taxes\", \"\", \"\", \"$12.34\")")
-
-
-//
 
             }
         }
@@ -144,6 +146,12 @@ class RoomBillingView(room : Room) : Fragment()
 
 
         return billingInfoList
+    }
+
+    fun parseNotesToHTML(notes : String) : String
+    {
+        val valid_HTML_notes = notes.replace("\n","<br>")
+        return valid_HTML_notes
     }
 
 

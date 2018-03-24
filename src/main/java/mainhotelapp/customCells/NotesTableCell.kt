@@ -11,6 +11,8 @@ import javafx.scene.paint.Color
 import javafx.scene.text.Text
 import javafx.scene.text.TextAlignment
 import mainhotelapp.AvailableRooms
+import mainhotelapp.HotelRoomReservationView
+import mainhotelapp.MyButtonBarView
 import tornadofx.*
 import java.time.LocalDate
 import java.util.*
@@ -26,6 +28,7 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
     var notesTextArea = createTextArea()
     var wrappingText = createText()
     val employeedID = employeeID
+    val reservationView = find(MyButtonBarView::class).rezView as HotelRoomReservationView
 
 
     init {
@@ -122,8 +125,11 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
 
                 wrappingText.text = updatedText
 
+                 reservationView.listOfAvailableRooms[index].notes = wrappingText.text.substring(0,wrappingText.text.indexOf("-")-1)
 
                 graphic = wrappingText
+
+
             }
 
 

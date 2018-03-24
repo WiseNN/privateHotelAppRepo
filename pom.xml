@@ -22,7 +22,7 @@
         <!-- Used as the 'Vendor' for JNLP generation -->
         <name>Your Organisation</name>
     </organization>
-    
+
      <dependencies>
          <dependency>
              <groupId>org.jetbrains.kotlin</groupId>
