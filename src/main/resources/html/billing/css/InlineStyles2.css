@@ -5,72 +5,72 @@
   language:en-US;
     /*border-collapse: revert !important;*/
 }
-.docTitle {
-  color: blueviolet;
-}
-#docTitle {
-  color: blueviolet;
-}
-#rezBillingNum {
-  color: brown;
-}
-#rezDate {
-  color: cadetblue;
-}
-#roomDescription {
-  color: chocolate;
-}
+/*.docTitle {*/
+  /*color: blueviolet;*/
+/*}*/
+/*#docTitle {*/
+  /*color: blueviolet;*/
+/*}*/
+/*#rezBillingNum {*/
+  /*color: brown;*/
+/*}*/
+/*#rezDate {*/
+  /*color: cadetblue;*/
+/*}*/
+/*#roomDescription {*/
+  /*color: chocolate;*/
+/*}*/
 
-#notesSpecialRequests {
-  color: cornflowerblue;
-}
+/*#notesSpecialRequests {*/
+  /*color: cornflowerblue;*/
+/*}*/
 #itemDescrLineItem {
-  color: crimson;
+  /*color: crimson;*/
   font-size: 14.0pt;
   line-height: 119%;
   font-family: Candara;
 
-  /*! language: en-US""; */
+  /*/ language: en-US""; */
 }
-#lengthLineItem {
-  color: darkgreen;
-}
-#rateLineItem {
-  color: deeppink;
-}
-#amountLineItem {
-  color: darkkhaki;
-}
-#totalLineItem {
-  color: steelblue;
-}
+/*#lengthLineItem {*/
+  /*color: darkgreen;*/
+/*}*/
+/*#rateLineItem {*/
+  /*color: deeppink;*/
+/*}*/
+/*#amountLineItem {*/
+  /*color: darkkhaki;*/
+/*}*/
+/*#totalLineItem {*/
+  /*color: steelblue;*/
+/*}*/
 
 
 
-#billingName {
-  color: wheat;
-}
-td {
-}
+/*#billingName {*/
+  /*color: wheat;*/
+/*}*/
+/*td {*/
+/*}*/
 
-#billingAddress1 {
-  color: blue;
-}
-#billingAddress2 {
-  color: tomato;
-}
-#cityStateZipcode {
-  color: #009292;
-}
-#paymentName {
-  color: #d76a00;
-}
-#paymentCardNumber {
-  color: #db00f2;
-}
-#paymentCardExprDate {
-  color: #6200ef;
-}
+/*#billingAddress1 {*/
+  /*color: blue;*/
+/*}*/
+/*#billingAddress2 {*/
+  /*color: tomato;*/
+/*}*/
+/*#cityStateZipcode {*/
+  /*color: #009292;*/
+/*}*/
+/*#paymentName {*/
+  /*color: #d76a00;*/
+/*}*/
+/*#paymentCardNumber {*/
+  /*color: #db00f2;*/
+/*}*/
+/*#paymentCardExprDate {*/
+  /*color: #6200ef;*/
+/*}*/
 #finalOutBillingP1 {
     /*   display: none; */
     top: 616.67pt !important;
@@ -164,13 +164,13 @@ td {
 /* --------- background image style --------- */
 
 .bgStyle{
-    /*background-image: url("../images/hotelRoom.jpg");*/
-    /*opacity: 0.2;*/
-    /*position: fixed;*/
-    /*top: 0px;*/
-    /*left: 0px;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background-size: 100%;*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("../images/hotelRoom.jpg");
+    opacity: 0.2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

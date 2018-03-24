@@ -183,13 +183,13 @@ class Billing
 		
 	}
 
-	createFinalOutBillingCardInfo(paymentName, cardNumber,exprDate)
+	createFinalOutBillingCardInfo(paymentName, cardNumber,exprDate,cardType)
 	{
 
 		var tdElm = document.getElementById("paymentCardExprDate");
 		
 		
-		var idNames = ["paymentName","paymentCardNumber","paymentCardExprDate"];
+		var idNames = ["paymentName","paymentCardNumber","paymentCardExprDate","paymentCardType"];
 		for(var i=0;i<idNames.length;i++)
 		{
 			var pElm = document.createElement("p");
@@ -258,7 +258,10 @@ class Billing
 
 	showfinalOutBillingTable(bool)
 	{
-		if(bool)
+
+		console.log("what is show billing boolean: "+bool);
+
+		if(!bool)
 		{
 			var finalOutTable1 = document.getElementById("finalOutBillingP1");
 			var finalOutTable2 = document.getElementById("finalOutBillingP2");
@@ -292,10 +295,10 @@ class Billing
 		// bill.setReservationNumberText("123456789");
 		// bill.setPurchaseTotalText("$999.99");
 		// bill.setDateText("March 24, 2018");
-		bill.createFinalOutBillingAddress("fullName", "adr1","adr2","cityStateZipcode");
-		bill.createFinalOutBillingCardInfo("paymentName", "cardNumber","exprDate");
+		// bill.createFinalOutBillingAddress("fullName", "adr1","adr2","cityStateZipcode");
+		// bill.createFinalOutBillingCardInfo("paymentName", "cardNumber","exprDate");
 		// bill.showfinalOutBillingTable(false);
-		// bill.setDocumentTitle("Reservation Summary");
+
 
 
   });
