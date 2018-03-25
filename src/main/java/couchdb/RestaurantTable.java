@@ -125,14 +125,14 @@ public class RestaurantTable implements Serializable
         //loop through the tablesMap for the given party size, and reserve all available tables
         for(int i=0;i<tableCount;i++)
         {
-            Map.Entry<String, Object> roomObj = ((isRemainingSeats) ? tablesMap : remainingTablesMap).entrySet().stream().filter((roomEntry) -> {
+            Map.Entry<String, Object> tableObj = ((isRemainingSeats) ? tablesMap : remainingTablesMap).entrySet().stream().filter((tableEntry) -> {
 
                 System.out.println(ConsoleColors.cyanText("Watching Reservation process..."));
-                System.out.println(ConsoleColors.cyanText("is Table: " + roomEntry.getKey() + " available?"));
+                System.out.println(ConsoleColors.cyanText("is Table: " + tableEntry.getKey() + " available?"));
 
 
                 //create Room object of Room class from Entry value
-                RestaurantTable table = (RestaurantTable) roomEntry.getValue();
+                RestaurantTable table = (RestaurantTable) tableEntry.getValue();
 
 
                 if (isBookingAvailable(table, pendingReservation))
@@ -155,13 +155,13 @@ public class RestaurantTable implements Serializable
                     //put the updated table back in the tablesMap the database
                     Map<String, Object> tablesMapFromDB = db.readDocInDB(DBNames.rooms);
                     //serialize
-                    String serializedRoom = null;
+                    String serializedTable = null;
                     try{
-                        serializedRoom = util.serializeObject(table);
+                        serializedTable = util.serializeObject(table);
 
                         if(tablesMapFromDB != null)
                         {
-                            tablesMapFromDB.replace(roomEntry.getKey(), serializedRoom);
+                            tablesMapFromDB.replace(tableEntry.getKey(), serializedTable);
 
                             //save the updated tablesMap to the database
                             db.updateDocInDB(DBNames.rooms, tablesMapFromDB);
@@ -191,7 +191,7 @@ public class RestaurantTable implements Serializable
 
             isRemainingSeats = false;
 
-            reservedTablesList.add((Room) roomObj.getValue());
+            reservedTablesList.add((Room) tableObj.getValue());
 
         }
 
