@@ -10,11 +10,9 @@ import javafx.scene.control.TextArea
 import javafx.scene.paint.Color
 import javafx.scene.text.Text
 import javafx.scene.text.TextAlignment
-import mainhotelapp.AvailableRooms
 import mainhotelapp.HotelRoomReservationView
 import mainhotelapp.MyButtonBarView
 import tornadofx.*
-import java.time.LocalDate
 import java.util.*
 import java.text.SimpleDateFormat
 
@@ -28,7 +26,7 @@ class NotesTableCell constructor(employeeID: String, notesColumn: TableColumn<Ro
     var notesTextArea = createTextArea()
     var wrappingText = createText()
     val employeedID = employeeID
-    val reservationView = find(MyButtonBarView::class).rezView as HotelRoomReservationView
+    val reservationView = find(MyButtonBarView::class).roomRezView as HotelRoomReservationView
 
 
     init {

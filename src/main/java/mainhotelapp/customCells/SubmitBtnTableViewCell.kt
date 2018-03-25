@@ -14,7 +14,7 @@ class SubmitBtnTableViewCell (submitBtnColumn: TableColumn<Room, String>): Table
 
 
 
-    val reservationView = find(MyButtonBarView::class).rezView as HotelRoomReservationView
+    val reservationView = find(MyButtonBarView::class).roomRezView as HotelRoomReservationView
 
 
 

@@ -23,7 +23,7 @@ public class HotelBackEndNorris
     {
 
         //create the reservation
-        Reservation roomReservation = new Reservation(fromDate, toDate, Reservation.serviceTypes.hotelRoom, "94843345");
+        Reservation roomReservation = new Reservation(fromDate, toDate,null,null,null, Reservation.serviceTypes.hotelRoom, "94843345");
 
         //reserve room
         Room roomClass = new Room();

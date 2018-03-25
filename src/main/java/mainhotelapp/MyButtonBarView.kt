@@ -1,6 +1,5 @@
 package mainhotelapp
 
-import com.sun.javafx.scene.control.skin.LabeledText
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.layout.AnchorPane
@@ -13,7 +12,9 @@ class MyButtonBarView constructor() : View()
 
 
     //imported views
-    var rezView : View? = null
+    var roomRezView: View? = null
+    var tableRezView : View? = null
+
     val spaRezFXML: AnchorPane by fxml("/fxml/SpaReservationUI.fxml")
 
 
@@ -66,12 +67,12 @@ class MyButtonBarView constructor() : View()
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     //pass in the parentView to retain a reference
-                    root.getChildList()!!.add(root.getChildList()!!.size,rezView!!.root)
+                    root.getChildList()!!.add(root.getChildList()!!.size, roomRezView!!.root)
 
                 }
             }
 
-            rewardsSysBtn = button("Rewards System"){
+            rewardsSysBtn = button("Table Reservation"){
 
                 this.prefWidthProperty().bind(root.prefWidthProperty())
                 this.prefHeightProperty().bind(root.heightProperty().divide(barBtnSizeDiviser))
@@ -84,7 +85,7 @@ class MyButtonBarView constructor() : View()
                     spaRezBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
-                    root.getChildList()!!.add(root.getChildList()!!.size,Label("Rewards System"))
+                    root.getChildList()!!.add(root.getChildList()!!.size,tableRezView!!.root)
                 }
             }
 
@@ -130,9 +131,10 @@ class MyButtonBarView constructor() : View()
 
         }
 
-        rezView = HotelRoomReservationView(this)
+        roomRezView = HotelRoomReservationView(this)
+        tableRezView = RestaurantReservationView(this)
 
-        this.add(rezView!!.root)
+        this.add(roomRezView!!.root)
         roomResBtn!!.disableProperty().set(true)
 
 
