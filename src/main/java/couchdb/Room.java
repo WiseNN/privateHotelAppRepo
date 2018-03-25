@@ -385,7 +385,7 @@ public class Room implements Serializable
                             Reservation reservation = new Reservation();
                             reservation.addToReservationsMapInDB(pendingReservation);
                         }else{
-                            System.out.println(ConsoleColors.yellowText("roomsMapFromDB is null check reserveRoom() in Class: Room"));
+                            System.out.println(ConsoleColors.yellowText("roomsMapFromDB is null check reserveTable() in Class: Room"));
                         }
                     }catch (Exception e)
                     {
@@ -499,7 +499,7 @@ public class Room implements Serializable
                 }
                 else
                 {
-                    //will return false if the room is currently available
+                    //will return false if the room is currently AVAILABLE
 
                     return false;
                 }

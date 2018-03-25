@@ -6,6 +6,9 @@ import devutil.ConsoleColors;
 import devutil.MyUtil;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -16,7 +19,10 @@ public class Reservation implements Serializable
     public String reservationID;
     public Date fromDate;
     public Date toDate;
-    public serviceTypes serviceType;//Hotel, Spa, Restuarant & Bar, Meeting & Events
+    public LocalTime time;
+    public Integer partySize;
+    public String specialRequests;
+    public serviceTypes serviceType;//Hotel, Spa, RestaurantTable & Bar, Meeting & Events
     public String customerID; // = Customers().uId >> "84847344"
     private Long lowestRervationNumber = new Long(1000);
     private Long highestReservationNumber = new Long(9000);;
@@ -30,19 +36,43 @@ public class Reservation implements Serializable
 
 
 
-    public Reservation(Date fromDate, Date toDate, serviceTypes serviceType, String customerID)
+    public Reservation(Date fromDate, Date toDate, LocalTime time,Integer partySize,String specialRequests,serviceTypes serviceType, String customerID)
     {
+        /*
+        * RestuarantID Prefix Key:
+        * ------------------------
+        * HS -> Hotel Stay
+        * RR -> RestaurantTable
+        * SP -> Spa
+        * */
 
 
         // nextInt is normally exclusive of the top value,
         // so add 1 to make it inclusive
         Long reservationID = ThreadLocalRandom.current().nextLong(lowestRervationNumber, highestReservationNumber+1);
 
-        this.reservationID = reservationID+"";  //generate reservationID, cast to string
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-        this.serviceType = serviceType; //room, spa, meeting
-        this.customerID = customerID;
+        if(serviceTypes.hotelRoom.equals(serviceType))
+        {
+            this.reservationID = "HS"+reservationID;  //generate reservationID, cast to string
+            this.fromDate = fromDate;
+            this.toDate = toDate;
+            this.serviceType = serviceType; //room, spa, meeting
+            this.customerID = customerID;
+        }
+        else if(serviceTypes.restuarantBar.equals(serviceType))
+        {
+            this.reservationID = "RR"+reservationID;  //generate reservationID, cast to string
+            this.fromDate = fromDate;
+            this.time = time; //dinner reservation time from user
+            this.partySize = partySize;
+            this.specialRequests = specialRequests;
+            this.serviceType = serviceType; //room, spa, meeting
+            this.customerID = customerID;
+        }
+
+
+
+
     }
 
     public Reservation()
