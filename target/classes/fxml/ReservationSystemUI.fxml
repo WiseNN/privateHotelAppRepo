@@ -9,11 +9,13 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
@@ -77,6 +79,23 @@
                <children>
                   <Label text="Booking Information:" />
                   <Separator prefWidth="200.0" />
+                  <HBox style="-fx-border-color: #979797;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rewards #" wrappingWidth="64.796875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField prefHeight="27.0" prefWidth="221.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
                   <HBox prefHeight="33.0" prefWidth="144.0" style="-fx-border-color: #979797;">
                      <children>
                         <Label minHeight="33.0" minWidth="52.0" text="* From" />
@@ -119,7 +138,10 @@
                      <children>
                         <HBox minWidth="55.0" style="-fx-border-color: #979797;">
                            <children>
-                              <Label alignment="CENTER" contentDisplay="CENTER" minHeight="42.0" minWidth="39.0" text="No." textAlignment="CENTER" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" minHeight="42.0" minWidth="39.0" text="Room No." textAlignment="CENTER">
+                                 <padding>
+                                    <Insets right="22.0" />
+                                 </padding></Label>
                               <ComboBox fx:id="numOfBookedRoomsComboBox" maxWidth="-Infinity" minHeight="27.0" minWidth="-Infinity" prefWidth="60.0" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets top="8.0" />

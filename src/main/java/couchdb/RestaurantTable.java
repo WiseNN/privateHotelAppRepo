@@ -2,7 +2,6 @@ package couchdb;
 
 import devutil.ConsoleColors;
 import devutil.MyUtil;
-import hotelbackend.Reservation;
 
 import java.io.Serializable;
 import java.time.LocalTime;
@@ -14,15 +13,27 @@ import java.util.stream.Collectors;
 
 public class RestaurantTable implements Serializable
 {
-    int numberOfSeats = 0;
-    int lowestNumberOfSeats = 1;
-    int highestNumberOfSeats = 10;
+    public int tableNumber = 0;
+    public int numberOfSeats = 0;
+    private int lowestNumberOfSeats = 1;
+    private int highestNumberOfSeats = 10;
+    public Reservation activeReservation;
     public ArrayList<String> reservations;
 
 
-    public RestaurantTable(int numberOfSeats)
+    private RestaurantTable( int tableNumber, int numberOfSeats)
     {
         this.numberOfSeats = numberOfSeats;
+        this.reservations = new ArrayList<>();
+        this.tableNumber = tableNumber;
+        //property is filled when table is getting reserved
+        this.activeReservation = null;
+    }
+
+    public RestaurantTable()
+    {
+        this.reservations = null;
+        this.activeReservation = null;
     }
 
     public void createTables()
@@ -33,7 +44,7 @@ public class RestaurantTable implements Serializable
 
 
         //if the rooms database exists, do not create one
-        if(db.readDocInDB(DBNames.rooms) != null)
+        if(db.readDocInDB(DBNames.restaurantTables) != null)
         {
             return;
         }
@@ -46,7 +57,7 @@ public class RestaurantTable implements Serializable
         RestaurantTable oneTable = null;
 
         int totalAmount = 70;
-        int numberOfSeats = ThreadLocalRandom.current().nextInt(lowestNumberOfSeats, highestNumberOfSeats+1);
+
 
         //use for loop to generate all tables
         for(Integer i=1;i<totalAmount+1;i++)
@@ -54,8 +65,9 @@ public class RestaurantTable implements Serializable
             //create new room HashMap
             HashMap<String, Object> tableObj = new HashMap<>();
 
-                //create one table with random number of numberOfSeats
-                oneTable = new RestaurantTable(numberOfSeats);
+            //create one table with random number of numberOfSeats
+            int numberOfSeats = ThreadLocalRandom.current().nextInt(lowestNumberOfSeats, highestNumberOfSeats+1);
+            oneTable = new RestaurantTable(i,numberOfSeats);
 
             MyUtil util = new MyUtil();
             String serializedRoom = null;
@@ -81,7 +93,7 @@ public class RestaurantTable implements Serializable
 
 
     //reserves a room, and returns the arrayList<Room> of reserved Rooms
-    public ArrayList<Room> reserveTable(int partySize, Reservation pendingReservation)
+    public ArrayList<RestaurantTable> reserveTable(int partySize, Reservation pendingReservation)
     {
         DB db = new DB();
         MyUtil util = new MyUtil();
@@ -91,7 +103,7 @@ public class RestaurantTable implements Serializable
 
 
         //create ArrayList to store retrieved rooms
-        ArrayList<Room> reservedTablesList = new ArrayList<>();
+        ArrayList<RestaurantTable> reservedTablesList = new ArrayList<>();
 
         int maxSeatsAtTable = 10;
         //party size over max seats available returns the number of tables we need
@@ -105,12 +117,14 @@ public class RestaurantTable implements Serializable
         if(tableCount == 0 && remainingSeats > 0)
         {
             tablesMap = getRestaurantTablesMapForPartySize(remainingSeats);
+            tableCount++;
         }
         else if(tableCount > 0 && remainingSeats > 0)
         {
             tablesMap = getRestaurantTablesMapForPartySize(maxSeatsAtTable);
             remainingTablesMap = getRestaurantTablesMapForPartySize(remainingSeats);
             isRemainingSeats = true;
+            tableCount++;
         }
         else if(tableCount > 0 && remainingSeats == 0)
         {
@@ -120,12 +134,13 @@ public class RestaurantTable implements Serializable
             System.out.println(ConsoleColors.yellowText("Whooa, Error reserving table, check reserveTable() in Class: RestaurantTable"));
         }
 
-
+        //make table count final, to use in lambda expression
+        final int finalTableCount = tableCount;
 
         //loop through the tablesMap for the given party size, and reserve all available tables
         for(int i=0;i<tableCount;i++)
         {
-            Map.Entry<String, Object> tableObj = ((isRemainingSeats) ? tablesMap : remainingTablesMap).entrySet().stream().filter((tableEntry) -> {
+            Map.Entry<String, Object> tableObj = ((isRemainingSeats) ? remainingTablesMap : tablesMap).entrySet().stream().filter((tableEntry) -> {
 
                 System.out.println(ConsoleColors.cyanText("Watching Reservation process..."));
                 System.out.println(ConsoleColors.cyanText("is Table: " + tableEntry.getKey() + " available?"));
@@ -143,6 +158,9 @@ public class RestaurantTable implements Serializable
                     //add the reservationID to the current rooms list of reservationID's
                     tableReservationsList.add(pendingReservation.reservationID);
 
+                    //attach the number of tables to pendingReservation
+                    pendingReservation.tableCount = finalTableCount;
+
                     //print that this table is available
                     System.out.println(ConsoleColors.cyanText("\n\nYes!"));
 
@@ -151,6 +169,9 @@ public class RestaurantTable implements Serializable
 
                     //update the current stay's duration (table duration property)
 //                    table.stayDuration = pendingReservation.fromDate.toString()+";"+pendingReservation.toDate.toString();
+
+                    //attach the activeReservation to thisRoom
+                    table.activeReservation = pendingReservation;
 
                     //put the updated table back in the tablesMap the database
                     Map<String, Object> tablesMapFromDB = db.readDocInDB(DBNames.rooms);
@@ -190,8 +211,9 @@ public class RestaurantTable implements Serializable
 
 
             isRemainingSeats = false;
+            remainingTablesMap = null;
 
-            reservedTablesList.add((Room) tableObj.getValue());
+            reservedTablesList.add((RestaurantTable) tableObj.getValue());
 
         }
 
@@ -203,12 +225,12 @@ public class RestaurantTable implements Serializable
     private Map<String, Object> getRestaurantTablesMapForPartySize(int partySize)
     {
         DB dbRef = new DB();
-        Map<String, Object> roomsMap = dbRef.readDocInDB(DBNames.restaurantTables);
+        Map<String, Object> tablesMap = dbRef.readDocInDB(DBNames.restaurantTables);
 
         MyUtil util = new MyUtil();
 
 
-        Map<String, Object> tablesListForPartySize = roomsMap.entrySet().stream().filter((entry -> {
+        Map<String, Object> tablesListForPartySize = tablesMap.entrySet().stream().filter((entry -> {
 
             RestaurantTable oneTable = null;
 
@@ -307,15 +329,28 @@ public class RestaurantTable implements Serializable
 
                 if(pendingReservation.fromDate.equals(reservationFromDBMap.fromDate))
                 {
-                    //if the times are far enough apart, the table is available (return false)
-                    if( (pendingReservation.time.isAfter( LocalTime.of(reservationFromDBMap.time.getHour()+5,0 )))  ||
-                            (pendingReservation.time.isBefore( LocalTime.of(reservationFromDBMap.time.getHour()-5,0 ))))
+
+                    //subtract the hrs...if there are atleast 4 hrs in between the times, the reservation can be made
+                    int hrs = Math.abs(pendingReservation.time.getHour() - reservationFromDBMap.time.getHour());
+                    if(hrs >= 4)
                     {
                         return false;
-                    }else{// if dates are too close, return true
+                    }else{
                         return true;
                     }
-                }else{ //return false if the dates do not match
+
+                    // --- old algorithm ---
+                    //if the times are far enough apart, the table is available (return false)
+//                    if( (pendingReservation.time.isAfter( LocalTime.of(reservationFromDBMap.time.getHour()+4,0 )))  ||
+//                            (pendingReservation.time.isBefore( LocalTime.of(reservationFromDBMap.time.getHour()-4,0 ))))
+//                    {
+//                        return false;
+//                    }else{// if dates are too close, return true
+//                        return true;
+//                    }
+                }
+                else
+                { //return false if the dates do not match
                     return false;
                 }
             }
@@ -327,6 +362,8 @@ public class RestaurantTable implements Serializable
 
         return isRoomAvailable;
     }
+
+
 }
 
 

@@ -2,19 +2,12 @@ package couchdb;
 
 import devutil.ConsoleColors;
 import devutil.MyUtil;
-import hotelbackend.Reservation;
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
-import org.omg.CORBA.Any;
 
-import javax.rmi.CORBA.Util;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -52,6 +45,8 @@ public class Room implements Serializable
 
     public String stayDuration;
     public transient SimpleStringProperty stayDurationProperty = new SimpleStringProperty(this, "stayDuration");
+
+    public Reservation activeReservation;
 
 
     public ArrayList<String> reservations;
@@ -94,6 +89,9 @@ public class Room implements Serializable
 
         this.isAvailableForOccupancy = isAvailableForOccupancy;
         this.isAvailableForOccupancyProperty  = new SimpleBooleanProperty(isAvailableForOccupancy);
+
+        //property is filled when table is getting reserved
+        this.activeReservation = null;
 
 
         if(roomType == allRoomTypes.suite)
@@ -366,6 +364,9 @@ public class Room implements Serializable
 
                     //update the current stay's duration (room duration property)
                     room.stayDuration = pendingReservation.fromDate.toString()+";"+pendingReservation.toDate.toString();
+
+                    //attach the pending reservation to the current rooms activeReservation Property
+                    room.activeReservation = pendingReservation;
 
                     //put the updated room back in the roomsMap the database
                     Map<String, Object> roomsMapFromDB = db.readDocInDB(DBNames.rooms);

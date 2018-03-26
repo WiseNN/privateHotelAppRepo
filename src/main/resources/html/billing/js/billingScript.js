@@ -256,7 +256,7 @@ class Billing
 		purchaseTotalText.innerHTML = withText;
 	}
 
-	showfinalOutBillingTable(bool)
+	showFinalOutBillingTable(bool)
 	{
 
 		console.log("what is show billing boolean: "+bool);

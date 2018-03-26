@@ -5,6 +5,7 @@ import tornadofx.*
 
 import couchdb.DB
 import couchdb.DBNames
+import couchdb.RestaurantTable
 import couchdb.Room
 import hotelbackend.HotelBackEndNorris
 //import hotelbackend.HotelBackend
@@ -72,11 +73,14 @@ class HotelRoomReservationView(parentView: MyButtonBarView) : View()
 
         //create sample data
         val roomsClass = Room()
+        val tablesClass = RestaurantTable()
         val db = DB()
         db.permenantlyRemoveDoc(DBNames.rooms)
         db.permenantlyRemoveDoc(DBNames.reservations)
         db.permenantlyRemoveDoc(DBNames.hotelCalenderEvents)
+        db.permenantlyRemoveDoc(DBNames.restaurantTables)
         roomsClass.createRooms()
+        tablesClass.createTables()
         db.createDoc(DBNames.reservations, HashMap<String, Any>())
         db.createDoc(DBNames.hotelCalenderEvents, HashMap<String, Any>())
 //        ------------------//------------------//------------------//------------------
@@ -194,11 +198,11 @@ class HotelRoomReservationView(parentView: MyButtonBarView) : View()
 
             listOfAvailableRooms.clear()
 
-            val rez =  HotelBackEndNorris().bookRoomNorris(Date.valueOf(fromBookingDatePicker.value), Date.valueOf(toBookingDatePicker.value), roomBookingTypeComboBox.value, numOfBookedRoomsComboBox.value)
-            println(" rez: $rez")
+            val roomRez =  HotelBackEndNorris().bookRoomNorris(Date.valueOf(fromBookingDatePicker.value), Date.valueOf(toBookingDatePicker.value), roomBookingTypeComboBox.value, numOfBookedRoomsComboBox.value)
+            println(" roomRez: $roomRez")
 
 
-            rez.forEach {
+            roomRez.forEach {
 
                 it.roomNumberProperty = SimpleStringProperty(""+it.roomNumber)
                 it.roomTypeProperty = SimpleObjectProperty<Room.allRoomTypes>(it.roomType)
@@ -218,7 +222,7 @@ class HotelRoomReservationView(parentView: MyButtonBarView) : View()
 
             }.apply {
 
-                listOfAvailableRooms.addAll(rez)
+                listOfAvailableRooms.addAll(roomRez)
 
             }
 

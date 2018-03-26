@@ -123,8 +123,8 @@ C  [libjfxwebkit.dylib+0xb25556]  Java_com_sun_webkit_WebPage_twkExecuteScript+0
 j  com.sun.webkit.WebPage.twkExecuteScript(JLjava/lang/String;)Ljava/lang/Object;+0
 j  com.sun.webkit.WebPage.executeScript(JLjava/lang/String;)Ljava/lang/Object;+107
 j  javafx.scene.web.WebEngine.executeScript(Ljava/lang/String;)Ljava/lang/Object;+19
-j  mainhotelapp.RoomBillingView$1.handle(Ljavafx/scene/web/WebEvent;)V+51
-j  mainhotelapp.RoomBillingView$1.handle(Ljavafx/event/Event;)V+5
+j  mainhotelapp.ReservationSummaryFragment$1.handle(Ljavafx/scene/web/WebEvent;)V+51
+j  mainhotelapp.ReservationSummaryFragment$1.handle(Ljavafx/event/Event;)V+5
 j  com.sun.javafx.webkit.UIClientImpl.lambda$dispatchWebEvent$57(Ljavafx/event/EventHandler;Ljavafx/scene/web/WebEvent;)Ljava/lang/Void;+2
 j  com.sun.javafx.webkit.UIClientImpl$$Lambda$481.run()Ljava/lang/Object;+8
 v  ~StubRoutines::call_stub
@@ -200,8 +200,8 @@ v  ~StubRoutines::call_stub
 j  com.sun.webkit.WebPage.twkExecuteScript(JLjava/lang/String;)Ljava/lang/Object;+0
 j  com.sun.webkit.WebPage.executeScript(JLjava/lang/String;)Ljava/lang/Object;+107
 j  javafx.scene.web.WebEngine.executeScript(Ljava/lang/String;)Ljava/lang/Object;+19
-j  mainhotelapp.RoomBillingView$1.handle(Ljavafx/scene/web/WebEvent;)V+51
-j  mainhotelapp.RoomBillingView$1.handle(Ljavafx/event/Event;)V+5
+j  mainhotelapp.ReservationSummaryFragment$1.handle(Ljavafx/scene/web/WebEvent;)V+51
+j  mainhotelapp.ReservationSummaryFragment$1.handle(Ljavafx/event/Event;)V+5
 j  com.sun.javafx.webkit.UIClientImpl.lambda$dispatchWebEvent$57(Ljavafx/event/EventHandler;Ljavafx/scene/web/WebEvent;)Ljava/lang/Void;+2
 j  com.sun.javafx.webkit.UIClientImpl$$Lambda$481.run()Ljava/lang/Object;+8
 v  ~StubRoutines::call_stub

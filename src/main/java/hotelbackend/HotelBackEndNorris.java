@@ -1,20 +1,12 @@
 package hotelbackend;
 
-import couchdb.CalenderEvents;
-import couchdb.DB;
-import couchdb.DBNames;
-import couchdb.Room;
+import couchdb.*;
 import devutil.ConsoleColors;
 
-import java.lang.reflect.Array;
-import java.net.URLEncoder;
-import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Date;
 import java.net.URL;
-import java.util.Map;
-
 
 
 public class HotelBackEndNorris
@@ -23,7 +15,7 @@ public class HotelBackEndNorris
     {
 
         //create the reservation
-        Reservation roomReservation = new Reservation(fromDate, toDate,null,null,null, Reservation.serviceTypes.hotelRoom, "94843345");
+        Reservation roomReservation = new Reservation(fromDate, toDate,null,null,null, Reservation.serviceTypes.hotelRoom, "94843345",null,null,null);
 
         //reserve room
         Room roomClass = new Room();
@@ -31,6 +23,20 @@ public class HotelBackEndNorris
 
         //return arrayList of rooms
         return listOfRooms;
+    }
+
+    public ArrayList<RestaurantTable>  bookTable(Date fromDate, LocalTime time, Integer partySize, String specialRequests,String name, String emailAddress, String phoneNumber)
+    {
+
+        //create the reservation
+        Reservation tableReservation = new Reservation(fromDate, null,time,partySize,specialRequests, Reservation.serviceTypes.restuarantBar, "94843345",name,emailAddress, phoneNumber);
+
+        //reserve room
+        RestaurantTable tableClass = new RestaurantTable();
+        ArrayList<RestaurantTable> listOfTables = tableClass.reserveTable(partySize, tableReservation);
+
+        //return arrayList of rooms
+        return listOfTables;
     }
 
 
