@@ -9,11 +9,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox maxHeight="1.7976931348623157E308" prefHeight="601.0" prefWidth="860.0" stylesheets="@../styles/finalOut_POS_Style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="51.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;">
+      <AnchorPane prefHeight="43.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;">
          <children>
             <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-ID : " />
             <Text layoutX="47.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WiseNN" />
@@ -22,6 +23,16 @@
                   <Image url="@../images/racing-flag2.png" />
                </image>
             </ImageView>
+            <Text layoutX="404.84210205078125" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order-ID # : " AnchorPane.leftAnchor="404.1011047363281">
+               <font>
+                  <Font name="Avenir Heavy Oblique" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="484.1011047363281" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zelia" AnchorPane.leftAnchor="484.1011047363281">
+               <font>
+                  <Font name="Avenir Heavy Oblique" size="13.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="554.0" prefWidth="860.0" style="-fx-background-color: #2096EF;" VBox.vgrow="ALWAYS">
@@ -36,9 +47,9 @@
             <Text layoutX="254.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px;" text="/" />
             <Text layoutX="28.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px;" text="CVN # :" />
             <TextField layoutX="539.0" layoutY="351.0" prefHeight="53.0" prefWidth="107.0" style="-fx-font-size: 30px;" styleClass="textFields" AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="539.0" />
-            <Button contentDisplay="CENTER" layoutX="16.0" layoutY="227.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="stopBtn" text="VOID ORDER" textAlignment="CENTER" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="16.0" />
-            <Button contentDisplay="CENTER" layoutX="210.0" layoutY="222.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="checkoutBtn" text="CHECK OUT" textAlignment="CENTER" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="16.0" />
-            <Button contentDisplay="CENTER" layoutX="210.0" layoutY="226.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="editOrderBtn" text="EDIT ORDER" textAlignment="CENTER" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="210.0" />
+            <Button contentDisplay="CENTER" layoutX="17.0" layoutY="234.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="stopBtn" text="VOID ORDER" textAlignment="CENTER" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="17.0" />
+            <Button contentDisplay="CENTER" layoutX="211.0" layoutY="234.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="checkoutBtn" text="CHECK OUT" textAlignment="CENTER" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="211.0" />
+            <Button contentDisplay="CENTER" layoutX="17.0" layoutY="386.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="editOrderBtn" text="EDIT ORDER" textAlignment="CENTER" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="17.0" />
             <Button contentDisplay="CENTER" layoutX="211.0" layoutY="379.0" mnemonicParsing="false" prefHeight="132.0" prefWidth="142.0" styleClass="manualOverrideBtn" text="MANUAL OVERRIDE" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="211.0" />
             <Text layoutX="244.20000000000005" layoutY="344.8235683441162" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px;" text="Additional Payment Methods :" AnchorPane.bottomAnchor="208.0729160308838" AnchorPane.leftAnchor="394.91582031250005" />
             <Text layoutX="395.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="roomTxt" text="Room # :" AnchorPane.bottomAnchor="156.67578125" AnchorPane.leftAnchor="392.20683593750005" />

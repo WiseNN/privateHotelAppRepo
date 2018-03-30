@@ -5,11 +5,14 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox maxHeight="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -19,7 +22,23 @@
                <image>
                   <Image url="@../images/cart3.png" />
                </image></ImageView>
+            <Text layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-ID : " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="17.0" />
+            <Text layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WiseNN" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="17.431640625" />
+            <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="120.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@../../../../../../../IntelliJ%20Projects/GluonMobile-MultiViewProjectwithFXMLApp/src/main/resources/com/gluonapplication/SampleApp3/images/racing-flag2.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="527.6816101074219" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order-ID # : " AnchorPane.rightAnchor="255.05938720703125" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="Avenir Heavy Oblique" size="13.0" />
+               </font>
+            </Text>
+            <TextField layoutX="609.0" layoutY="8.0" prefHeight="34.0" prefWidth="133.0" style="-fx-padding: 0 0 0 10;" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" text="Zelia" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </AnchorPane>
       <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
          <AnchorPane maxWidth="350.0" minHeight="-Infinity" minWidth="-Infinity">

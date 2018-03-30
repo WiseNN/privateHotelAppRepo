@@ -1,0 +1,41 @@
+.bgRect{
+    /*-fx-effect: innershadow(gaussian , rgba(255,255,255,0.6), 700,0,0,0);*/
+    -fx-background-color: rgba(0,0,0,0.77);
+    /*-fx-fill: rgba(255,255,255,.5);*/
+}
+
+.cornerLabel{
+    -fx-border-style: solid;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-text-fill: white;
+    /*-fx-label-padding: 0 0 0 40;*/
+    -fx-font-size: 23px;
+    /*-fx-font-style: bold;*/
+    -fx-font-family: "Arial Rounded MT Bold";
+
+}
+
+.stickyNoteLabel{
+    -fx-font-family: "Avenir Next Condensed";
+    -fx-font-size: 20;
+    -fx-background-color: transparent;
+
+}
+
+.text-area {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
