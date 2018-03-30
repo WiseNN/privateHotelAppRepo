@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="232px" height="251px" viewBox="0 0 232 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="63.7449516%" gradientTransform="translate(0.500000,0.500000),scale(1.000000,0.917790),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#40ADFF" offset="0%"></stop>
+            <stop stop-color="#1D94ED" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="221" y="0" width="221.1873" height="241"></rect>
+        <filter x="-2.5%" y="-3.5%" width="109.9%" height="108.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="6" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.487262228 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="POS-System" transform="translate(-755.000000, -627.000000)">
+            <g id="Btn_Row1-Copy" transform="translate(534.000000, 630.000000)">
+                <g id="Rectangle-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#radialGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#1081D7" stroke-width="5" x="223.5" y="2.5" width="216.1873" height="236"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

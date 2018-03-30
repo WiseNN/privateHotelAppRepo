@@ -1,0 +1,39 @@
+*{
+    font-style: normal !important;
+}
+#myBtn{
+    -fx-background-color: radial-gradient(focus-angle 270deg, focus-distance 0%, center 50% 50%, radius 63.7449516%, reflect, #40ADFF 0%, #1D94ED 100%);
+    -fx-border-color: #1081D7;
+    -fx-border-width:  5px;
+    -fx-border-style: solid;
+    /*-fx-effect: dropshadow(gaussian , black , 4,1,6,2);*/
+    -fx-padding: 0px;
+    -fx-pref-height: 100px;
+    -fx-pref-width: 5000px;
+    -fx-padding: 5px;
+    -fx-min-width: 53.2px;
+    -fx-font-style: bold !important;
+    -fx-font-family: "Avenir Next";
+    -fx-font-size: 16px;
+
+}
+
+/*.sideBarBtn{*/
+    /*!*-fx-pref-height: 100;*!*/
+
+
+/*}*/
+
+#onScreenHorizRect{
+    -fx-effect: innershadow(gaussian , rgba(0,0,0,.2), 21,0,0,0);
+    -fx-background-color: #F0EF9C;
+}
+
+#onScreenLabel{
+    -fx-text-fill: black;
+    -fx-font-family: "Avenir Next";
+    -fx-font-size: 43px;
+    -fx-font-style: normal !important;
+    -fx-font-weight: normal !important;
+    -fx-label-padding: 0 0 0 10;
+}

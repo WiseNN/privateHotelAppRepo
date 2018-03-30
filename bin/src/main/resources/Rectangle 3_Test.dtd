@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/Rectangle 3_Test.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE svg SYSTEM "Rectangle 3_Test.dtd">
+
+    <svg>
+    ...
+    </svg>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT svg (title|desc|defs|g)*>
+<!ATTLIST svg
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    viewBox CDATA #IMPLIED
+    version CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+    xmlns:xlink CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT title (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT desc (#PCDATA)>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT defs (radialGradient|rect|filter)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT radialGradient (stop)*>
+<!ATTLIST radialGradient
+    cx CDATA #IMPLIED
+    cy CDATA #IMPLIED
+    fx CDATA #IMPLIED
+    fy CDATA #IMPLIED
+    r CDATA #IMPLIED
+    gradientTransform CDATA #IMPLIED
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT stop EMPTY>
+<!ATTLIST stop
+    stop-color CDATA #IMPLIED
+    offset CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT rect EMPTY>
+<!ATTLIST rect
+    id CDATA #IMPLIED
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    stroke CDATA #IMPLIED
+    stroke-width CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT filter (feMorphology|feOffset|feGaussianBlur|feComposite|feColorMatrix)*>
+<!ATTLIST filter
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    filterUnits CDATA #IMPLIED
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT feMorphology EMPTY>
+<!ATTLIST feMorphology
+    radius CDATA #IMPLIED
+    operator CDATA #IMPLIED
+    in CDATA #IMPLIED
+    result CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT feOffset EMPTY>
+<!ATTLIST feOffset
+    dx CDATA #IMPLIED
+    dy CDATA #IMPLIED
+    in CDATA #IMPLIED
+    result CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT feGaussianBlur EMPTY>
+<!ATTLIST feGaussianBlur
+    stdDeviation CDATA #IMPLIED
+    in CDATA #IMPLIED
+    result CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT feComposite EMPTY>
+<!ATTLIST feComposite
+    in CDATA #IMPLIED
+    in2 CDATA #IMPLIED
+    operator CDATA #IMPLIED
+    result CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT feColorMatrix EMPTY>
+<!ATTLIST feColorMatrix
+    values CDATA #IMPLIED
+    type CDATA #IMPLIED
+    in CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT g (g|use|rect)*>
+<!ATTLIST g
+    id CDATA #IMPLIED
+    stroke CDATA #IMPLIED
+    stroke-width CDATA #IMPLIED
+    fill CDATA #IMPLIED
+    fill-rule CDATA #IMPLIED
+    transform CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT use EMPTY>
+<!ATTLIST use
+    fill CDATA #IMPLIED
+    fill-opacity CDATA #IMPLIED
+    filter CDATA #IMPLIED
+    fill-rule CDATA #IMPLIED
+    xlink:href CDATA #IMPLIED
+  >

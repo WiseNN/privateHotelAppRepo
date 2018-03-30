@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+
+
+<Button id="myBtn" mnemonicParsing="false" prefHeight="359.0" prefWidth="365.0" stylesheets="@../styles/POS_BtnStyle.css" text="Mac N' Cheese" textFill="WHITE" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <font>
+      <Font name="Avenir Next Bold" size="36.0" />
+   </font>
+</Button>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutX="335.0" layoutY="14.0" orientation="VERTICAL" prefHeight="569.0" prefWidth="7.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="14.0" />
+      <Separator layoutX="15.0" layoutY="183.0" prefHeight="1.0" prefWidth="314.0" />
+      <TextField fx:id="rewardsNumTextField" alignment="CENTER" layoutX="73.0" layoutY="14.0" prefHeight="27.0" prefWidth="180.0" promptText="Rewards Number" />
+      <Text layoutX="157.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" />
+      <TextField fx:id="roomNumTextField" alignment="CENTER" layoutX="73.0" layoutY="84.0" prefHeight="27.0" prefWidth="180.0" promptText="Room Number" />
+      <Button fx:id="lookUpRomNumOrRewardsNumBtn" layoutX="125.0" layoutY="127.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="79.0" text="Look Up" />
+      <ComboBox fx:id="nameSalutationComboBox" layoutX="23.0" layoutY="234.0" prefHeight="27.0" prefWidth="46.0" />
+      <TextField fx:id="firstNameTextField" alignment="CENTER" layoutX="82.0" layoutY="234.0" prefHeight="27.0" prefWidth="114.0" promptText="&quot;John&quot;" />
+      <TextField fx:id="lastNameTextField" alignment="CENTER" layoutX="206.0" layoutY="234.0" prefHeight="27.0" prefWidth="114.0" promptText="&quot;Doe&quot;" />
+      <RadioButton fx:id="maleRadioBtn" layoutX="62.0" layoutY="274.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Male" />
+      <RadioButton fx:id="femaleRadioBtn" layoutX="126.0" layoutY="274.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Female" />
+      <Text layoutX="23.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:" />
+      <TextField fx:id="firstFourPhoneNumTextField" alignment="CENTER" layoutX="23.0" layoutY="323.0" prefHeight="27.0" prefWidth="50.0" promptText="(404)" />
+      <TextField fx:id="secondForPhoneNumTextField" alignment="CENTER" layoutX="91.0" layoutY="323.0" prefHeight="27.0" prefWidth="50.0" promptText="628" />
+      <TextField fx:id="lastFourPhoneNumTextField" alignment="CENTER" layoutX="159.0" layoutY="323.0" prefHeight="27.0" prefWidth="50.0" promptText="7234" />
+      <Text layoutX="81.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <Text layoutX="148.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <Text layoutX="23.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" />
+      <Text layoutX="25.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+      <TextField fx:id="emailTextField" alignment="CENTER" layoutX="26.0" layoutY="375.0" prefHeight="27.0" prefWidth="180.0" promptText="example@gmail.com" />
+      <Text layoutX="28.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Separator layoutX="15.0" layoutY="416.0" prefHeight="1.0" prefWidth="314.0" />
+      <Text layoutX="18.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treatment Details" underline="true" />
+      <DatePicker fx:id="treatmentDatePicker" layoutX="19.0" layoutY="473.0" prefHeight="27.0" prefWidth="114.0" />
+      <Text layoutX="22.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+      <Text layoutX="157.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:" />
+      <ComboBox fx:id="treatmentStartTimeComboBox" layoutX="154.0" layoutY="473.0" prefHeight="27.0" prefWidth="114.0" />
+      <Text layoutX="22.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Party Size:" />
+      <ComboBox fx:id="partySizeTreatmentDetailComboBox" layoutX="19.0" layoutY="537.0" prefHeight="27.0" prefWidth="114.0" />
+      <Text layoutX="156.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Element Type:" />
+      <ComboBox fx:id="elementTypeTreatmentDetailComboBox" layoutX="154.0" layoutY="537.0" prefHeight="27.0" prefWidth="114.0" />
+      <Text layoutX="18.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information" underline="true" />
+      <Separator layoutX="349.0" layoutY="183.0" prefHeight="3.0" prefWidth="334.0" />
+      <Text layoutX="346.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promotions" underline="true" />
+      <WebView fx:id="promotionsWebView" layoutX="352.0" layoutY="38.0" prefHeight="137.0" prefWidth="324.0" />
+      <ComboBox fx:id="massageTreatmentComboBox" layoutX="351.0" layoutY="250.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="352.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Massages" />
+      <ComboBox fx:id="facialTreatmentComboBox" layoutX="524.0" layoutY="250.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="524.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facials" />
+      <ComboBox fx:id="HydraFacialTreatmentComboBox" layoutX="353.0" layoutY="309.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="354.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HydraFacial MD®" />
+      <ComboBox fx:id="scrubNWrapTreatmentComboBox" layoutX="526.0" layoutY="309.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="526.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scrubs &amp; Wraps" />
+      <ComboBox fx:id="escapeTreatmentComboBox" layoutX="353.0" layoutY="367.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="354.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escape Packages" />
+      <ComboBox fx:id="hairTreatmentComboBox" layoutX="526.0" layoutY="367.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="526.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hair Treatments" />
+      <ComboBox fx:id="makeupNHairRemovalTreatmentComboBox" layoutX="352.0" layoutY="428.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="353.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Makeup &amp; Hair Removal" />
+      <ComboBox fx:id="WeddingSpaServicesTreatmentComboBox" layoutX="525.0" layoutY="428.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="525.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wedding Spa Services" />
+      <ComboBox fx:id="ChuanSignatureTreatmentComboBox" layoutX="354.0" layoutY="487.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="355.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chuan Signature Man" />
+      <ComboBox fx:id="chuanFinishingTouchTreatmentComboBox" layoutX="527.0" layoutY="487.0" prefHeight="27.0" prefWidth="153.0" />
+      <Text layoutX="527.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chuan Finishing Touch" />
+      <ComboBox fx:id="chuanSignatureHandNFootTreatmentComboBox" layoutX="354.0" layoutY="545.0" prefHeight="27.0" prefWidth="259.0" />
+      <Text layoutX="355.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chuan Signature Hand &amp; Foot Therapies" />
+      <Text layoutX="345.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treatment Type" underline="true" />
+      <Separator layoutX="351.0" layoutY="591.0" prefHeight="3.0" prefWidth="334.0" />
+      <TextArea fx:id="occasionNSpecialRequestTextArea" layoutX="351.0" layoutY="602.0" prefHeight="102.0" prefWidth="334.0" promptText="Occasions &amp; Special Requests..." />
+      <Button fx:id="reserveSpaBtn" layoutX="350.0" layoutY="722.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="334.0" text="Reserve Spa" AnchorPane.bottomAnchor="18.0" />
+   </children>
+</AnchorPane>

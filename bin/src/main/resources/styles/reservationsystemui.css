@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.root{
+    -fx-font-size: 40px;
+}
+
+.tableViewCheckBox{
+    margin-left: 0px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+
+}
