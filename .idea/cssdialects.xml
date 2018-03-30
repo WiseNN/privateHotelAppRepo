@@ -3,5 +3,6 @@
   <component name="CssDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/resources/styles/POS_BtnStyle.css" dialect="CLASSIC" />
     <file url="file://$PROJECT_DIR$/src/main/resources/styles/RectBtnStyle.css" dialect="CLASSIC" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" dialect="CLASSIC" />
   </component>
 </project>
