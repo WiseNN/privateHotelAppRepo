@@ -8,10 +8,11 @@
     -fx-text-fill: black;
     -fx-font-family: Avenir;
     -fx-font-size: 36px;
-    -fx-font-style: bold !important;
+    -fx-font-style: bold;
     -fx-font-weight: 300;
     -fx-label-padding: 0 0 0 10;
     /*-fx-background-color: red;*/
+
 }
 
 .deleteBtn{

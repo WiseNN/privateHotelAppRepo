@@ -39,6 +39,7 @@ class MyButtonBarView constructor() : View()
                 this.prefWidthProperty().bind(root.prefWidthProperty())
                 this.prefHeightProperty().bind(root.heightProperty().divide(barBtnSizeDiviser))
 
+
                 action{
                     println("Presenting 1 ")
 

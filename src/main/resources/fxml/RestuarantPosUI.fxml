@@ -34,7 +34,7 @@
                   <Font name="Avenir Heavy Oblique" size="13.0" />
                </font>
             </Text>
-            <TextField layoutX="609.0" layoutY="8.0" prefHeight="34.0" prefWidth="133.0" style="-fx-padding: 0 0 0 10;" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" text="Zelia" />
+            <TextField layoutX="609.0" layoutY="8.0" prefHeight="34.0" prefWidth="133.0" style="-fx-padding: 0 0 0 10;" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" text="Zelia" AnchorPane.rightAnchor="118.0" />
          </children>
          <opaqueInsets>
             <Insets />

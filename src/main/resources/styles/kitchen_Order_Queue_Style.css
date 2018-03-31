@@ -1,0 +1,35 @@
+.titleLabel{
+    -fx-label-padding: 0 0 0 30;
+    /*-fx-padding: 0 0 0 10;*/
+    -fx-background-color: #939393;
+    -fx-text-fill: white;
+    -fx-font-family: Courier;
+    -fx-font-style: bold;
+    -fx-font-size: 40px;
+
+}
+
+.body{
+    -fx-background-color: blue;
+
+}
+
+.orderNumber{
+    /*-fx-background-color: #939393;*/
+    -fx-border-color: #939393;
+    -fx-border-width: 7px;
+    -fx-font-size: 27px;
+    -fx-text-fill: white;
+    -fx-font-family: Courier;
+}
+
+.orderItemLabel{
+    -fx-label-padding: 10 10 0 10;
+    -fx-font-family: Courier;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-border-color: #939393;
+    -fx-border-width: 3px;
+    -fx-border-style: solid;
+
+}
