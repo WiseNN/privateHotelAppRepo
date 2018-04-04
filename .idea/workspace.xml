@@ -9,17 +9,11 @@
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
-      <change beforePath="$PROJECT_DIR$/hotelapp.iml" afterPath="$PROJECT_DIR$/hotelapp.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" afterPath="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java" afterPath="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Edit_POS_Menu_UI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Edit_POS_Menu_UI.fxml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RestuarantPosUI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RestuarantPosUI.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/rewards_System_UI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/rewards_System_UI.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" afterPath="$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/sideBarBtnStyle.css" afterPath="$PROJECT_DIR$/src/main/resources/styles/sideBarBtnStyle.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/DBNames.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/DBNames.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/RestuarantPosUI.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/RestuarantPosUI.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,19 +28,71 @@
       <file leaf-file-name="MyButtonBarView.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantPOSView.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FXKt.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/FXKt.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HotelBackEndNorris.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurantItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/App.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurantPOSView.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="96" column="42" lean-forward="false" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+            <state relative-caret-position="295">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditPOSView.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#455#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,63 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlsKt.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/ControlsKt.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Labeled.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Labeled.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="144" column="45" lean-forward="false" selection-start-line="144" selection-start-column="45" selection-end-line="144" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditPOSView.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="82" column="66" lean-forward="false" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
-              <folding>
-                <element signature="e#22#427#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotelBackEndNorris.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestaurantItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,10 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Mangz</find>
-      <find>Mang</find>
-      <find>addressOneTextField</find>
-      <find>notes</find>
       <find>TD</find>
       <find>checks</find>
       <find>getRoo</find>
@@ -169,7 +159,6 @@
       <find>racing-flag</find>
       <find>barBtnSizeDiviser</find>
       <find>inner</find>
-      <find>submitBtn</find>
       <find>stream</find>
       <find>find</find>
       <find>btnStyle</find>
@@ -177,6 +166,11 @@
       <find>addC</find>
       <find>create</find>
       <find>addCat</find>
+      <find>this.ad</find>
+      <find>MapCh</find>
+      <find>Modify Item</find>
+      <find>submitBtn</find>
+      <find>toggleState</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -236,11 +230,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/fxml/Edit_POS_Menu_UI.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/sideBarBtnStyle.css" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt" />
       </list>
     </option>
   </component>
@@ -637,12 +631,12 @@
       <workItem from="1522346316295" duration="29400000" />
       <workItem from="1522441528285" duration="9439000" />
       <workItem from="1522457618368" duration="13073000" />
-      <workItem from="1522633025577" duration="42515000" />
+      <workItem from="1522633025577" duration="56436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528689000" />
+    <option name="totallyTimeSpent" value="542610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -656,7 +650,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25272068" sideWeight="0.6230329" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4292624" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4292624" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45344618" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -669,7 +663,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42321643" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42321643" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -703,7 +697,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4292624" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45344618" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26466382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26466382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -901,39 +895,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
-          <line>43</line>
+          <line>72</line>
           <properties />
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
-          <line>47</line>
+          <line>80</line>
           <properties />
           <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
           <line>88</line>
           <properties />
           <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
-          <line>96</line>
-          <properties />
-          <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
@@ -982,6 +958,54 @@
           <line>120</line>
           <properties />
           <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>154</line>
+          <properties />
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>156</line>
+          <properties />
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="165" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java</url>
@@ -1121,6 +1145,12 @@
           <properties />
           <option name="timeStamp" value="141" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt</url>
           <line>47</line>
@@ -1135,7 +1165,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
-          <line>25</line>
+          <line>36</line>
           <properties myFieldName="toggleState" myClassName="mainhotelapp.EditPOSView" />
           <option name="timeStamp" value="134" />
         </line-breakpoint>
@@ -1148,7 +1178,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="155" />
+      <option name="time" value="166" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
@@ -1158,6 +1188,10 @@
         <watch expression="sideBar.children" language="kotlin" />
         <watch expression="menuDB" language="kotlin" />
         <watch expression="(it.source as Button).textProperty().get()" language="kotlin" />
+        <watch expression="category" language="kotlin" />
+        <watch expression="toggleState" language="kotlin" />
+        <watch expression="toggleState" language="kotlin" />
+        <watch expression="(editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).textProperty()" language="kotlin" />
       </configuration>
     </watches-manager>
   </component>
@@ -1172,6 +1206,21 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>(editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).textProperty()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>toggleState</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>category</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>(it.source as Button).textProperty().get()</expression-string>
         <language-id>kotlin</language-id>
@@ -1207,52 +1256,9 @@
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>toggleState</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text.value</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import javafx.scene.control.RadioButton</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text</expression-string>
-        <language-id>kotlin</language-id>
-        <custom-info>import javafx.scene.control.RadioButton</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/ReservationSummaryFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3173">
-          <caret line="167" column="65" lean-forward="false" selection-start-line="167" selection-start-column="65" selection-end-line="167" selection-end-column="65" />
-          <folding>
-            <element signature="e#22#481#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/SubmitBtnTableViewCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="64" column="110" lean-forward="false" selection-start-line="64" selection-start-column="110" selection-end-line="64" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/customCells/PackagesTableViewCell.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="69" column="22" lean-forward="false" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -1523,14 +1529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/FXKt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Parent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1598,30 +1596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.2.21/kotlin-stdlib-1.2.21-sources.jar!/generated/_Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1638,29 +1612,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/beans/binding/StringExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#1142#1143#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectPropertyBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#1722#1723#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/App.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/FXKt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="82" column="66" lean-forward="false" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
+        <state relative-caret-position="134">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <element signature="e#22#427#0" expanded="true" />
+            <element signature="e#22#455#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="96" column="42" lean-forward="false" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>

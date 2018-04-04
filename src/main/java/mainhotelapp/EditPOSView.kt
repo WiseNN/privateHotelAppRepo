@@ -3,13 +3,14 @@ package mainhotelapp
 import couchdb.DB
 import couchdb.DBNames
 import couchdb.RestaurantItem
+import devutil.ConsoleColors
 import hotelbackend.HotelBackEndNorris
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.value.ObservableValue
-import javafx.scene.control.Button
-import javafx.scene.control.RadioButton
-import javafx.scene.control.TextField
-import javafx.scene.control.ToggleGroup
+import javafx.collections.MapChangeListener
+import javafx.collections.ObservableMap
+import javafx.scene.control.*
+import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 import tornadofx.*
 
@@ -21,10 +22,25 @@ class EditPOSView(parentView : MyButtonBarView) : View()
     val itemTextField : TextField by fxid()
     val priceTextField : TextField by fxid()
     val submitBtn : Button by fxid()
+    val screen : AnchorPane by fxid()
 
+
+    //internal UI Elements
+    val categoriesComboBox = ComboBox<String>()
+    val itemsComboBox = ComboBox<String>()
+
+    //internal data models
+    var editMenuDB = (parentView.restuarantPOSView as RestaurantPOSView).menuDB
+    var categoriesList = mutableListOf("").observable()
+    var itemsList = mutableListOf("").observable()
 
 //    var toggleState = (editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text
-var toggleState : SimpleStringProperty = SimpleStringProperty("")
+    var toggleState : String? = null
+
+    //retain instance to RestaurantPOSView
+//    val restaurantView =
+
+
 
 
 
@@ -32,75 +48,229 @@ var toggleState : SimpleStringProperty = SimpleStringProperty("")
 
     init {
 
-        val selectedRadioBtn = (editItemsToggleGroup.selectedToggleProperty().get() as RadioButton)
-        //make biDirectional to avoid using an Observable, can use another property instead
-        toggleState.bindBidirectional(selectedRadioBtn.textProperty())
+
+        //set categoriesComboBox Invisible Boolean
+        categoriesComboBox.visibleProperty().set(false)
+
+
+        editMenuDB!!.addListener(MapChangeListener {
+            println("changed!!")
+            updateCategoriesList()
+        })
+
+
+        categoriesComboBox.selectionModel.selectedItemProperty().addListener(ChangeListener { observable, oldValue, newValue ->
+
+            //render a new list per each category selection
+            updateItemsList(newValue)
+        })
 
 
 
 //        toggleState.bind(selectedRadioBtn.textProperty())
 
 
-//        editItemsToggleGroup.selectedToggleProperty().addListener(ChangeListener { observable, oldValue, newValue ->
-//            val selectedRadioTxt = (editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text
-//            println("selected Toggle: "+selectedRadioTxt)
-//
-//                toggleState = selectedRadioTxt
-//
-//
-//            when(toggleState)
-//            {
-//                "Add Item" -> {
-//                    categoryTextField.disableProperty().set(false)
-//                    itemTextField.disableProperty().set(false)
-//                    priceTextField.disableProperty().set(false)
-//                }
-//                "Remove Item" -> {
-//                    categoryTextField.disableProperty().set(false)
-//                    itemTextField.disableProperty().set(false)
-//                    priceTextField.disableProperty().set(true)
-//                }
-//                "Modify Item" -> {
-//                    categoryTextField.disableProperty().set(false)
-//                    itemTextField.disableProperty().set(false)
-//                    priceTextField.disableProperty().set(false)
-//                }
-//
-//            }
-//        })
+        editItemsToggleGroup.selectedToggleProperty().addListener(ChangeListener { observable, oldValue, newValue ->
+
+
+            toggleState = (editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text
+            toggleActionHandler(toggleState!!)
+
+            println("selected Toggle: "+toggleState)
+
+
+
+
+
+        })
 
 
         submitBtn.setOnMouseClicked {
-            val category = categoryTextField.text
-            val item = if (!itemTextField.text.equals("")) itemTextField.text else ""
-            val price = if (!priceTextField.text.equals("")) priceTextField.text.toDouble() else -1.0
-            var updatedName = null
-            var updatedPrice = -1
-            var sendState = ""
-
-            sendState = toggleState.value
-            //silently add a category if the item is not passed
-            if(toggleState.value.equals("Add Item") && item.equals("") && !category.equals(""))
+                submitUpdate()
+        }
+        submitBtn.setOnKeyPressed {
+            println(ConsoleColors.cyanText("edit Menu Btn: ${it.character}"))
+            if(it.character == "ENTER")
             {
-                sendState = "Add Category"
+                submitUpdate()
             }
-            else if(toggleState.equals("Remove Item") && item.equals("") && !category.equals(""))
-            {
-                sendState = "Remove Category"
+        }
+
+
+        //call updateItems to hydrate comboBox with the first category key
+        val menuMap = editMenuDB["menu"]!! as Map<String, Any>
+        if (menuMap.size > 0) updateItemsList(menuMap.keys.first())
+
+        //show comboBox if necessary
+
+        val selectedRadioTxt = (editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text
+        toggleActionHandler(selectedRadioTxt)
+
+    }
+
+    fun showCategoriesComboBox()
+    {
+
+
+        //create combobox for the category
+        categoriesComboBox.items = categoriesList
+
+        categoriesComboBox.resizeRelocate(categoryTextField.layoutX,categoryTextField.layoutY,categoryTextField.width,categoryTextField.height)
+        screen.add(categoriesComboBox)
+    }
+    fun showItemsComboBox()
+    {
+
+
+        //create combobox for the category
+        itemsComboBox.items = itemsList
+
+        itemsComboBox.resizeRelocate(itemTextField.layoutX,categoryTextField.layoutY,itemTextField.width,itemTextField.height)
+        screen.add(itemsComboBox)
+    }
+    fun updateCategoriesList()
+    {
+
+        val editMenuMap = editMenuDB!!["menu"] as Map<String, Any>
+        if(categoriesList.size > 0) categoriesList.clear()
+
+        categoriesList.addAll(editMenuMap.keys)
+        categoryTextField.text = ""
+
+    }
+
+    fun updateItemsList(inCategory:String)
+    {
+        val editMenuMap = editMenuDB!!["menu"] as Map<String, Any>
+        if(itemsList.size > 0) itemsList.clear()
+
+        val itemsListInMenu = editMenuMap[inCategory] as ArrayList<RestaurantItem>
+        var tempList = ArrayList<String>().observable()
+        itemsListInMenu.forEach {  tempList.add(it.name)}
+        itemsList = tempList
+    }
+
+    fun submitUpdate()
+    {
+        val category = if(categoryTextField.isVisible) categoryTextField.text else categoriesComboBox.selectedItem
+
+        val item = if (!itemTextField.text.equals("")) itemTextField.text else ""
+        val price = if (!priceTextField.text.equals("")) priceTextField.text.toDouble() else -1.0
+        var updatedName = null
+        var updatedPrice = -1
+        var sendState = ""
+
+        //silently fail if category is not specified
+        if(category == "" ||category == null)
+        {
+            println(ConsoleColors.yellowText("No Category Has Been Selected!"))
+            return
+        }
+
+        HotelBackEndNorris().updatePOSMenu(toggleState, category, item, price,updatedName, updatedPrice)
+
+
+
+
+
+
+        editMenuDB!!["menu"] = RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)).observable()
+
+        println("map: "+editMenuDB!!["menu"].toString())
+    }
+
+    fun toggleActionHandler(selectedRadioTxt: String)
+    {
+        when(selectedRadioTxt)
+        {
+            "Add Item" -> {
+
+                categoryTextField.disableProperty().set(true)
+                itemTextField.disableProperty().set(false)
+                priceTextField.disableProperty().set(false)
+
+                //show comboBox
+                if(!categoriesComboBox.isVisible)
+                {
+                    //make categories textField invisible
+                    categoryTextField.visibleProperty().set(false)
+                    //set comboBox visible property (doesn't update automatically)
+                    categoriesComboBox.visibleProperty().set(true)
+                    showCategoriesComboBox()
+                }
+
+
             }
+            "Remove Item" -> {
+                categoryTextField.disableProperty().set(false)
+                priceTextField.disableProperty().set(true)
 
 
 
-            HotelBackEndNorris().updatePOSMenu(sendState, category, item, price,updatedName, updatedPrice)
+                //show comboBox
+                if(!categoriesComboBox.isVisible)
+                {
+                    //make categories textField invisible
+                    categoryTextField.visibleProperty().set(false)
+                    //make items textField invisible
+                    itemTextField.disableProperty().set(false)
+
+                    //set comboBox visible property (doesn't update automatically)
+                    categoriesComboBox.visibleProperty().set(true)
+
+                    showItemsComboBox()
+                }
+            }
+            "Modify Item" -> {
+                categoryTextField.disableProperty().set(false)
+                itemTextField.disableProperty().set(false)
+                priceTextField.disableProperty().set(false)
 
 
-            val restaurantView = (find(MyButtonBarView::class).restuarantPOSView as RestaurantPOSView)
+
+                //show comboBox
+                if(!categoriesComboBox.isVisible)
+                {
+                    //make categories textField invisible
+                    categoryTextField.visibleProperty().set(false)
+                    //set comboBox visible property (doesn't update automatically)
+                    categoriesComboBox.visibleProperty().set(true)
+                    showCategoriesComboBox()
+                }
+            }
+            "Add Category" -> {
+                categoryTextField.disableProperty().set(false)
+                itemTextField.disableProperty().set(true)
+                priceTextField.disableProperty().set(true)
+
+
+                //show textBox
+                if(!categoryTextField.isVisible)
+                {
+                    categoriesComboBox.visibleProperty().set(false)
+
+                    categoryTextField.visibleProperty().set(true)
+                }
+
+            }
+            "Remove Category" -> {
+                categoryTextField.disableProperty().set(true)
+                itemTextField.disableProperty().set(true)
+                priceTextField.disableProperty().set(true)
 
 
 
-        restaurantView.menuDB["menu"] = RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)).observable()
+                //show comboBox
+                if(!categoriesComboBox.isVisible)
+                {
+                    //make categories textField invisible
+                    categoryTextField.visibleProperty().set(false)
+                    //set comboBox visible property (doesn't update automatically)
+                    categoriesComboBox.visibleProperty().set(true)
+                    showCategoriesComboBox()
+                }
 
-        println("map: "+restaurantView.menuDB.toString())
+            }
 
         }
     }

@@ -201,7 +201,12 @@ class MyButtonBarView constructor() : View()
         roomRezView = HotelRoomReservationView(this)
         tableRezView = RestaurantReservationView(this)
         restuarantPOSView = RestaurantPOSView(this)
+
         editPOSView = EditPOSView(this)
+         (editPOSView as EditPOSView).editMenuDB = (restuarantPOSView as RestaurantPOSView).menuDB
+
+
+
 
         this.add(roomRezView!!.root)
         roomResBtn!!.disableProperty().set(true)

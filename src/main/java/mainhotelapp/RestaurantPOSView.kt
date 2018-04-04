@@ -35,8 +35,8 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
 
 
-        val map = mutableMapOf<String, Any>().observable()
-        map.put("menu", RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)))
+
+        menuDB.put("menu", RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)))
 
         menuDB.addListener(MapChangeListener {
             println("changed!!")
