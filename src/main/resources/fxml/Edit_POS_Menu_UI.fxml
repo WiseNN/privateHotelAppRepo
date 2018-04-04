@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="51.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;">
+         <children>
+            <Text layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-ID : " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="17.0" />
+            <Text layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WiseNN" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="17.431640625" />
+            <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="120.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@../images/racing-flag2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane prefHeight="558.0" prefWidth="860.0" style="-fx-background-color: #1081D7;" stylesheets="@../styles/Edit_POS_Menu_UI.css" VBox.vgrow="ALWAYS">
+         <children>
+            <Text fill="WHITE" layoutX="24.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="staticText" text="Edit Items :" />
+            <HBox layoutX="159.0" layoutY="94.0" prefHeight="67.0" prefWidth="416.0" styleClass="toggleGroup">
+               <children>
+                  <RadioButton mnemonicParsing="false" selected="true" text="Add Item">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="editItemsToggleGroup" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Remove Item" toggleGroup="$editItemsToggleGroup" />
+                  <RadioButton mnemonicParsing="false" text="Modify Item" toggleGroup="$editItemsToggleGroup" />
+               </children>
+            </HBox>
+            <Text fill="WHITE" layoutX="182.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" styleClass="staticText" text="Category Name :" />
+            <Text fill="WHITE" layoutX="182.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" styleClass="staticText" text="Item Name : " />
+            <Text fill="WHITE" layoutX="182.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24px;" styleClass="staticText" text="Price : " />
+            <TextField fx:id="categoryTextField" layoutX="379.0" layoutY="216.0" prefHeight="34.0" prefWidth="184.0" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" />
+            <TextField fx:id="itemTextField" layoutX="325.0" layoutY="262.0" prefHeight="34.0" prefWidth="184.0" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" />
+            <TextField fx:id="priceTextField" layoutX="260.0" layoutY="311.0" prefHeight="34.0" prefWidth="184.0" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css"  />
+            <Button fx:id="submitBtn" layoutX="619.0" layoutY="420.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="190.0" styleClass="submitBtn" text="Submit Changes" AnchorPane.bottomAnchor="59.0" AnchorPane.rightAnchor="51.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

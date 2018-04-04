@@ -9,5 +9,7 @@ public class DBNames {
     public static String additionalRoomPackages = "additionalRoomPackages";
     public static String hotelCalenderEvents = "hotelCalenderEvents";
     public static String restaurantTables = "RestaurantTable";
+    public static String restaurantMenu = "RestaurantMenu";
+
 
 }

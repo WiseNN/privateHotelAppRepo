@@ -90,5 +90,32 @@ public class HotelBackEndNorris
 
         return date;
     }
+
+    public void updatePOSMenu(String action, String category, String item, double price, String updatedName, int updatedPrice)
+    {
+        RestaurantItem modItems = new RestaurantItem();
+
+
+        switch(action)
+        {
+           case "Add Item" :
+               modItems.addItem(category, item, price);
+                break;
+            case "Remove Item" :
+                modItems.removeItem(category, item);
+                break;
+            case "Update Item" :
+                modItems.updateItem(category, item, updatedName, updatedPrice);
+                break;
+            case "Add Category" :
+                modItems.addCategory(category);
+                break;
+            case "Remove Category" :
+                modItems.removeCategory(category);
+                break;
+
+        }
+
+    }
 }
 

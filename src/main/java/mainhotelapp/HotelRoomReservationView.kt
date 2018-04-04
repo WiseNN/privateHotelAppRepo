@@ -71,19 +71,7 @@ class HotelRoomReservationView(parentView: MyButtonBarView) : View()
     init {
 
 
-        //create sample data
-        val roomsClass = Room()
-        val tablesClass = RestaurantTable()
-        val db = DB()
-        db.permenantlyRemoveDoc(DBNames.rooms)
-        db.permenantlyRemoveDoc(DBNames.reservations)
-        db.permenantlyRemoveDoc(DBNames.hotelCalenderEvents)
-        db.permenantlyRemoveDoc(DBNames.restaurantTables)
-        roomsClass.createRooms()
-        tablesClass.createTables()
-        db.createDoc(DBNames.reservations, HashMap<String, Any>())
-        db.createDoc(DBNames.hotelCalenderEvents, HashMap<String, Any>())
-//        ------------------//------------------//------------------//------------------
+
 
         root.prefWidthProperty().bind(parentView.root.widthProperty())
 //        root.minWidth = 699.0

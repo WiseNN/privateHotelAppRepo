@@ -2,7 +2,7 @@
 
     -fx-background-color: radial-gradient(focus-angle 0deg, focus-distance 0%, center 63.2005453% 54.9924904%, radius 32.5894782%, #7E80B8 55%, rgba(100,102,153,0.90) 98%);
     -fx-font-family: "Avenir Next Condensed";
-    -fx-font-style: bold;
+    /*-fx-font-style: bold;*/
     -fx-font-size: 27px;
     -fx-border-style: solid;
     -fx-border-width: 8px;
