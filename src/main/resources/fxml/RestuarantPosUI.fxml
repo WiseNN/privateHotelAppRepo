@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="1.7976931348623157E308" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="51.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;">
          <children>
@@ -43,7 +43,7 @@
       </AnchorPane>
       <StackPane fx:id="viewStackPane" VBox.vgrow="ALWAYS">
          <children>
-            <SplitPane dividerPositions="0.5">
+            <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308">
                <AnchorPane maxWidth="350.0" minHeight="-Infinity" minWidth="-Infinity">
                   <VBox fx:id="sideBar" layoutX="4.0" layoutY="3.0" maxHeight="1.7976931348623157E308" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="250.0" style="-fx-background-color: orange;" stylesheets="@../styles/sideBarBtnStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </AnchorPane>
@@ -53,27 +53,40 @@
                         <content>
                            <VBox fx:id="outputScreen" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #F0EF9C;">
                               <children>
-                                 <HBox fx:id="rowItem" prefHeight="63.0" prefWidth="600.0" spacing="10.0" styleClass="onScreenHorizRect">
+                                 <StackPane maxWidth="1.7976931348623157E308">
                                     <children>
-                                       <Label fx:id="rowLabel" lineSpacing="10.0" maxWidth="1.7976931348623157E308" minWidth="456.0" prefHeight="5000.0" style="-fx-font-style: normal !important;" styleClass="onScreenLabel" text="Mac N'  Cheese ......................................................................$5.99" textOverrun="CENTER_ELLIPSIS" HBox.hgrow="ALWAYS" />
-                                       <ImageView fx:id="rowExitImg" fitHeight="67.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
-                                          <HBox.margin>
-                                             <Insets top="4.0" />
-                                          </HBox.margin>
-                                          <image>
-                                             <Image url="@../images/delete-button1.png" />
-                                          </image>
-                                       </ImageView>
-                                       <ImageView fx:id="rowKeyboardImg" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
-                                          <image>
-                                             <Image url="@../images/keyboardIcon1.png" />
-                                          </image>
-                                          <HBox.margin>
-                                             <Insets top="7.0" />
-                                          </HBox.margin>
-                                       </ImageView>
+                                       <AnchorPane maxWidth="1.7976931348623157E308" style="-fx-background-color: blue;">
+                                          <children>
+                                             <HBox fx:id="rowItem" prefHeight="63.0" prefWidth="600.0" spacing="10.0" styleClass="onScreenHorizRect" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <children>
+                                                   <Label fx:id="rowLabel" lineSpacing="10.0" maxWidth="1.7976931348623157E308" minWidth="456.0" prefHeight="5000.0" style="-fx-font-style: normal !important;" styleClass="onScreenLabel" text="Mac N'  Cheese ......................................................................$5.99" textOverrun="CENTER_ELLIPSIS" HBox.hgrow="ALWAYS" />
+                                                   <ImageView fx:id="rowExitImg" fitHeight="67.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                                      <HBox.margin>
+                                                         <Insets top="4.0" />
+                                                      </HBox.margin>
+                                                      <image>
+                                                         <Image url="@../images/delete-button1.png" />
+                                                      </image>
+                                                   </ImageView>
+                                                   <ImageView fx:id="rowKeyboardImg" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                                      <image>
+                                                         <Image url="@../images/keyboardIcon1.png" />
+                                                      </image>
+                                                      <HBox.margin>
+                                                         <Insets top="7.0" />
+                                                      </HBox.margin>
+                                                   </ImageView>
+                                                </children>
+                                             </HBox>
+                                             <ImageView fx:id="miniStickyImgView" fitHeight="25.0" fitWidth="21.0" layoutX="250.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                   <Image url="@../images/mini-sticky-note2.png" />
+                                                </image>
+                                             </ImageView>
+                                          </children>
+                                       </AnchorPane>
                                     </children>
-                                 </HBox>
+                                 </StackPane>
                               </children>
                               <stylesheets>
                                  <URL value="@../styles/POS_BtnStyle.css" />
@@ -82,14 +95,7 @@
                            </VBox>
                         </content>
                      </ScrollPane>
-                     <VBox fx:id="itemsVbox" minHeight="400.0" minWidth="600.0" stylesheets="@../styles/POS_BtnStyle.css">
-                        <children>
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES" />
-                        </children>
-                     </VBox>
+                     <VBox fx:id="itemsVbox" minHeight="400.0" minWidth="600.0" stylesheets="@../styles/POS_BtnStyle.css" />
                   </items>
                </SplitPane>
             </SplitPane>

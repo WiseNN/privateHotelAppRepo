@@ -11,9 +11,13 @@ import javafx.collections.ObservableMap
 import javafx.scene.Parent
 import javafx.scene.control.Button
 import javafx.scene.control.Label
+import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.HBox
 import javafx.scene.layout.StackPane
 import javafx.scene.layout.VBox
+import javafx.scene.text.Font
+import javafx.scene.text.Text
+import sun.plugin.javascript.navig.Anchor
 import tornadofx.*
 import java.awt.Image
 import java.util.*
@@ -33,9 +37,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
     val rowKeyboardImg : javafx.scene.image.ImageView by fxid()
     val outputScreen : VBox by fxid()
     val viewStackPane : StackPane by fxid()
-
-
-
+    val miniStickyImgView : javafx.scene.image.ImageView by fxid()
 
 
 
@@ -99,11 +101,41 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
         label.ellipsisString = rowLabel.ellipsisString
         label.lineSpacing = rowLabel.lineSpacing
         label.text = generateLabelText(item!!.name,item!!.price)
+        AnchorPane.setBottomAnchor(label,0.0)
+        AnchorPane.setTopAnchor(label, 0.0)
+        AnchorPane.setLeftAnchor(label,0.0)
+        AnchorPane.setRightAnchor(label,0.0)
+
+        //create mini-stickyNote ImageView, and add to anchoredPane
+        val miniStickyIcon =javafx.scene.image.ImageView()
+        miniStickyIcon.image = miniStickyImgView.image
+        miniStickyIcon.isPreserveRatio = true
+        miniStickyIcon.isSmooth = true
+        miniStickyIcon.fitHeight = miniStickyImgView.fitHeight
+        miniStickyIcon.fitWidth = miniStickyImgView.fitWidth
+
+        //create textLabel with only name to get width -> place sticky note w/Padding
+        //not adding to view
+        val tempLabel = Text()
+        tempLabel.styleClass.addAll(rowLabel.styleClass)
+        tempLabel.fontProperty().set(Font("Avenir Book", 36.0))
+        tempLabel.text = item!!.name
+        val stickyPadding = 10.0
+        val separationDistance = tempLabel.boundsInLocal.width+stickyPadding
+
+        miniStickyIcon.layoutX = separationDistance
+        miniStickyIcon.layoutY = miniStickyImgView.layoutY
+
+        //hide miniSticky
+        miniStickyIcon.isVisible = false
 
 
+        //create removeIcon
         exitImg.image = rowExitImg.image
         exitImg.fitWidth = rowExitImg.fitWidth
         exitImg.fitHeight = rowExitImg.fitHeight
+        exitImg.isPreserveRatio = true
+        exitImg.isSmooth = true
         exitImg.setOnMouseClicked {
 
             if(outputScreen.getChildList() != null)
@@ -114,27 +146,52 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
             }
         }
 
+        //create customizeOrder icon
         keyboardImgView.image = rowKeyboardImg.image
         keyboardImgView.fitWidth = rowKeyboardImg.fitWidth
         keyboardImgView.fitHeight = rowKeyboardImg.fitHeight
+        keyboardImgView.isPreserveRatio = true
+        keyboardImgView.isSmooth = true
+
+        //create stackPane for Label, add label to stackPane
+        val labelStackPane = StackPane()
+        labelStackPane.maxWidth = Double.MAX_VALUE
+        labelStackPane.add(label)
+
+        //create anchorPane for stickyNote, place ontop of Label in stackPane (add stickyNote, then add anchorPane to stackPane)
+        val anchoredLabelContainer = AnchorPane()
+        anchoredLabelContainer.maxWidth = Double.MAX_VALUE
+        anchoredLabelContainer.add(miniStickyIcon)
+
+
+        labelStackPane.add(anchoredLabelContainer)
+
+        //add all elements to the row (including stackPane) before displaying row
+        row.children.addAll(labelStackPane,exitImg,keyboardImgView)
+
+
+        //display the row
+        outputScreen.add(row)
+
+        //create customize orderView and hide it from user until keyboard icon is pressed
+        val editView = EditOrderPOSView(item!!.name,this)
+
+        //pass stickyNote
+        editView.stickyNote = miniStickyIcon
+        viewStackPane.add(editView.root)
+        editView.root.hide()
+
 
         keyboardImgView.setOnMouseClicked {
-            val editView = EditOrderPOSView(this)
-            viewStackPane.add(editView)
-
+            editView.root.show()
         }
-
-
-        row.children.addAll(label,exitImg,keyboardImgView)
-
-        outputScreen.add(row)
 
     }
     fun generateLabelText(itemName: String, itemPrice: Double) : String
     {
         var ellipseString = ""
 
-        for(i in 0..100)
+        for(i in 0..200)
         {
             ellipseString += "."
         }

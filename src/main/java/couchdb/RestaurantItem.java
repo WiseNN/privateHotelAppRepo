@@ -18,6 +18,7 @@ public class RestaurantItem implements Serializable
     {
         this.name = name;
         this.price = price;
+
     }
     public RestaurantItem()
     {
