@@ -9,6 +9,7 @@ import tornadofx.*
 import de.codecentric.centerdevice.javafxsvg.*
 import javafx.scene.control.ComboBox
 import javafx.scene.control.TextField
+import javafx.scene.layout.Priority
 import org.controlsfx.control.textfield.TextFields
 
 
@@ -65,10 +66,12 @@ class MyButtonBarView constructor() : View()
         val cBox = ComboBox<String>()
         cBox.items = listOf("1","2").observable()
         root.prefWidthProperty().set(699.0)
+        root.vgrow = Priority.ALWAYS
 
         hbox{
 
                 this.prefHeightProperty().set(30.0)
+
 
             homeBtn =  button("Home"){
 
@@ -86,6 +89,7 @@ class MyButtonBarView constructor() : View()
                     spaRezBtn!!.disableProperty().set(false)
                     posBtn!!.disableProperty().set(false)
                     editPosBtn!!.disableProperty().set(false)
+
 
                     //pass in the parentView to retain a reference
                     root.getChildList()!!.remove(root.getChildList()!!.last())

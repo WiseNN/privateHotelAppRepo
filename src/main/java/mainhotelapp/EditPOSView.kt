@@ -12,6 +12,7 @@ import javafx.collections.ObservableList
 import javafx.collections.ObservableMap
 import javafx.scene.control.*
 import javafx.scene.layout.AnchorPane
+import javafx.scene.layout.Priority
 import javafx.scene.layout.VBox
 import tornadofx.*
 import java.awt.event.ActionListener
@@ -50,6 +51,18 @@ class EditPOSView(parentView : MyButtonBarView) : View()
     override val root = editRestaurantPOS
 
     init {
+        root.vgrow = Priority.ALWAYS
+
+
+//        categoryTextField.textProperty().addListener { observable, oldValue, newValue ->
+//            UIUtil().validateText(observable,oldValue,newValue,categoryTextField,"Name")
+//        }
+//        itemTextField.textProperty().addListener { observable, oldValue, newValue ->
+//            UIUtil().validateText(observable,oldValue,newValue,itemTextField,"alphaText")
+//        }
+//        priceTextField.textProperty().addListener { observable, oldValue, newValue ->
+//            UIUtil().validateText(observable,oldValue,newValue,priceTextField,"Name")
+//        }
 
 
         //set categoriesComboBox Invisible Boolean
@@ -65,6 +78,12 @@ class EditPOSView(parentView : MyButtonBarView) : View()
 
         categoriesComboBox.selectionModel.selectedItemProperty().addListener(ChangeListener { observable, oldValue, newValue ->
 
+            //validate selection
+            if(newValue == null || newValue == "")
+            {
+                System.out.println(ConsoleColors.yellowText("No Category was selected!"))
+                return@ChangeListener
+            }
             //render a new list per each category selection
             updateItemsList(newValue)
         })
@@ -92,6 +111,24 @@ class EditPOSView(parentView : MyButtonBarView) : View()
         submitBtn.setOnMouseClicked {
                 submitUpdate()
             clearTextFields()
+        }
+
+        itemTextField.setOnKeyPressed {
+
+
+            if(it.code.toString() == "ENTER" && (itemTextField.text != "" || itemTextField.text != null) && (priceTextField.text  != "" || priceTextField.text == null))
+            {
+                submitUpdate()
+                clearTextFields()
+            }
+        }
+        priceTextField.setOnKeyPressed {
+
+            if(it.code.toString() == "ENTER" && (itemTextField.text != "" || itemTextField.text != null) && (priceTextField.text  != "" || priceTextField.text == null))
+            {
+                submitUpdate()
+                clearTextFields()
+            }
         }
 //        val l = ActionListener()
 

@@ -95,6 +95,14 @@ class UIUtil
 //                println("textField: "+textField.text.replace("(\\d{3})\\-?(\\d{3})\\-?(\\d{4})".toRegex(),"\$1-\$2-\$3"))
 
             }
+            "alphaText" -> {
+                val regExpr = Regex("([a-z]|[A-Z]\\s)*")
+                val bool = regExpr.matches(newValue)
+
+                println("textfield changed from $oldValue to $newValue regexBool: $bool")
+
+                if (bool) textField.textProperty().set(newValue) else textField.textProperty().set(oldValue)
+            }
             else -> System.out.println(ConsoleColors.yellowText("ERROR: The validation type: \"isWhat\" " +
                     "param: $isWhat is not accounted for in this when (switch) statement. \n " +
                     "See validateText() in Class: ReservationSummaryFragment)"))

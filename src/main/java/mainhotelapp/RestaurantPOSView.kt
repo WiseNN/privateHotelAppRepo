@@ -7,14 +7,13 @@ import devutil.ConsoleColors
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.value.ObservableValue
 import javafx.collections.MapChangeListener
+import javafx.collections.ObservableList
 import javafx.collections.ObservableMap
 import javafx.scene.Parent
 import javafx.scene.control.Button
 import javafx.scene.control.Label
-import javafx.scene.layout.AnchorPane
-import javafx.scene.layout.HBox
-import javafx.scene.layout.StackPane
-import javafx.scene.layout.VBox
+import javafx.scene.control.TextField
+import javafx.scene.layout.*
 import javafx.scene.text.Font
 import javafx.scene.text.Text
 import sun.plugin.javascript.navig.Anchor
@@ -38,19 +37,94 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
     val outputScreen : VBox by fxid()
     val viewStackPane : StackPane by fxid()
     val miniStickyImgView : javafx.scene.image.ImageView by fxid()
+    val newOrderBtn : Button by fxid()
+    val killOrderBtn : Button by fxid()
+    var orderList : ObservableList<Any>? = null
+    val orderIDTextField : TextField by fxid()
 
 
 
     override val root = restuarantPOS
     var menuDB : ObservableMap<String, Any> = (HashMap<String, Object>()).observable()
 
-
-
     init{
 
 
+            //disable viewStackPane when the newOrder Button is visible, enable when the visibleProperty is not visible
+            viewStackPane.disableProperty().set(true)
+
+            //disable orderID TextField, when new orderBtn is pressed enable textfield
+            orderIDTextField.disableProperty().set(true)
+
+            //make newOrderBtn visible
+            newOrderBtn.visibleProperty().set(true)
+
+            //when newOrder is clicked, hide btn and enable orderId textField
+            newOrderBtn.setOnMouseClicked {
+                //hide this
+                newOrderBtn.visibleProperty().set(false)
+                //show killOrder Btn
+                killOrderBtn.visibleProperty().set(true)
+
+                //enable orderTextField
+                orderIDTextField.disableProperty().set(false)
+
+            }
+
+            //hide killOrderBtn
+            killOrderBtn.visibleProperty().set(false)
+
+            //when killOrder is clicked, hide btn and disable orderId textField, and viewStackPane, and dump orderList
+            killOrderBtn.setOnMouseClicked {
+                //hide this
+                killOrderBtn.visibleProperty().set(false)
+                //show newOrder Btn
+                newOrderBtn.visibleProperty().set(true)
+
+                //disable & clear textField
+                orderIDTextField.text = ""
+                orderIDTextField.disableProperty().set(true)
+
+                //disable viewStackPane
+                viewStackPane.disableProperty().set(true)
+
+                orderList = null
+            }
 
 
+            //On orderIDTextField press Enter, we will create a new Order List with ID @ index: 0,
+            //1. create an intelligent way to change the order name
+            //-> by checking on enter if a list exists, if not we will create one, if so, we will change index: 0
+            //-> to the new orderID
+            //2. enable the viewStackPane
+            orderIDTextField.setOnKeyPressed {
+
+                println("Value: "+it.code.toString())
+                if(it.code.toString() == "ENTER" && (orderIDTextField.text != "" || orderIDTextField.text != null))
+                {
+                    //check if order list exist...
+                    if(orderList == null)
+                    {
+                        orderList = mutableListOf<RestaurantItem>().observable()
+                        orderList!!.add(0,orderIDTextField.text)
+
+                    }else{
+                        //else if list exists, replace the orderID
+                        if(orderIDTextField.text != "" || orderIDTextField.text != null)
+                        {
+                            orderList!!.remove(0,0)
+                            orderList!!.add(0, orderIDTextField.text)
+                        }
+
+                    }
+                    viewStackPane.disableProperty().set(false)
+                }
+
+            }
+
+
+
+            root.vgrow = Priority.ALWAYS
             menuDB.put("menu", RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)))
 
             menuDB.addListener(MapChangeListener {
@@ -63,13 +137,10 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
         }
 
-    fun createScreenRow(inCategory: String,forBtn: String)
+    fun createScreenRow(item: RestaurantItem)
     {
-        val menuMap = menuDB["menu"] as Map<String, Any>
 
-        val itemsList = menuMap[inCategory] as ArrayList<RestaurantItem>
-        val item = itemsList.find { it.name == forBtn }
-        println("found item: ${item.toString()}")
+        println("found item: $item")
 
         val row = HBox()
 
@@ -246,7 +317,13 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
                         itemBtn.text = item.name
                         itemBtn.id = "myBtn"
                         itemBtn.setOnMousePressed {
-                            createScreenRow(category,item.name)
+                            val menuMap = menuDB["menu"] as Map<String, Any>
+
+                            val itemsList = menuMap[category] as ArrayList<RestaurantItem>
+                            val item = itemsList.find { it.name == item.name }
+                            createScreenRow(item!!)
+                            if(orderList !=null) orderList!!.add(item) else System.out.println(ConsoleColors.yellowText("orderList does not exist!"))
+
                         }
 
 

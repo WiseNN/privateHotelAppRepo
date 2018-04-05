@@ -5,6 +5,7 @@ import javafx.scene.Parent
 import javafx.scene.control.Label
 import javafx.scene.control.TextArea
 import javafx.scene.image.ImageView
+import javafx.scene.layout.Priority
 import javafx.scene.layout.StackPane
 import tornadofx.*
 
@@ -19,6 +20,8 @@ class EditOrderPOSView(itemName: String, parentView: View ) : View()
     var stickyNote: ImageView = ImageView()
 
     init {
+
+            root.vgrow = Priority.ALWAYS
             //set dish label
             dishNameLabel.label(itemName)
 
