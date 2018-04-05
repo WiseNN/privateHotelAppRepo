@@ -10,9 +10,14 @@ import javafx.collections.MapChangeListener
 import javafx.collections.ObservableMap
 import javafx.scene.Parent
 import javafx.scene.control.Button
+import javafx.scene.control.Label
 import javafx.scene.layout.HBox
+import javafx.scene.layout.StackPane
 import javafx.scene.layout.VBox
 import tornadofx.*
+import java.awt.Image
+import java.util.*
+import javax.swing.text.html.ImageView
 
 class RestaurantPOSView(parentView : MyButtonBarView) : View()
 {
@@ -22,6 +27,14 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 //    val menuBtn : Button by fxid()
     val menuRow : HBox by fxid()
     val itemsVbox : VBox by fxid()
+    val rowItem : HBox by fxid()
+    val rowLabel : Label by fxid()
+    val rowExitImg : javafx.scene.image.ImageView by fxid()
+    val rowKeyboardImg : javafx.scene.image.ImageView by fxid()
+    val outputScreen : VBox by fxid()
+    val viewStackPane : StackPane by fxid()
+
+
 
 
 
@@ -36,46 +49,98 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
 
 
-        menuDB.put("menu", RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)))
+            menuDB.put("menu", RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)))
 
-        menuDB.addListener(MapChangeListener {
-            println("changed!!")
-            layoutMenu()
-        })
+            menuDB.addListener(MapChangeListener {
+                println("changed!!")
+                layoutMenu()
+            })
 
-
-
-//        layoutMenu()
-
-
-
-
-
-//        menuDB.forEach { key, value ->
-//
-//            val myBtn = Button()
-//            myBtn.text = key
-//
-//            val itemsList = value as ArrayList<RestaurantItem>
-//            itemsList.forEach {
-//
-//            }
-//
-//        }
-
-
-
-        //used to layout the items in the menu
-
-
-
-
-
-
+            outputScreen.getChildList()!!.clear()
 
 
         }
 
+    fun createScreenRow(inCategory: String,forBtn: String)
+    {
+        val menuMap = menuDB["menu"] as Map<String, Any>
+
+        val itemsList = menuMap[inCategory] as ArrayList<RestaurantItem>
+        val item = itemsList.find { it.name == forBtn }
+        println("found item: ${item.toString()}")
+
+        val row = HBox()
+
+        val label = Label()
+        val exitImg = javafx.scene.image.ImageView()
+        val keyboardImgView = javafx.scene.image.ImageView()
+
+        row.prefHeight = rowItem.prefHeight
+        row.prefWidth = rowItem.prefWidth
+        row.maxHeight = rowItem.maxHeight
+        row.maxWidth = rowItem.maxWidth
+        row.minHeight = rowItem.minHeight
+        row.minWidth = rowItem.minWidth
+        row.spacing = rowItem.spacing
+        row.hgrow = rowItem.hgrow
+        row.styleClass.addAll(rowItem.styleClass)
+
+
+
+        label.prefHeight = rowLabel.prefHeight
+        label.prefWidth = rowLabel.prefWidth
+        label.maxWidth = rowLabel.maxWidth
+        label.maxHeight = rowLabel.height
+        label.minHeight = rowLabel.minHeight
+        label.minWidth = rowLabel.minWidth
+        label.styleClass.addAll(rowLabel.styleClass)
+        label.textAlignment = rowLabel.textAlignment
+        label.textOverrun = rowLabel.textOverrun
+        label.ellipsisString = rowLabel.ellipsisString
+        label.lineSpacing = rowLabel.lineSpacing
+        label.text = generateLabelText(item!!.name,item!!.price)
+
+
+        exitImg.image = rowExitImg.image
+        exitImg.fitWidth = rowExitImg.fitWidth
+        exitImg.fitHeight = rowExitImg.fitHeight
+        exitImg.setOnMouseClicked {
+
+            if(outputScreen.getChildList() != null)
+            {
+//                val index = ((it.source as javafx.scene.image.ImageView).parent as HBox).id.toInt()
+                val index = ((it.source as javafx.scene.image.ImageView).parent as HBox).indexInParent
+                outputScreen.getChildList()!!.remove(outputScreen.getChildList()!![index])
+            }
+        }
+
+        keyboardImgView.image = rowKeyboardImg.image
+        keyboardImgView.fitWidth = rowKeyboardImg.fitWidth
+        keyboardImgView.fitHeight = rowKeyboardImg.fitHeight
+
+        keyboardImgView.setOnMouseClicked {
+            val editView = EditOrderPOSView(this)
+            viewStackPane.add(editView)
+
+        }
+
+
+        row.children.addAll(label,exitImg,keyboardImgView)
+
+        outputScreen.add(row)
+
+    }
+    fun generateLabelText(itemName: String, itemPrice: Double) : String
+    {
+        var ellipseString = ""
+
+        for(i in 0..100)
+        {
+            ellipseString += "."
+        }
+
+        return "$itemName $ellipseString $$itemPrice"
+    }
 
     fun layoutMenu()
     {
@@ -123,6 +188,9 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
                         itemBtn.text = item.name
                         itemBtn.id = "myBtn"
+                        itemBtn.setOnMousePressed {
+                            createScreenRow(category,item.name)
+                        }
 
 
                         //if this is a multiple of 5
@@ -136,6 +204,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
                             hBox.maxHeight = Double.MAX_VALUE
                         }
 
+
                         hBox.add(itemBtn)
                     }
                     if(itemsLeftOver > 0)
@@ -145,26 +214,12 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
                 }else{
                     System.out.println(ConsoleColors.yellowText("itemsList is NULL!! from: sideBarBtn Mouse Listener  Class: RestaurantPOSView"))
                 }
-
-
-
-
             }
 //            sideBar.replaceChildren(sideBarBtn)
-
             sideBar.add(sideBarBtn)
-
-
-
-
+        }
     }
 
 
-
-
-
-
-
-    }
 
 }

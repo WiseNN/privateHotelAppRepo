@@ -8,11 +8,14 @@ import hotelbackend.HotelBackEndNorris
 import javafx.beans.property.SimpleStringProperty
 import javafx.beans.value.ObservableValue
 import javafx.collections.MapChangeListener
+import javafx.collections.ObservableList
 import javafx.collections.ObservableMap
 import javafx.scene.control.*
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 import tornadofx.*
+import java.awt.event.ActionListener
+import java.awt.event.KeyEvent
 
 class EditPOSView(parentView : MyButtonBarView) : View()
 {
@@ -31,7 +34,7 @@ class EditPOSView(parentView : MyButtonBarView) : View()
 
     //internal data models
     var editMenuDB = (parentView.restuarantPOSView as RestaurantPOSView).menuDB
-    var categoriesList = mutableListOf("").observable()
+    var categoriesList : ObservableList<String>? = mutableListOf("").observable()
     var itemsList = mutableListOf("").observable()
 
 //    var toggleState = (editItemsToggleGroup.selectedToggleProperty().get() as RadioButton).text
@@ -55,7 +58,8 @@ class EditPOSView(parentView : MyButtonBarView) : View()
 
         editMenuDB!!.addListener(MapChangeListener {
             println("changed!!")
-            updateCategoriesList()
+            if(toggleState!! == "Add Category") updateCategoriesList()
+
         })
 
 
@@ -87,12 +91,17 @@ class EditPOSView(parentView : MyButtonBarView) : View()
 
         submitBtn.setOnMouseClicked {
                 submitUpdate()
+            clearTextFields()
         }
-        submitBtn.setOnKeyPressed {
-            println(ConsoleColors.cyanText("edit Menu Btn: ${it.character}"))
-            if(it.character == "ENTER")
+//        val l = ActionListener()
+
+        categoryTextField.setOnKeyPressed{
+
+            println("Value: ${it.code.toString()}")
+            if(it.code.toString() == "ENTER")
             {
                 submitUpdate()
+                clearTextFields()
             }
         }
 
@@ -132,11 +141,26 @@ class EditPOSView(parentView : MyButtonBarView) : View()
     {
 
         val editMenuMap = editMenuDB!!["menu"] as Map<String, Any>
-        if(categoriesList.size > 0) categoriesList.clear()
 
-        categoriesList.addAll(editMenuMap.keys)
+        if(categoriesList!!.sizeProperty.get() > 0)
+        {
+           try{
+               categoriesList!!.clear()
+           }catch (e: Exception){
+               System.out.println(ConsoleColors.yellowText(e.message))
+           }
+        }
+
+        categoriesList!!.addAll(editMenuMap.keys)
         categoryTextField.text = ""
 
+    }
+
+    fun clearTextFields()
+    {
+        categoryTextField.text = ""
+        itemTextField.text = ""
+        priceTextField.text = ""
     }
 
     fun updateItemsList(inCategory:String)
@@ -173,8 +197,8 @@ class EditPOSView(parentView : MyButtonBarView) : View()
 
 
 
-
-        editMenuDB!!["menu"] = RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)).observable()
+        val s= RestaurantItem().getDeserializedMenu(DB().readDocInDB(DBNames.restaurantMenu)).observable()
+        editMenuDB!!["menu"] = s
 
         println("map: "+editMenuDB!!["menu"].toString())
     }

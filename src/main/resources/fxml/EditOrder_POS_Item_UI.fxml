@@ -1,142 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <StackPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox maxHeight="1.7976931348623157E308">
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="558.0" prefWidth="860.0" stylesheets="@../styles/edit_Item_POS_Style.css">
          <children>
-            <AnchorPane prefHeight="51.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;">
-               <children>
-                  <ImageView fitHeight="42.0" fitWidth="70.0" layoutX="790.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="5.0">
-                     <image>
-                        <Image url="@../images/cart3.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="20.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-ID : " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="17.0" />
-                  <Text layoutX="60.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WiseNN" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="17.431640625" />
-                  <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="120.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="16.0">
-                     <image>
-                        <Image url="@../images/racing-flag2.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="527.6816101074219" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order-ID # : " AnchorPane.rightAnchor="255.05938720703125" AnchorPane.topAnchor="17.0">
-                     <font>
-                        <Font name="Avenir Heavy Oblique" size="13.0" />
-                     </font>
-                  </Text>
-                  <TextField layoutX="609.0" layoutY="8.0" prefHeight="34.0" prefWidth="133.0" style="-fx-padding: 0 0 0 10;" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" text="Zelia" />
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </AnchorPane>
-            <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
-               <AnchorPane maxWidth="350.0" minHeight="-Infinity" minWidth="-Infinity">
-                  <VBox layoutX="4.0" layoutY="3.0" maxHeight="1.7976931348623157E308" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="250.0" style="-fx-background-color: orange;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <Button minWidth="271.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="271.0" styleClass="sideBarBtn" stylesheets="@../styles/sideBarBtnStyle.css" text="Button" />
-                        <Button id="sideBarBtn" mnemonicParsing="false" prefHeight="113.0" prefWidth="250.0" styleClass="sideBarBtn" stylesheets="@../styles/sideBarBtnStyle.css" text="Button" />
-                        <Button id="sideBarBtn" mnemonicParsing="false" prefHeight="113.0" prefWidth="250.0" styleClass="sideBarBtn" stylesheets="@../styles/sideBarBtnStyle.css" text="Button" />
-                        <Button id="sideBarBtn" mnemonicParsing="false" prefHeight="113.0" prefWidth="250.0" styleClass="sideBarBtn" stylesheets="@../styles/sideBarBtnStyle.css" text="Button" />
-                        <Button id="sideBarBtn" mnemonicParsing="false" prefHeight="113.0" prefWidth="250.0" styleClass="sideBarBtn" stylesheets="@../styles/sideBarBtnStyle.css" text="Button" />
-                     </children>
-                  </VBox>
-               </AnchorPane>
-               <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
-                  <items>
-                     <VBox maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="600.0" style="-fx-background-color: #F0EF9C;">
-                        <children>
-                           <HBox prefHeight="63.0" prefWidth="600.0" spacing="10.0" styleClass="onScreenHorizRect">
-                              <children>
-                                 <Label lineSpacing="10.0" maxWidth="1.7976931348623157E308" minWidth="456.0" prefHeight="5000.0" style="-fx-font-style: normal !important;" styleClass="onScreenLabel" text="Mac N'  Cheese ......................................................................$5.99" textOverrun="CENTER_ELLIPSIS" HBox.hgrow="ALWAYS" />
-                                 <ImageView fitHeight="67.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
-                                    <HBox.margin>
-                                       <Insets top="4.0" />
-                                    </HBox.margin>
-                                    <image>
-                                       <Image url="@../images/delete-button1.png" />
-                                    </image>
-                                 </ImageView>
-                                 <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
-                                    <image>
-                                       <Image url="@../images/keyboardIcon1.png" />
-                                    </image>
-                                    <HBox.margin>
-                                       <Insets top="7.0" />
-                                    </HBox.margin>
-                                 </ImageView>
-                              </children>
-                              <stylesheets>
-                                 <URL value="@../styles/POS_BtnStyle.css" />
-                                 <URL value="@../styles/onScreenLabel.css" />
-                              </stylesheets>
-                           </HBox>
-                        </children>
-                     </VBox>
-                     <VBox minWidth="600.0">
-                        <children>
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                              <children>
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Chicken  and rice" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Stake and Rice " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Stake and Mashed potatoes " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Chicken and Mashed potatoes " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Fish and mixed vegetables" textAlignment="CENTER" wrapText="true" />
-                              </children>
-                           </HBox>
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                              <children>
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Sprite " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Coke " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Water" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Lemonade" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Tea" textAlignment="CENTER" wrapText="true" />
-                              </children>
-                           </HBox>
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                              <children>
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Chocolate cake " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Cheese cake " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Ice cream" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Vanilla cake " textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Strawberry ShortCake" textAlignment="CENTER" wrapText="true" />
-                              </children>
-                           </HBox>
-                           <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
-                              <children>
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Martini" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Margarita" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Daicari" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Vodka" textAlignment="CENTER" wrapText="true" />
-                                 <Button id="myBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="100.0" prefWidth="5000.0" stylesheets="@../styles/POS_BtnStyle.css" text="Champagne" textAlignment="CENTER" wrapText="true" />
-                              </children>
-                           </HBox>
-                        </children>
-                     </VBox>
-                  </items>
-               </SplitPane>
-            </SplitPane>
-         </children>
-      </VBox>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/edit_Item_POS_Style.css">
-         <children>
-            <Pane layoutY="50.0" prefHeight="559.0" prefWidth="860.0" styleClass="bgRect" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+            <Pane layoutY="-5.0" prefHeight="614.0" prefWidth="860.0" styleClass="bgRect" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label alignment="CENTER" layoutX="30.0" layoutY="504.0" prefHeight="75.0" prefWidth="267.0" styleClass="cornerLabel" text="Item: Mac N' Cheese" textAlignment="CENTER" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
             <AnchorPane layoutX="367.0" layoutY="143.0" AnchorPane.topAnchor="143.0">
                <children>
