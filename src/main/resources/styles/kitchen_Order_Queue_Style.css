@@ -14,6 +14,7 @@
 
 }
 
+
 .orderNumber{
     /*-fx-background-color: #939393;*/
     -fx-border-color: #939393;
@@ -23,13 +24,23 @@
     -fx-font-family: Courier;
 }
 
-.orderItemLabel{
-    -fx-label-padding: 10 10 0 10;
-    -fx-font-family: Courier;
-    -fx-font-size: 20px;
-    -fx-text-fill: white;
+.orderItemBox{
+    -fx-padding: 10 10 0 10;
     -fx-border-color: #939393;
     -fx-border-width: 3px;
     -fx-border-style: solid;
+
+}
+.orderItemLabel
+{
+    -fx-font-family: Courier;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 4px;
+    -fx-border-color: #939393;
 
 }

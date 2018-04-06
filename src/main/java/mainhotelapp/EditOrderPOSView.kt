@@ -9,7 +9,7 @@ import javafx.scene.layout.Priority
 import javafx.scene.layout.StackPane
 import tornadofx.*
 
-class EditOrderPOSView(itemName: String, parentView: View ) : View()
+class EditOrderPOSView(parentView: View ) : View()
 {
     val editOrderView : StackPane by fxml("/fxml/EditOrder_POS_Item_UI.fxml")
     override val root = editOrderView
@@ -22,8 +22,8 @@ class EditOrderPOSView(itemName: String, parentView: View ) : View()
     init {
 
             root.vgrow = Priority.ALWAYS
-            //set dish label
-            dishNameLabel.label(itemName)
+
+
 
             //make trashcan disregard textArea text, and dismiss view
             trashCanImgView.setOnMouseClicked {

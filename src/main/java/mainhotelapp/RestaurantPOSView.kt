@@ -4,23 +4,17 @@ import couchdb.DB
 import couchdb.DBNames
 import couchdb.RestaurantItem
 import devutil.ConsoleColors
-import javafx.beans.property.SimpleObjectProperty
-import javafx.beans.value.ObservableValue
 import javafx.collections.MapChangeListener
 import javafx.collections.ObservableList
 import javafx.collections.ObservableMap
-import javafx.scene.Parent
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
 import javafx.scene.layout.*
 import javafx.scene.text.Font
 import javafx.scene.text.Text
-import sun.plugin.javascript.navig.Anchor
 import tornadofx.*
-import java.awt.Image
 import java.util.*
-import javax.swing.text.html.ImageView
 
 class RestaurantPOSView(parentView : MyButtonBarView) : View()
 {
@@ -39,7 +33,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
     val miniStickyImgView : javafx.scene.image.ImageView by fxid()
     val newOrderBtn : Button by fxid()
     val killOrderBtn : Button by fxid()
-    var orderList : ObservableList<Any>? = null
+    var orderListItems: ObservableList<Any>? = null
     val orderIDTextField : TextField by fxid()
 
 
@@ -74,7 +68,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
             //hide killOrderBtn
             killOrderBtn.visibleProperty().set(false)
 
-            //when killOrder is clicked, hide btn and disable orderId textField, and viewStackPane, and dump orderList
+            //when killOrder is clicked, hide btn and disable orderId textField, and viewStackPane, and dump orderListItems
             killOrderBtn.setOnMouseClicked {
                 //hide this
                 killOrderBtn.visibleProperty().set(false)
@@ -88,7 +82,14 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
                 //disable viewStackPane
                 viewStackPane.disableProperty().set(true)
 
-                orderList = null
+                //clear the orderListItems
+                orderListItems = null
+
+                //clear the outputScreen orderItems
+                if(outputScreen.getChildList() != null)
+                {
+                    outputScreen.getChildList()!!.clear()
+                }
             }
 
 
@@ -103,17 +104,17 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
                 if(it.code.toString() == "ENTER" && (orderIDTextField.text != "" || orderIDTextField.text != null))
                 {
                     //check if order list exist...
-                    if(orderList == null)
+                    if(orderListItems == null)
                     {
-                        orderList = mutableListOf<RestaurantItem>().observable()
-                        orderList!!.add(0,orderIDTextField.text)
+                        orderListItems = mutableListOf<RestaurantItem>().observable()
+                        orderListItems!!.add(0,orderIDTextField.text)
 
                     }else{
                         //else if list exists, replace the orderID
                         if(orderIDTextField.text != "" || orderIDTextField.text != null)
                         {
-                            orderList!!.remove(0,0)
-                            orderList!!.add(0, orderIDTextField.text)
+                            orderListItems!!.remove(0,0)
+                            orderListItems!!.add(0, orderIDTextField.text)
                         }
 
                     }
@@ -136,6 +137,26 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
 
         }
+
+    fun submitOrder(toDestination: String)
+    {
+        if(orderIDTextField.text != null || orderIDTextField.text != "")
+        {
+            //send Order menu you to kitchen
+            when(toDestination)
+            {
+                "kitchen" -> {
+                    //we need to design the logic for the kitchen Screen
+                }
+                "payout" -> {
+                    //send the order to the final out screen
+
+                }
+
+            }
+        }
+
+    }
 
     fun createScreenRow(item: RestaurantItem)
     {
@@ -245,7 +266,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
         outputScreen.add(row)
 
         //create customize orderView and hide it from user until keyboard icon is pressed
-        val editView = EditOrderPOSView(item!!.name,this)
+        val editView = EditOrderPOSView(this)
 
         //pass stickyNote
         editView.stickyNote = miniStickyIcon
@@ -254,6 +275,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
 
         keyboardImgView.setOnMouseClicked {
+            editView.dishNameLabel.text = item!!.name
             editView.root.show()
         }
 
@@ -321,8 +343,21 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
                             val itemsList = menuMap[category] as ArrayList<RestaurantItem>
                             val item = itemsList.find { it.name == item.name }
-                            createScreenRow(item!!)
-                            if(orderList !=null) orderList!!.add(item) else System.out.println(ConsoleColors.yellowText("orderList does not exist!"))
+
+
+                            //this will fail silently, we need to report that if the list is not created show an alert view to the user
+                            if(orderListItems !=null)
+                            {
+                                orderListItems!!.add(item)
+                                createScreenRow(item!!)
+                                println("OrderList: "+orderListItems.toString())
+                            }
+                            else
+                            {
+                                System.out.println(ConsoleColors.yellowText("orderListItems does not exist!"))
+                            }
+
+
 
                         }
 
