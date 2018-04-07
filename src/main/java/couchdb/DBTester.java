@@ -66,6 +66,7 @@ public class DBTester
         //creating a document, and returns a Map<K, V>
         Map<String, Object> newDocMap = dbClassRef.createDoc(DBNames.sampleDocName, newMap1);
 
+
         //reads a Map (not a document, only send a Map) to the console with an indent factor
         System.out.println("\nprintMap1\n");
         dbClassRef.printDocAsJSON(newDocMap, 3);

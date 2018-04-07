@@ -5,7 +5,8 @@ import com.couchbase.lite.Database;
 import com.couchbase.lite.Document;
 import com.couchbase.lite.util.Log;
 import com.sun.javaws.exceptions.InvalidArgumentException;
-import com.github.underscore.*;
+
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
 
@@ -168,7 +169,7 @@ public class DB
     //This function will print the JSON object to the console in green.
     //It takes in a Map<K,V> object (can pass a HashMap<K,V>) and an indent factor.
     //If a null value is passed in the docMap parameter, this function will throw an exception.
-    public void printDocAsJSON(Map<String, Object> docMap, int indentFactor)
+    public void printDocAsJSON(Map<String, Object> docMap, int indentFactor) throws JSONException
     {
 
         if((docMap == null))

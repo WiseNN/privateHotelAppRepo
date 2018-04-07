@@ -6,11 +6,9 @@ import javafx.scene.control.Label
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 import tornadofx.*
-import de.codecentric.centerdevice.javafxsvg.*
 import javafx.scene.control.ComboBox
-import javafx.scene.control.TextField
 import javafx.scene.layout.Priority
-import org.controlsfx.control.textfield.TextFields
+import kots.KitchenOrderQueueView
 
 
 class MyButtonBarView constructor() : View()
@@ -23,6 +21,7 @@ class MyButtonBarView constructor() : View()
     var roomRezView: View? = null
     var tableRezView : View? = null
     var restuarantPOSView : View? = null
+    var kotsView : View? = null
     var editPOSView : View? = null
 
     val spaRezFXML: AnchorPane by fxml("/fxml/SpaReservationUI.fxml")
@@ -35,6 +34,7 @@ class MyButtonBarView constructor() : View()
     var spaRezBtn : Button? = null
     var posBtn : Button? = null
     var editPosBtn : Button? = null
+    var kotsBtn: Button? = null
 
 
     override val root = VBox()
@@ -89,6 +89,7 @@ class MyButtonBarView constructor() : View()
                     spaRezBtn!!.disableProperty().set(false)
                     posBtn!!.disableProperty().set(false)
                     editPosBtn!!.disableProperty().set(false)
+                    kotsBtn!!.disableProperty().set(false)
 
 
                     //pass in the parentView to retain a reference
@@ -112,6 +113,7 @@ class MyButtonBarView constructor() : View()
                     spaRezBtn!!.disableProperty().set(false)
                     posBtn!!.disableProperty().set(false)
                     editPosBtn!!.disableProperty().set(false)
+                    kotsBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     //pass in the parentView to retain a reference
@@ -133,6 +135,7 @@ class MyButtonBarView constructor() : View()
                     spaRezBtn!!.disableProperty().set(false)
                     posBtn!!.disableProperty().set(false)
                     editPosBtn!!.disableProperty().set(false)
+                    kotsBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     root.getChildList()!!.add(root.getChildList()!!.size,tableRezView!!.root)
@@ -151,6 +154,7 @@ class MyButtonBarView constructor() : View()
                     rewardsSysBtn!!.disableProperty().set(false)
                     posBtn!!.disableProperty().set(false)
                     editPosBtn!!.disableProperty().set(false)
+                    kotsBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     root.getChildList()!!.add(root.getChildList()!!.size,spaRezFXML)
@@ -170,6 +174,7 @@ class MyButtonBarView constructor() : View()
                     rewardsSysBtn!!.disableProperty().set(false)
                     editPosBtn!!.disableProperty().set(false)
                     spaRezBtn!!.disableProperty().set(false)
+                    kotsBtn!!.disableProperty().set(false)
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     root.getChildList()!!.add(root.getChildList()!!.size,restuarantPOSView!!.root)
@@ -189,10 +194,32 @@ class MyButtonBarView constructor() : View()
                     rewardsSysBtn!!.disableProperty().set(false)
                     posBtn!!.disableProperty().set(false)
                     spaRezBtn!!.disableProperty().set(false)
+                    kotsBtn!!.disableProperty().set(false)
 
 
                     root.getChildList()!!.remove(root.getChildList()!!.last())
                     root.getChildList()!!.add(root.getChildList()!!.size,editPOSView!!.root)
+                }
+            }
+
+            kotsBtn = button("KOTS"){
+                this.prefWidthProperty().bind(root.prefWidthProperty())
+                this.prefHeightProperty().bind(root.heightProperty().divide(barBtnSizeDiviser))
+                action{
+
+                    this.disableProperty().set(true)
+
+                    homeBtn!!.disableProperty().set(false)
+                    roomResBtn!!.disableProperty().set(false)
+                    rewardsSysBtn!!.disableProperty().set(false)
+                    posBtn!!.disableProperty().set(false)
+                    spaRezBtn!!.disableProperty().set(false)
+                    editPosBtn!!.disableProperty().set(false)
+
+
+
+                    root.getChildList()!!.remove(root.getChildList()!!.last())
+                    root.getChildList()!!.add(root.getChildList()!!.size,kotsView!!.root)
                 }
             }
 
@@ -205,13 +232,16 @@ class MyButtonBarView constructor() : View()
         roomRezView = HotelRoomReservationView(this)
         tableRezView = RestaurantReservationView(this)
         restuarantPOSView = RestaurantPOSView(this)
+        kotsView = KitchenOrderQueueView()
 
+        //pass the menu database to the editPOS View considering we are the parent of
+        //both instances
         editPOSView = EditPOSView(this)
          (editPOSView as EditPOSView).editMenuDB = (restuarantPOSView as RestaurantPOSView).menuDB
 
 
 
-
+        //set initial view as the room reservation view
         this.add(roomRezView!!.root)
         roomResBtn!!.disableProperty().set(true)
 
