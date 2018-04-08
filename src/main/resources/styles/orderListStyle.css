@@ -1,0 +1,41 @@
+.orderList{
+    -fx-background-color: #1081D7;
+}
+.header{
+    -fx-background-color:  #36AAFF;
+}
+
+.orderRow{
+
+    -fx-effect: innershadow(gaussian , rgba(0,0,0,.5),9,0,0,0);
+    -fx-background-color: #1081D7;
+    -fx-border-radius: 51px;
+}
+
+.orderLabel{
+    -fx-font-family: AvenirNext-Medium;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-label-padding: 10 10 10 20;
+    -fx-text-alignment: center;
+}
+.loginPanel{
+    -fx-background-color: #1081D7;
+    /*-fx-border-color: black;*/
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,.5),14,0,0,4);
+    -fx-border-radius: 0 0 10 10;
+    -fx-background-radius: 0 0 10 10;
+}
+.kotsLoginSubmitBtn{
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+
+}
+.username{
+    /*-fx-label-padding:  10 10 10 10;*/
+    -fx-padding: 0 10 0 10;
+}
+.password{
+    /*-fx-label-padding: 10 10 10 10;*/
+    -fx-padding: 4 10 0 10;
+}

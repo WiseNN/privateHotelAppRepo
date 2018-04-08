@@ -15,10 +15,15 @@ import javafx.scene.text.Font
 import javafx.scene.text.Text
 import tornadofx.*
 import java.util.*
+import javafx.animation.TranslateTransition
+import javafx.scene.Node
+import javafx.scene.shape.Rectangle
+import javafx.util.Duration
+
 
 class RestaurantPOSView(parentView : MyButtonBarView) : View()
 {
-    val restuarantPOS: VBox by fxml("/fxml/RestuarantPosUI.fxml")
+    val restuarantPOS: StackPane by fxml("/fxml/RestuarantPosUI.fxml")
 //    val sideBarBtn : Button by fxid()
     val sideBar : VBox by fxid()
 //    val menuBtn : Button by fxid()
@@ -35,6 +40,10 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
     val killOrderBtn : Button by fxid()
     var orderListItems: ObservableList<Any>? = null
     val orderIDTextField : TextField by fxid()
+    val kotsLoginPanel : AnchorPane by fxid("kotsLoginPanel")
+    val loginAnchorPane: AnchorPane by fxid()
+    val eidLabel : Label by fxid()
+    val posVBox : VBox by fxid()
 
 
 
@@ -42,6 +51,40 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
     var menuDB : ObservableMap<String, Any> = (HashMap<String, Object>()).observable()
 
     init{
+
+        //get animator translation distances for show/ hiding
+        val yAnimatorDistance = -kotsLoginPanel.parentToLocal(kotsLoginPanel.boundsInParent.maxX,kotsLoginPanel.boundsInParent.maxY).y-120
+        val yAnimatorDistance2 = +kotsLoginPanel.parentToLocal(kotsLoginPanel.boundsInParent.maxX,kotsLoginPanel.boundsInParent.maxY).y+120
+        //translate login dialog out of view
+        kotsLoginPanel.translateYProperty().set(yAnimatorDistance)
+//        //hide loginAnchorPane
+        loginAnchorPane.visibleProperty().set(false)
+
+
+
+
+        eidLabel.setOnMouseClicked {
+            println("can see: ${loginAnchorPane.visibleProperty().get()}")
+            val cycleCount = 1
+            val duration = 0.5
+            if(loginAnchorPane.visibleProperty().get() && eidLabel.disableProperty().value != true)
+            {
+                eidLabel.disableProperty().set(true)
+                animateHide(kotsLoginPanel,cycleCount,duration,yAnimatorDistance)
+
+            }
+            else if(eidLabel.disableProperty().value != true)
+            {
+                eidLabel.disableProperty().set(true)
+                loginAnchorPane.visibleProperty().set(true)
+                animateShow(kotsLoginPanel,cycleCount,duration,yAnimatorDistance2)
+
+            }
+
+        }
+
+
+
 
 
             //disable viewStackPane when the newOrder Button is visible, enable when the visibleProperty is not visible
@@ -137,6 +180,64 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
 
         }
+    fun animateHide(forNode : Node, myCycleCount : Int, myDuration : Double,animatorDistance : Double )
+    {
+        val clipRect = Rectangle(kotsLoginPanel.width, kotsLoginPanel.height)
+
+        // changes according pane's width and height
+        clipRect.heightProperty().bind(kotsLoginPanel.heightProperty().plus(50))
+        clipRect.widthProperty().bind(kotsLoginPanel.widthProperty().plus(50))
+
+
+        clipRect.yProperty().set(51.0)
+
+        // set rect as clip rect
+        loginAnchorPane.clip = clipRect
+
+        val tr = TranslateTransition()
+
+        tr.setOnFinished {
+            root.getChildList()!!.move(posVBox,root.getChildList()!!.lastIndex)
+            loginAnchorPane.visibleProperty().set(false)
+            eidLabel.disableProperty().set(false)
+            println("removed dialog from focus view")
+        }
+        tr.node = kotsLoginPanel
+        tr.byY = animatorDistance
+        tr.duration = Duration.seconds(myDuration)
+        tr.cycleCount = myCycleCount
+        tr.play()
+    }
+
+    fun animateShow(forNode : Node, myCycleCount : Int, myDuration : Double, animatorDistance: Double)
+    {
+
+        //move the login dialog to the front of the view stack
+        root.getChildList()!!.move(loginAnchorPane,root.getChildList()!!.lastIndex)
+
+        val clipRect = Rectangle(kotsLoginPanel.width, kotsLoginPanel.height)
+
+        // changes according pane's width and height
+        clipRect.heightProperty().bind(kotsLoginPanel.heightProperty().plus(50))
+        clipRect.widthProperty().bind(kotsLoginPanel.widthProperty().plus(50))
+
+
+        clipRect.yProperty().set(51.0)
+
+        // set rect as clip rect
+        loginAnchorPane.clip = clipRect
+
+        val tr = TranslateTransition()
+        tr.setOnFinished {
+            eidLabel.disableProperty().set(false)
+        }
+        tr.node = kotsLoginPanel
+        tr.byY = animatorDistance
+        tr.duration = Duration.seconds(myDuration)
+        tr.cycleCount = myCycleCount
+        tr.play()
+    }
+
 
     fun submitOrder(toDestination: String)
     {

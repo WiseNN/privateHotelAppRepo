@@ -38,6 +38,7 @@ class KOTS_TERMINAL_Client
             println("order Update: "+data[0].toString())
 
         }
+
         socket!!.connect()
         var i = 0
         while (!socket!!.connected())
