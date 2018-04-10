@@ -73,7 +73,8 @@ object KOTS_Server
 
     @Throws(InterruptedException::class, UnsupportedEncodingException::class)
 
-    fun server() {
+    fun server()
+    {
         val config = Configuration()
         config.setHostname("localhost")
         config.setPort(PORT)

@@ -1,5 +1,6 @@
 package kots
 
+import couchdb.DB
 import de.codecentric.centerdevice.javafxsvg.SvgImageLoaderFactory
 import de.codecentric.centerdevice.javafxsvg.dimension.PrimitiveDimensionProvider
 import javafx.application.Application
@@ -9,42 +10,260 @@ import javafx.animation.*
 import javafx.scene.shape.Circle
 import javafx.animation.Animation
 import javafx.animation.Timeline
+import javafx.beans.property.DoubleProperty
+import javafx.beans.property.ReadOnlyDoubleProperty
+import javafx.fxml.FXML
+import javafx.scene.Node
+import javafx.scene.control.Button
+import javafx.scene.control.TextField
 import javafx.scene.layout.*
 import javafx.scene.text.Text
+import javafx.stage.Stage
 import javafx.util.Duration
+import java.time.LocalDateTime
 import java.util.*
 import kotlin.concurrent.schedule
+import javafx.animation.KeyFrame
+import javafx.event.ActionEvent
+import javafx.event.Event
+import javafx.event.EventHandler
+import javafx.scene.control.Label
+import java.text.SimpleDateFormat
+import java.util.Calendar
+
+
 
 
 
 class KitchenOrderQueueView : View()
 {
     val kitchenOrderQVIew: StackPane by fxml("/fxml/kitchenOrderQueue_UI.fxml")
+    val timeLabel : Label by fxid()
     override val root = kitchenOrderQVIew
+    val kitchenObservationVBox  : VBox by fxid()
     val orderOneVBox : VBox by fxid()
     val orderTwoVBox : VBox by fxid()
     val orderThreeVBox : VBox by fxid()
     val orderFourVBox : VBox by fxid()
-
+    val usernameTextField : TextField by fxid()
+    val passwordTextField : TextField by fxid()
+    val loginBtn : TextField by fxid()
     val gridPane : GridPane by fxid()
     var t : TimerTask? = null
+    val employeeManagerBtn : Button by fxid()
+    //overlay root
+    val orderDetailsOverlayAnchorPane : AnchorPane by fxid()
+    //overlay children
+    val sidebarMenuAnchorPane : AnchorPane by fxid()
+    val itemsListAnchorPane : AnchorPane by fxid()
+    val itemDetailAnchorPane : AnchorPane by fxid()
+    //-------------------------------------------
+    //login anchor pane root
+    val loginContainerAnchorPane : AnchorPane by fxid()
+    //login anchor pane children
+    val kotsLoginPanelAnchorPane : AnchorPane by fxid()
+
+
+
+
+    //statics for overlay layout
+    val detailWidth = itemDetailAnchorPane.widthProperty()
+    val itemsListWidth = itemsListAnchorPane.widthProperty()
+    val sideBarWidth = sidebarMenuAnchorPane.widthProperty()
+
+
 
     init
     {
+        //init view layout for initial view
+        initializeViewLayout()
+
+        val dateTime = LocalDateTime.now()
+        initClock()
+
+        kitchenObservationVBox.setOnMouseClicked {
+
+            println("click count: "+it.clickCount)
+            if(it.clickCount == 2)
+            {
+                showSideBarMenu(sidebarMenuAnchorPane, it.source as Node,sideBarWidth,false)
+
+            }
+
+        }
+
+
+
+
+
+
 
 
 
         root.vgrow = Priority.ALWAYS
 
-//            testAnimation()
+
+        //for incoming orders
+//        testOrderChangeAnimation()
 
     }
 
-    fun testAnimation()
+    fun initClock()
     {
 
+        val timeline = Timeline()
+
+        val keyFrame = KeyFrame(
+                Duration.seconds(1.0),
+                EventHandler<ActionEvent> {
+
+                    val cal = Calendar.getInstance()
 
 
+                     val date = Date();
+
+                    val strDateFormat = "HH:mm:ss a";
+                    val simpleDateFormatted = SimpleDateFormat(strDateFormat);
+                    val strDate = simpleDateFormatted.format(date)
+
+                    val second = strDate.substring(6,8)
+                    val minute = strDate.substring(3,5)
+                    val hour = strDate.substring(0,2).toInt() % 12
+                    val period = strDate.substring(9)
+
+
+                    timeLabel.text =  "$hour : $minute : $second $period"
+
+                }
+        )
+
+        timeline.keyFrames.addAll(keyFrame)
+        timeline.cycleCount = Timeline.INDEFINITE
+        timeline.play()
+
+
+
+
+
+
+
+
+
+    }
+
+    fun showSideBarMenu(forNode: Node,sourceNode : Node, boundedValue : ReadOnlyDoubleProperty, reverse : Boolean)
+    {
+        //disable node so user cannot click mid animation
+        sourceNode.disableProperty().set(true)
+
+        //unbind xTranslate Value
+        forNode.translateXProperty().unbind()
+        //move overlay's parent to the last view in the stack
+        root.getChildList()!!.move(forNode.parent, root.getChildList()!!.lastIndex)
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+            forNode.requestFocus()
+
+            //create focus change listener
+            forNode.parent.setOnMouseClicked {
+
+                //if parent has click, but this does not, rebind, and hide menu
+                if (it.clickCount == 1 && !inHierarchy(it.getPickResult().getIntersectedNode(), forNode)) {
+                    hideSideBarMenu(forNode,sourceNode,boundedValue)
+
+                }
+            }
+
+            sourceNode.disableProperty().set(false)
+
+
+        }
+        tt.node = forNode
+        tt.toX = 0.0
+//        tt.delay = 1.seconds
+        tt.duration = 0.3.seconds
+        tt.cycleCount = 1
+
+        tt.play()
+
+    }
+
+    fun inHierarchy(node: Node?, potentialHierarchyElement: Node?): Boolean {
+        var node = node
+        if (potentialHierarchyElement == null) {
+            return true
+        }
+        while (node != null) {
+            if ( node === potentialHierarchyElement) {
+                return true
+            }
+            node = node.parent
+        }
+        return false
+    }
+
+    //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
+    fun hideSideBarMenu(forNode: Node,sourceNode: Node, boundedValue: ReadOnlyDoubleProperty)
+    {
+
+        //disable during animation/processing click
+        sourceNode.parent.disableProperty().set(true)
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+            //move kitchen Observation View back to front of stack
+            root.getChildList()!!.move(kitchenObservationVBox, root.getChildList()!!.lastIndex)
+
+
+            forNode.translateXProperty().unbind()
+            //re-bind xTranslate Value
+            forNode.translateXProperty().bind(boundedValue)
+
+            //re enable node even though its out of view range
+            sourceNode.parent.disableProperty().set(false)
+        }
+        tt.node = forNode
+        tt.toX = boundedValue.get()
+//        tt.delay = 1.seconds
+        tt.duration = 0.5.seconds
+        tt.cycleCount = 1
+
+        tt.play()
+
+
+
+    }
+    //move all side elements off of the screen to slide in on use
+    fun initializeViewLayout()
+    {
+
+        //get width of all overlay panes
+
+
+        //move all overlay panels off of the screen
+        println("width: "+detailWidth+itemsListWidth+sideBarWidth)
+        itemDetailAnchorPane.translateXProperty().bind(detailWidth.add(itemsListWidth).add(sideBarWidth))
+        itemsListAnchorPane.translateXProperty().bind(itemsListWidth.add(sideBarWidth))
+        sidebarMenuAnchorPane.translateXProperty().bind(sideBarWidth)
+
+
+        //get widths of all login panes
+        val loginPaneWidthHeight = kotsLoginPanelAnchorPane.heightProperty()
+        //move all login container anchor pane  off of the screen
+        kotsLoginPanelAnchorPane.translateYProperty().bind(-loginPaneWidthHeight)
+
+
+        //now make the las view in the stack the kitchenObservationVBox
+        root.getChildList()!!.move(kitchenObservationVBox,root.getChildList()!!.lastIndex)
+
+    }
+    fun testOrderChangeAnimation()
+    {
 
         val timer = Timer("schedule", true);
 
@@ -261,7 +480,21 @@ class KitchenOrderQueueView : View()
         transition.play();
     }
 
+
+    fun signOn()
+    {
+        if(usernameTextField.text != "" || usernameTextField != null &&
+                passwordTextField.text != "" || passwordTextField.text != null)
+        {
+            val db = DB()
+
+        }
+    }
+
 }
+
+
+
 
 
 

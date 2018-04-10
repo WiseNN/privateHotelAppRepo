@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -24,12 +25,22 @@
       <Separator maxHeight="1.7976931348623157E308" orientation="VERTICAL" prefHeight="545.0" prefWidth="14.0" />
       <Separator maxWidth="1.7976931348623157E308" prefHeight="15.0" prefWidth="866.0" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-      <VBox prefHeight="200.0" prefWidth="100.0">
+      <VBox fx:id="kitchenObservationVBox" prefHeight="200.0" prefWidth="100.0">
          <children>
             <HBox maxHeight="63.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="866.0" styleClass="headerLabel" VBox.vgrow="NEVER">
                <children>
                   <Label maxWidth="1.7976931348623157E308" prefHeight="63.0" prefWidth="670.0" styleClass="headerTitle" text="Kitchen Order Queue" HBox.hgrow="ALWAYS" />
-                  <Label maxHeight="63.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="166.0" styleClass="headerClock" text="18 : 24" />
+                  <Text fx:id="connectedStatusLabel" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Connected..." wrappingWidth="111.55361119066356">
+                     <HBox.margin>
+                        <Insets top="24.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Circle fx:id="statusIndicator" fill="RED" opacity="0.5" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                     <HBox.margin>
+                        <Insets top="24.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Label fx:id="timeLabel" maxHeight="63.0" maxWidth="345.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="63.0" prefWidth="276.0" styleClass="headerClock" text="18 : 24 : 23 PM" />
                </children>
             </HBox>
             <GridPane fx:id="gridPane" prefHeight="558.0" prefWidth="866.0" VBox.vgrow="ALWAYS">
@@ -90,9 +101,9 @@
             </GridPane>
          </children>
       </VBox>
-      <AnchorPane fx:id="loginAnchorPane" prefHeight="437.0" prefWidth="860.0" visible="false">
+      <AnchorPane fx:id="loginContainerAnchorPane" prefHeight="437.0" prefWidth="860.0" visible="false">
          <children>
-            <AnchorPane fx:id="kotsLoginPanel" layoutX="19.0" layoutY="51.0" maxHeight="280.0" maxWidth="410.0" prefHeight="328.0" prefWidth="440.0" style="-fx-background-color: rgba(0,0,0,0.7);" styleClass="loginPanel" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="63.0">
+            <AnchorPane fx:id="kotsLoginPanelAnchorPane" layoutX="19.0" layoutY="51.0" maxHeight="280.0" maxWidth="410.0" prefHeight="328.0" prefWidth="440.0" style="-fx-background-color: rgba(0,0,0,0.7);" styleClass="loginPanel" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="63.0">
                <stylesheets>
                   <URL value="@../styles/finalOut_POS_Style.css" />
                   <URL value="@../styles/orderListStyle.css" />
@@ -118,24 +129,25 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="orderDetailsOverlayAnchorPane" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane layoutX="770.0" layoutY="63.0" prefHeight="482.0" prefWidth="96.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
+            <AnchorPane fx:id="sidebarMenuAnchorPane" layoutX="770.0" layoutY="63.0" prefHeight="482.0" prefWidth="96.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
                <children>
-                  <Label alignment="CENTER" layoutY="425.0" prefHeight="77.0" prefWidth="96.0" styleClass="signOutBtn" text="Sign - Out" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Label alignment="CENTER" layoutX="11.0" layoutY="23.0" prefHeight="54.0" prefWidth="75.0" styleClass="ordersBtn" text="Orders">
+                  <Label fx:id="signOutBtn" alignment="CENTER" layoutY="425.0" prefHeight="77.0" prefWidth="96.0" styleClass="signOutBtn" text="Sign - Out" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="ordersBtn" alignment="CENTER" layoutX="11.0" layoutY="23.0" prefHeight="54.0" prefWidth="75.0" styleClass="ordersBtn" text="Orders">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </Label>
+                  <Label fx:id="employeeManagerBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="329.0" prefHeight="77.0" prefWidth="96.0" styleClass="signOutBtn" text="Employee Manager" wrapText="true" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children></AnchorPane>
-            <AnchorPane layoutX="674.0" layoutY="63.0" prefHeight="482.0" prefWidth="297.0" styleClass="orderItemsSidebarList" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="63.0">
+            <AnchorPane fx:id="itemsListAnchorPane" layoutX="674.0" layoutY="63.0" prefHeight="482.0" prefWidth="297.0" styleClass="orderItemsSidebarList" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="63.0">
                <children>
                   <ScrollPane maxHeight="1.7976931348623157E308" style="-fx-background: none;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
                         <VBox maxHeight="1.7976931348623157E308" prefHeight="482.0" prefWidth="278.0">
                            <children>
-                              <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="284.0" styleClass="orderItemBtn">
+                              <HBox fx:id="orderListItemBtn" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="284.0" styleClass="orderItemBtn">
                                  <children>
                                     <Label alignment="CENTER" prefHeight="96.0" prefWidth="93.0" text="#12" textAlignment="CENTER" textFill="WHITE">
                                        <font>
@@ -162,7 +174,7 @@
                      </content>
                   </ScrollPane>
                </children></AnchorPane>
-            <AnchorPane layoutY="63.0" prefHeight="482.0" prefWidth="473.0" styleClass="orderSideBarItem" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="393.0" AnchorPane.topAnchor="63.0">
+            <AnchorPane fx:id="itemDetailAnchorPane" layoutY="63.0" prefHeight="482.0" prefWidth="473.0" styleClass="orderSideBarItem" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="393.0" AnchorPane.topAnchor="63.0">
                <children>
                   <VBox layoutX="75.0" layoutY="83.0" maxWidth="1.7976931348623157E308" prefHeight="309.0" prefWidth="333.0" styleClass="orderItemBox" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="74.5" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="83.0">
                      <children>

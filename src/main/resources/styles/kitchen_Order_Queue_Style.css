@@ -60,7 +60,7 @@
 .headerClock{
     -fx-font-size: 27px;
     -fx-text-fill: #4F4F4F;
-    -fx-label-padding: 0 30 0 20;
+    -fx-label-padding: 0 10 0 20;
     -fx-font-family: Courier;
 
 }
@@ -83,7 +83,7 @@
 }
 
 .orderItemBtn:hover{
-    -fx-cursor: hand;
+    -fx-cursor: ;
 }
 
 .orderSideBarItem{
