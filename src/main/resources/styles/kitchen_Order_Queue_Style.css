@@ -25,7 +25,7 @@
 }
 
 .orderItemBox{
-    -fx-padding: 10 10 0 10;
+    -fx-padding: 10 10 10 10;
     -fx-border-color: #939393;
     -fx-border-width: 3px;
     -fx-border-style: solid;
@@ -44,3 +44,102 @@
     -fx-border-color: #939393;
 
 }
+
+.headerLabel{
+    -fx-background-color: #939393;
+
+}
+
+.headerTitle{
+    -fx-font-size: 27px;
+    -fx-text-fill: #4F4F4F;
+    -fx-label-padding: 0 0 0 70;
+    -fx-font-family: Courier;
+}
+
+.headerClock{
+    -fx-font-size: 27px;
+    -fx-text-fill: #4F4F4F;
+    -fx-label-padding: 0 30 0 20;
+    -fx-font-family: Courier;
+
+}
+
+.sideBar{
+    -fx-background-color: rgba(0,0,0,0.85);
+    -fx-border-color: white;
+    -fx-border-width: 0 0 0 0;
+
+}
+.orderItemsSidebarList{
+    -fx-background-color: rgba(0,0,0,0.93);
+    -fx-border-color: white;
+    -fx-border-width: 0 0.5 0 0;
+}
+.orderItemBtn{
+    -fx-border-color: white;
+    -fx-border-width: 0 0 1 0;
+    -fx-effect: dropshadow(gaussian , rgba(255,255,255,0.8), 8,0,4,3);
+}
+
+.orderItemBtn:hover{
+    -fx-cursor: hand;
+}
+
+.orderSideBarItem{
+    -fx-background-color: rgba(0,0,0,0.95);
+    -fx-border-color: white;
+    -fx-border-width: 0 0.5 0 0;
+}
+
+.orderItemBox{
+    -fx-border-color: white;
+    -fx-border-radius: 3;
+    -fx-background-radius: 10;
+}
+.orderItemTextLabels{
+    -fx-text-fill: white;
+    -fx-font-family: "Avenir Next Condensed";
+    -fx-font-size: 22;
+    -fx-label-padding: 0 0 0 20;
+}
+
+.signOutBtn{
+    -fx-effect: innershadow(gaussian , rgba(255,255,255,255.49), 8,0,0,0);
+    -fx-border-width: 1 0 0 0;
+    -fx-border-style: solid;
+    -fx-border-color: white;
+    -fx-font-family: Avenir Light;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-label-padding: 0 10 0 10;
+}
+.signOutBtn:hover{
+    -fx-cursor: hand;
+}
+
+.ordersBtn{
+    /*-fx-border-width: 0 0 0 0;*/
+    /*-fx-border-width: 0 0 1 0;*/
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian , rgba(255,255,255,255.49), 8,0,0,0);
+    -fx-border-radius: 10;
+    -fx-font-size: 17;
+
+    -fx-border-style: solid;
+    -fx-border-color: white;
+    -fx-font-family: Avenir Light;
+    /*-fx-label-padding: 0 10 0 10;*/
+
+    /*-fx-padding: 10;*/
+}
+
+.ordersBtn:hover {
+    -fx-cursor: hand;
+}
+
+
+.signOutBtn .text{
+    /*-fx-effect: none;*/
+}
+

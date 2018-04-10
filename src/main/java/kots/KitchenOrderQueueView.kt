@@ -36,15 +36,7 @@ class KitchenOrderQueueView : View()
 
         root.vgrow = Priority.ALWAYS
 
-
-// schedule at a fixed rate
-//        timer.scheduleAtFixedRate(1000, 1000) {
-//            println("hello world2")
-//
-//        }
-
-
-
+//            testAnimation()
 
     }
 
@@ -82,12 +74,13 @@ class KitchenOrderQueueView : View()
 
 
             val menuTranslation = animateBoxTranslation(orderOneVBox,orderTwoVBox,orderThreeVBox,orderFourVBox,translationDuration,transCycleCount)
-            menuTranslation.playFromStart()
+//            menuTranslation.play()
             parallelTransition {
-                //                cycleCount = 10
+                                cycleCount = 10
 
 
                 children.addAll(colorChangeTransition,menuTranslation)
+
             }
 
 
