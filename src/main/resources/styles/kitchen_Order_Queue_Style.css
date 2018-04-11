@@ -83,7 +83,7 @@
 }
 
 .orderItemBtn:hover{
-    -fx-cursor: ;
+    -fx-cursor: hand;
 }
 
 .orderSideBarItem{

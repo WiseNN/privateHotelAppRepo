@@ -224,9 +224,6 @@ class MyButtonBarView constructor() : View()
             }
 
 
-
-
-
         }
 
         roomRezView = HotelRoomReservationView(this)

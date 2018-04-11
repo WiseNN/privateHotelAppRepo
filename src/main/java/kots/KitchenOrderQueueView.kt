@@ -10,22 +10,17 @@ import javafx.animation.*
 import javafx.scene.shape.Circle
 import javafx.animation.Animation
 import javafx.animation.Timeline
-import javafx.beans.property.DoubleProperty
-import javafx.beans.property.ReadOnlyDoubleProperty
-import javafx.fxml.FXML
 import javafx.scene.Node
-import javafx.scene.control.Button
 import javafx.scene.control.TextField
 import javafx.scene.layout.*
 import javafx.scene.text.Text
-import javafx.stage.Stage
 import javafx.util.Duration
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.concurrent.schedule
 import javafx.animation.KeyFrame
+import javafx.beans.binding.DoubleBinding
 import javafx.event.ActionEvent
-import javafx.event.Event
 import javafx.event.EventHandler
 import javafx.scene.control.Label
 import java.text.SimpleDateFormat
@@ -47,31 +42,29 @@ class KitchenOrderQueueView : View()
     val orderFourVBox : VBox by fxid()
     val usernameTextField : TextField by fxid()
     val passwordTextField : TextField by fxid()
+    val headerBarHBox : HBox by fxid()
     val loginBtn : TextField by fxid()
+    val ordersBtn : Label by fxid()
+    val signInOutBtn : Label by  fxid()
     val gridPane : GridPane by fxid()
     var t : TimerTask? = null
-    val employeeManagerBtn : Button by fxid()
+    val employeeManagerBtn : Label by fxid()
     //overlay root
     val orderDetailsOverlayAnchorPane : AnchorPane by fxid()
     //overlay children
     val sidebarMenuAnchorPane : AnchorPane by fxid()
-    val itemsListAnchorPane : AnchorPane by fxid()
+    val menuItemsListAnchorPane: AnchorPane by fxid()
     val itemDetailAnchorPane : AnchorPane by fxid()
-    //-------------------------------------------
-    //login anchor pane root
-    val loginContainerAnchorPane : AnchorPane by fxid()
-    //login anchor pane children
     val kotsLoginPanelAnchorPane : AnchorPane by fxid()
-
-
+    //-------------------------------------------
 
 
     //statics for overlay layout
     val detailWidth = itemDetailAnchorPane.widthProperty()
-    val itemsListWidth = itemsListAnchorPane.widthProperty()
+    val itemsListWidth = menuItemsListAnchorPane.widthProperty()
     val sideBarWidth = sidebarMenuAnchorPane.widthProperty()
-
-
+    val loginPanelHeight = kotsLoginPanelAnchorPane.heightProperty()
+    val headerBarHeight = headerBarHBox.heightProperty()
 
     init
     {
@@ -86,19 +79,32 @@ class KitchenOrderQueueView : View()
             println("click count: "+it.clickCount)
             if(it.clickCount == 2)
             {
-                showSideBarMenu(sidebarMenuAnchorPane, it.source as Node,sideBarWidth,false)
+                //send source node to disable on transition
+                //send returnToNode node, to know what view to put back on the stack after hide animation
+                //here source node is same as returnToView
+                showSideBarMenu(it.source as Node,sideBarWidth.add(0),false).play()
 
             }
 
         }
 
+        orderDetailsOverlayAnchorPane.setOnMouseClicked {
+
+        }
+
+        ordersBtn.setOnMouseClicked {
 
 
+//            (it.source as Label).disableProperty().set(true)
+            //source not is different from returnToView
 
+            //source > parent > parent
+            showSideBarMenuItems(it.source as Node ,itemsListWidth.add(sideBarWidth),false).play()
+        }
 
-
-
-
+        signInOutBtn.setOnMouseClicked {
+            showLoginPanel(kitchenObservationVBox, loginPanelHeight.add(headerBarHeight).add(20), false).play()
+        }
 
         root.vgrow = Priority.ALWAYS
 
@@ -141,55 +147,252 @@ class KitchenOrderQueueView : View()
         timeline.cycleCount = Timeline.INDEFINITE
         timeline.play()
 
-
-
-
-
-
-
-
-
     }
 
-    fun showSideBarMenu(forNode: Node,sourceNode : Node, boundedValue : ReadOnlyDoubleProperty, reverse : Boolean)
+
+
+
+    fun showLoginPanel( returnToView : Node,boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
     {
         //disable node so user cannot click mid animation
-        sourceNode.disableProperty().set(true)
+        signInOutBtn.disableProperty().set(true)
 
-        //unbind xTranslate Value
-        forNode.translateXProperty().unbind()
-        //move overlay's parent to the last view in the stack
-        root.getChildList()!!.move(forNode.parent, root.getChildList()!!.lastIndex)
+        //unbind yTranslate Value
+        kotsLoginPanelAnchorPane.translateYProperty().unbind()
+
+        //move overlay's to the last view in the stack
+        root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
 
         val tt = TranslateTransition()
 
 
         tt.setOnFinished {
-            forNode.requestFocus()
 
-            //create focus change listener
-            forNode.parent.setOnMouseClicked {
 
-                //if parent has click, but this does not, rebind, and hide menu
-                if (it.clickCount == 1 && !inHierarchy(it.getPickResult().getIntersectedNode(), forNode)) {
-                    hideSideBarMenu(forNode,sourceNode,boundedValue)
+            //create focus change listener for orverlay Panel View
+            kotsLoginPanelAnchorPane.setOnMouseClicked {
 
+                //if has click, but this does not, rebind, and hide menu
+                if (it.clickCount == 2 )
+                {
+
+                    hideLoginPanel(returnToView,boundedValue).play()
                 }
             }
 
-            sourceNode.disableProperty().set(false)
+
 
 
         }
-        tt.node = forNode
+        tt.node = kotsLoginPanelAnchorPane
+        tt.toY = 0.0
+//        tt.delay = 1.seconds
+        tt.duration = 0.3.seconds
+        tt.cycleCount = 1
+
+        return tt
+
+    }
+
+    //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
+    fun hideLoginPanel(returnToView: Node,boundedValue: DoubleBinding) : TranslateTransition
+    {
+
+        //disable during animation/processing click
+        kotsLoginPanelAnchorPane.disableProperty().set(true)
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+
+
+
+            kotsLoginPanelAnchorPane.translateYProperty().unbind()
+            //re-bind xTranslate Value
+            kotsLoginPanelAnchorPane.translateYProperty().bind(-boundedValue)
+
+            //detach listeners on node created in showSideBarMenu onFinishFunction
+            kotsLoginPanelAnchorPane.setOnMouseClicked { null }
+
+            //re enable node even though its out of view range
+            kotsLoginPanelAnchorPane.disableProperty().set(false)
+
+            //move kitchen Observation View back to front of stack
+            root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
+
+            //re-enable th signOutBtn
+            signInOutBtn.disableProperty().set(false)
+        }
+
+        tt.node = kotsLoginPanelAnchorPane
+        tt.byY = -boundedValue.get()
+//        tt.delay = 1.seconds
+        tt.duration = 0.5.seconds
+        tt.cycleCount = 1
+
+
+
+
+        return tt
+    }
+
+    fun showSideBarMenu( returnToView : Node,boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
+    {
+        //disable node so user cannot click mid animation
+        kitchenObservationVBox.disableProperty().set(true)
+
+        //unbind xTranslate Value
+        sidebarMenuAnchorPane.translateXProperty().unbind()
+        //move overlay's parent to the last view in the stack
+        root.getChildList()!!.move(sidebarMenuAnchorPane.parent, root.getChildList()!!.lastIndex)
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+
+
+            //create focus change listener for orverlay Panel View
+            sidebarMenuAnchorPane.setOnMouseClicked {
+
+                //if has click, but this does not, rebind, and hide menu
+                if (it.clickCount == 2 )
+                {
+
+                    hideSideBarMenu(returnToView,boundedValue).play()
+                }
+            }
+
+
+
+        }
+        tt.node = sidebarMenuAnchorPane
         tt.toX = 0.0
 //        tt.delay = 1.seconds
         tt.duration = 0.3.seconds
         tt.cycleCount = 1
 
-        tt.play()
+        return tt
 
     }
+
+    //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
+    fun hideSideBarMenu(returnToView: Node,boundedValue: DoubleBinding) : TranslateTransition
+    {
+
+        //disable during animation/processing click
+        kitchenObservationVBox.disableProperty().set(true)
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+            //move kitchen Observation View back to front of stack
+            root.getChildList()!!.move(kitchenObservationVBox, root.getChildList()!!.lastIndex)
+
+
+            sidebarMenuAnchorPane.translateXProperty().unbind()
+            //re-bind xTranslate Value
+            sidebarMenuAnchorPane.translateXProperty().bind(boundedValue)
+
+            //detach listeners on node created in showSideBarMenu onFinishFunction
+            sidebarMenuAnchorPane.setOnMouseClicked { null }
+
+            //re enable node thats about to be seen
+            kitchenObservationVBox.disableProperty().set(false)
+
+
+        }
+        tt.node = sidebarMenuAnchorPane
+        tt.toX = boundedValue.get()
+//        tt.delay = 1.seconds
+        tt.duration = 0.5.seconds
+        tt.cycleCount = 1
+
+
+
+
+        return tt
+    }
+
+    fun showSideBarMenuItems( returnToView : Node,boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
+    {
+        //disable the orders button when showing this elm
+        sidebarMenuAnchorPane.disableProperty().set(true)
+
+        //unbind xTranslate Value
+        menuItemsListAnchorPane.translateXProperty().unbind()
+
+        //move overlay's parent to the last view in the stack
+        root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+
+
+            //create focus change listener
+            menuItemsListAnchorPane.setOnMouseClicked {
+
+
+                //if parent has click, but this does not, rebind, and hide menu
+                if (it.clickCount == 2 )
+                {
+
+                    //hide sideBarAnchorPane AND...Pass mouse event to detach in the future (on hiding element)
+//                    val ttForSideBar = hideSideBarMenu(sourceNode,returnToView,boundedValue)
+                    //...hide menuItemsListAnchorPane
+                    hideSideBarMenuItemsList(returnToView,boundedValue).play()
+
+                }
+            }
+        }
+        tt.node = menuItemsListAnchorPane
+        tt.toX = 0.0
+//        tt.delay = 1.seconds
+        tt.duration = 0.3.seconds
+        tt.cycleCount = 1
+
+        return  tt
+
+    }
+
+    //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
+    fun hideSideBarMenuItemsList( returnToView: Node, boundedValue: DoubleBinding) : TranslateTransition
+    {
+
+        val tt = TranslateTransition()
+
+
+        tt.setOnFinished {
+            //move kitchen Observation View back to front of stack
+            root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
+
+
+            menuItemsListAnchorPane.translateXProperty().unbind()
+            //re-bind xTranslate Value
+            menuItemsListAnchorPane.translateXProperty().bind(boundedValue)
+
+            //detach listeners on node created in showSideBarMenu onFinishFunction
+            menuItemsListAnchorPane.setOnMouseClicked { null }
+
+            //re enable node even though its out of view range
+            sidebarMenuAnchorPane.disableProperty().set(false)
+        }
+        tt.node = menuItemsListAnchorPane
+        tt.toX = boundedValue.get()
+//        tt.delay = 1.seconds
+        tt.duration = 0.5.seconds
+        tt.cycleCount = 1
+
+        return tt
+
+
+
+    }
+
 
     fun inHierarchy(node: Node?, potentialHierarchyElement: Node?): Boolean {
         var node = node
@@ -205,39 +408,8 @@ class KitchenOrderQueueView : View()
         return false
     }
 
-    //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
-    fun hideSideBarMenu(forNode: Node,sourceNode: Node, boundedValue: ReadOnlyDoubleProperty)
-    {
-
-        //disable during animation/processing click
-        sourceNode.parent.disableProperty().set(true)
-
-        val tt = TranslateTransition()
 
 
-        tt.setOnFinished {
-            //move kitchen Observation View back to front of stack
-            root.getChildList()!!.move(kitchenObservationVBox, root.getChildList()!!.lastIndex)
-
-
-            forNode.translateXProperty().unbind()
-            //re-bind xTranslate Value
-            forNode.translateXProperty().bind(boundedValue)
-
-            //re enable node even though its out of view range
-            sourceNode.parent.disableProperty().set(false)
-        }
-        tt.node = forNode
-        tt.toX = boundedValue.get()
-//        tt.delay = 1.seconds
-        tt.duration = 0.5.seconds
-        tt.cycleCount = 1
-
-        tt.play()
-
-
-
-    }
     //move all side elements off of the screen to slide in on use
     fun initializeViewLayout()
     {
@@ -248,14 +420,15 @@ class KitchenOrderQueueView : View()
         //move all overlay panels off of the screen
         println("width: "+detailWidth+itemsListWidth+sideBarWidth)
         itemDetailAnchorPane.translateXProperty().bind(detailWidth.add(itemsListWidth).add(sideBarWidth))
-        itemsListAnchorPane.translateXProperty().bind(itemsListWidth.add(sideBarWidth))
+        menuItemsListAnchorPane.translateXProperty().bind(itemsListWidth.add(sideBarWidth))
         sidebarMenuAnchorPane.translateXProperty().bind(sideBarWidth)
+        kotsLoginPanelAnchorPane.translateYProperty().bind(-(loginPanelHeight.add(headerBarHeight).add(20)))
 
 
-        //get widths of all login panes
-        val loginPaneWidthHeight = kotsLoginPanelAnchorPane.heightProperty()
+//        //get widths of all login panes
+//        val loginPaneWidthHeight = kotsLoginPanelAnchorPane.heightProperty()
         //move all login container anchor pane  off of the screen
-        kotsLoginPanelAnchorPane.translateYProperty().bind(-loginPaneWidthHeight)
+//        kotsLoginPanelAnchorPane.translateYProperty().bind(-loginPaneWidthHeight)
 
 
         //now make the las view in the stack the kitchenObservationVBox
