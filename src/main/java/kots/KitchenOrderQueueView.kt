@@ -21,6 +21,7 @@ import java.util.*
 import kotlin.concurrent.schedule
 import javafx.animation.KeyFrame
 import javafx.beans.binding.DoubleBinding
+import javafx.beans.property.SimpleObjectProperty
 import javafx.event.ActionEvent
 import javafx.event.EventHandler
 import javafx.scene.control.Button
@@ -28,9 +29,8 @@ import javafx.scene.control.Label
 import javafx.stage.StageStyle
 import java.text.SimpleDateFormat
 import java.util.Calendar
-
-
-
+import java.util.concurrent.ConcurrentLinkedQueue
+import kotlin.concurrent.timerTask
 
 
 class KitchenOrderQueueView : View()
@@ -45,6 +45,12 @@ class KitchenOrderQueueView : View()
     val orderTwoVBox : VBox by fxid()
     val orderThreeVBox : VBox by fxid()
     val orderFourVBox : VBox by fxid()
+
+    val orderOneTextLabel : Label by fxid()
+    val orderTwoTextLabel : Label by fxid()
+    val orderThreeTextLabel : Label by fxid()
+    val orderFourTextLabel : Label by fxid()
+
     val usernameTextField : TextField by fxid()
     val passwordTextField : TextField by fxid()
     val headerBarHBox : HBox by fxid()
@@ -63,6 +69,7 @@ class KitchenOrderQueueView : View()
     val kotsLoginPanelAnchorPane : AnchorPane by fxid()
     //-------------------------------------------
 
+    val timer = Timer("dequeue timer", true)
 
     //statics for overlay layout
     val detailWidth = itemDetailAnchorPane.widthProperty()
@@ -117,6 +124,24 @@ class KitchenOrderQueueView : View()
                     //set isInitialLoad
                     isInitialLoad = true
 
+
+//                    KOTS_Server_Java.orderQueue = ConcurrentLinkedQueue<KOTS_Order>()
+
+                    //init dequeing timer
+                    timer.scheduleAtFixedRate(timerTask {
+
+//                        if(isInitialLoad)
+//                        {
+//                            KOTS_Server_Java.orderQueue = ConcurrentLinkedQueue<KOTS_Order>()
+//                        }
+                        println("running...")
+
+
+                        initDequeueTask()
+                    }, 2000,3000)
+
+
+
                     //load logged in event listeners
 //                    loadLoggedInListeners()
 
@@ -154,6 +179,38 @@ class KitchenOrderQueueView : View()
 //        testOrderChangeAnimation()
 
     }
+
+    fun initDequeueTask()
+    {
+
+
+//        val task = object : TimerTask() {
+//            internal var i = 0
+//            override fun run() {
+
+                println("counting")
+
+                if (KOTS_Server_Java.orderQueue != null)
+                {
+
+                    if (KOTS_Server_Java.orderQueue.peek() != null) {
+                        //if available, send the next order to the kitchen view screen
+
+                        updateOrders(KOTS_Server_Java.orderQueue.poll())
+                    }
+
+
+                }
+
+
+//            }
+//        }
+//
+//       return task
+
+    }
+
+
 
 
     fun loadLoggedInListeners()
@@ -571,6 +628,7 @@ class KitchenOrderQueueView : View()
     fun testOrderChangeAnimation()
     {
 
+
         val timer = Timer("schedule", true);
 
 // schedule a single event
@@ -601,9 +659,8 @@ class KitchenOrderQueueView : View()
             val menuTranslation = animateBoxTranslation(orderOneVBox,orderTwoVBox,orderThreeVBox,orderFourVBox,translationDuration,transCycleCount)
 //            menuTranslation.play()
             parallelTransition {
-                                cycleCount = 10
 
-
+                cycleCount = 10
                 children.addAll(colorChangeTransition,menuTranslation)
 
             }
@@ -611,6 +668,74 @@ class KitchenOrderQueueView : View()
 
 
         }
+
+
+    }
+
+
+    fun updateOrders(newOrder: KOTS_Order)
+    {
+
+
+        // schedule a single event
+        val clearColor = Color.rgb(0,0,0,0.0)
+        val greenColor =  Color.web("#55FF00")
+        val yellowColor = Color.web("#FFEC00")
+        val redColor = Color.RED
+        val borderDuration = 0.1
+        val borderCycleCount = 7
+        val translationDuration = 1.0
+        val transCycleCount = 10
+
+
+
+            val colorChangeTransition = ParallelTransition()
+            colorChangeTransition.cycleCount = borderCycleCount
+
+            colorChangeTransition.children.addAll(
+                    changeBorderColor(clearColor,orderOneVBox,borderDuration),
+                    changeBorderColor(greenColor,orderTwoVBox,borderDuration),
+                    changeBorderColor(yellowColor,orderThreeVBox,borderDuration),
+                    changeBorderColor(redColor,orderFourVBox,borderDuration)
+            )
+
+
+            val menuTranslation = animateBoxTranslation(orderOneVBox,orderTwoVBox,orderThreeVBox,orderFourVBox,translationDuration,transCycleCount)
+//            menuTranslation.play()
+            parallelTransition {
+                cycleCount = 2
+
+
+                children.addAll(colorChangeTransition,menuTranslation)
+
+                var newOrderItemsString = ""
+                newOrder.itemsList.forEach {
+                    newOrderItemsString +=  it.name+"\n"
+                }
+                setOnFinished {
+
+                    //update the onscreen labels with the new order information
+                    runAsync {
+                        ui {
+                            //old order one
+                            val oldOrderOne = orderOneTextLabel.text
+                            //store new order one
+                            orderOneTextLabel.text = newOrderItemsString
+                            //save old order two, then push old order one to text Label two
+                            val oldOrderTwo = orderTwoTextLabel.text
+                            orderTwoTextLabel.text = oldOrderOne
+                            //save old order three, the push old order two to text label three
+                            val oldOrderThree = orderThreeTextLabel.text
+                            orderThreeTextLabel.text = oldOrderTwo
+                            //drop old order four, and push old order three to text label four
+                            orderFourTextLabel.text = oldOrderThree
+                        }
+                    }
+
+
+                }
+
+            }
     }
 
     fun changeBorderColor(toNewColor: Color, onOrderVbox: VBox, durationInSeconds: Double) : SequentialTransition

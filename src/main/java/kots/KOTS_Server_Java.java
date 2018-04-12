@@ -8,6 +8,7 @@ import com.corundumstudio.socketio.listener.DataListener;
 import com.corundumstudio.socketio.protocol.PacketType;
 import couchdb.RestaurantItem;
 import devutil.ConsoleColors;
+import devutil.MyUtil;
 import io.socket.parser.Packet;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
@@ -17,31 +18,65 @@ import org.json.JSONObject;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.PriorityBlockingQueue;
 
 
-public class KOTS_Server_Java
+ public class KOTS_Server_Java
 {
 
     private static int PORT = 7000;
     private static SocketIOClient uiSocket = null;
     private static SocketIOServer server = null;
 
-    private  static SimpleObjectProperty<ConcurrentLinkedQueue<RestaurantItem>> orderQueue  = new SimpleObjectProperty< ConcurrentLinkedQueue<RestaurantItem>>();
-    private static ConcurrentHashMap<String, SocketIOClient> terminalSocketMap  = new ConcurrentHashMap<String, SocketIOClient>();
+      static ConcurrentLinkedQueue<KOTS_Order> orderQueue = new ConcurrentLinkedQueue<KOTS_Order>();
+     static ConcurrentHashMap<String, SocketIOClient> terminalSocketMap  = new ConcurrentHashMap<String, SocketIOClient>();
 
     static KitchenOrderQueueView kitchView  = null;
+    static Timer timer = new Timer();
 
 
+    KOTS_Server_Java()
+    {
+
+
+
+    }
 
     public static void main(String[] args)
     {
 
 
+
+
+    }
+
+    static void initDequeueTask()
+    {
+
+
+//        TimerTask task = new TimerTask() {
+//            int i = 0;
+//            @Override
+//            public void run() {
+
+                System.out.println("counting...");
+
+                if(KOTS_Server_Java.orderQueue.peek() != null)
+                {
+                    //if available, send the next order to the kitchen view screen
+                    kitchView.updateOrders(KOTS_Server_Java.orderQueue.poll());
+                }
+
+
+//            }
+//        };
+
+//        timer.schedule(task, 2000, 540000L);
+//        timer.schedule(task, 100, 2000);
     }
 
     static void startServer() throws InterruptedException
@@ -89,24 +124,59 @@ public class KOTS_Server_Java
 
 
         //this event listener adds orders to the queue, and sends back an ack to the user
-        server.addEventListener(EventNames.addOrder, JSONObject.class, new DataListener<JSONObject>() {
+        server.addEventListener(EventNames.addOrder, String.class, new DataListener<String>() {
             @Override
-            public void onData(SocketIOClient client, JSONObject data, AckRequest ackRequest) {
+            public void onData(SocketIOClient client, String serializedKOTS_Order, AckRequest ackRequest) {
 
-                //get the restuarantItem from data param cast to RestuarantItem
-                RestaurantItem restuarantItem = (RestaurantItem) data.get("item");
+                KOTS_Order newKotsOrder = null;
 
-                if (orderQueue != null)
+
+                try{
+                        newKotsOrder =  new MyUtil().deserializeObject(KOTS_Order.class, serializedKOTS_Order);
+                }catch(Exception e)
                 {
-                    orderQueue.get().add(restuarantItem);
-                    ackRequest.sendAckData(false);
+                 System.out.println(e.getMessage());
                 }
+
+                if (KOTS_Server_Java.orderQueue != null)
+                {
+                    if(newKotsOrder != null)
+                    {
+                        //added new order
+                        orderQueue.add(newKotsOrder);
+                        ackRequest.sendAckData(200);
+                    }else{
+                        //new order was null
+                        ackRequest.sendAckData(400);
+                    }
+                }
+
                 else
                 {
+
                     System.out.println(ConsoleColors.cyanText("THIS ORDER QUEUE HAS NOT BEEN CREATED YET CANNOT ADD ITEM!!!!"));
                     //send back false to tell sender this action was not taken (order was not added to queue)
-                    ackRequest.sendAckData(false);
+                    ackRequest.sendAckData(500);
                 }
+
+
+
+
+
+//                //get the restuarantItem from data param cast to RestuarantItem
+//                RestaurantItem restuarantItem = (RestaurantItem) data.get("item");
+//
+//                if (orderQueue != null)
+//                {
+//                    orderQueue.get().add(restuarantItem);
+//                    ackRequest.sendAckData(false);
+//                }
+//                else
+//                {
+//                    System.out.println(ConsoleColors.cyanText("THIS ORDER QUEUE HAS NOT BEEN CREATED YET CANNOT ADD ITEM!!!!"));
+//                    //send back false to tell sender this action was not taken (order was not added to queue)
+//                    ackRequest.sendAckData(false);
+//                }
             }
         });
 
@@ -123,9 +193,12 @@ public class KOTS_Server_Java
         });
 
 
+
+
         server.start();
         System.out.println("Server Online...");
         InetAddress ipInfo = null;
+
 
         //get host
         try{
@@ -141,6 +214,8 @@ public class KOTS_Server_Java
 
         System.out.println("LoopBack Address: ${InetAddress.getLoopbackAddress().hostAddress}");
 
+//        initDequeueTask();
+
     }
 
     static void stopServer()
@@ -151,12 +226,13 @@ public class KOTS_Server_Java
 
     }
 
+
     void initOrderQueue()
     {
 
-        orderQueue.addListener((observable, oldValue, newValue) -> {
-        System.out.println("textfield changed from " + oldValue + " to " + newValue);
-    });
+//        orderQueue.addListener((observable, oldValue, newValue) -> {
+//        System.out.println("textfield changed from " + oldValue + " to " + newValue);
+//    });
 
 
     }

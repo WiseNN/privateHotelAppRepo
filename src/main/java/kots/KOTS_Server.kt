@@ -24,6 +24,7 @@ import javafx.beans.property.SimpleObjectProperty
 import javafx.collections.ObservableList
 import tornadofx.*
 import com.corundumstudio.socketio.AckCallback
+import devutil.MyUtil
 import javafx.scene.paint.Color
 import org.json.JSONObject
 import java.net.InetAddress
@@ -38,7 +39,7 @@ object KOTS_Server
 
     internal var server: SocketIOServer? = null
     private val PORT = 5000
-    private val orderQueue  = SimpleObjectProperty<Queue<RestaurantItem>>()
+     val orderQueue  = SimpleObjectProperty<Queue<KOTS_Order>>()
     private var uiSocket : SocketIOClient? = null
     private var terminalSocketMap  = HashMap<String, SocketIOClient>()
     var kitchView : KitchenOrderQueueView? = null
@@ -121,14 +122,19 @@ object KOTS_Server
 
 
         //add orders to the queue
-        server!!.addEventListener(EventNames.addOrder, JSONObject::class.java) { client, data, ackRequest ->
+        server!!.addEventListener(EventNames.addOrder,String::class.java) { client,serializedKOTS_Order, ackRequest ->
 
             //get the restuarantItem from data param cast to RestuarantItem
-            val restuarantItem = data["item"] as RestaurantItem
+
+
+                val newKotsOrder =  MyUtil().deserializeObject(KOTS_Order::class.java, serializedKOTS_Order)
+
+
 
             if (orderQueue != null)
             {
-                orderQueue!!.get().add(restuarantItem)
+                orderQueue!!.get().add(newKotsOrder)
+                ackRequest.sendAckData(true)
             }
             else
             {

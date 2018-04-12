@@ -5,29 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e20bf3d-5dc8-4883-857d-f7321037781f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
-      <change beforePath="$PROJECT_DIR$/hotelapp.iml" afterPath="$PROJECT_DIR$/hotelapp.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataProcessing/Encryption3.java" afterPath="$PROJECT_DIR$/src/main/java/dataProcessing/Encryption3.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kots/EventNames.java" afterPath="$PROJECT_DIR$/src/main/java/kots/EventNames.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt" afterPath="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt" afterPath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server2.kt" afterPath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server2.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" afterPath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt" afterPath="$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/KOTSEmployeeManager.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/KOTSEmployeeManager.fxml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RestuarantPosUI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RestuarantPosUI.fxml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/kitchenOrderQueue_UI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/kitchenOrderQueue_UI.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/RestuarantUIStyle.css" afterPath="$PROJECT_DIR$/src/main/resources/styles/RestuarantUIStyle.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" afterPath="$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/CalenderEvents.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/CalenderEvents.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/DBTester.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/DBTester.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Reservation.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Reservation.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/RestaurantTable.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/RestaurantTable.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/couchdb/Room.class" afterPath="$PROJECT_DIR$/target/classes/couchdb/Room.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/RestuarantPosUI.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/RestuarantPosUI.fxml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/styles/RestuarantUIStyle.css" afterPath="$PROJECT_DIR$/target/classes/styles/RestuarantUIStyle.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,31 +34,20 @@
       <file leaf-file-name="RestaurantPOSView.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="72" column="58" lean-forward="true" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
+            <state relative-caret-position="247">
+              <caret line="507" column="37" lean-forward="false" selection-start-line="507" selection-start-column="37" selection-end-line="507" selection-end-column="37" />
               <folding>
-                <element signature="e#22#940#0" expanded="true" />
-                <marker date="1523511518510" expanded="true" signature="3648:3692" ph="..." />
+                <marker date="1523551513350" expanded="true" signature="6106:6150" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="onScreenLabel.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css">
+      <file leaf-file-name="MyUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devutil/MyUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestuarantUIStyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/styles/RestuarantUIStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="108">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,29 +56,31 @@
       <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="37">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyButtonBarView.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
+      <file leaf-file-name="KOTS_EmployeeManager.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="240" column="21" lean-forward="false" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+            <state relative-caret-position="171">
+              <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditPOSView.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt">
+      <file leaf-file-name="KitchenOrderQueueView.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1501">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-3603">
+              <caret line="705" column="30" lean-forward="false" selection-start-line="705" selection-start-column="30" selection-end-line="705" selection-end-column="30" />
+              <folding>
+                <element signature="e#14#1093#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,28 +88,41 @@
       <file leaf-file-name="KOTS_Server_Java.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="72">
+              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1179#1191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KOTS_Server.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IP_AddressView.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kots/IP_AddressView.kt">
+      <file leaf-file-name="TimerTask.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/TimerTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="187">
+              <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <file leaf-file-name="ConcurrentLinkedQueue.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentLinkedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6726">
-              <caret line="381" column="29" lean-forward="false" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+            <state relative-caret-position="-263">
+              <caret line="380" column="13" lean-forward="false" selection-start-line="380" selection-start-column="13" selection-end-line="380" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -135,7 +131,7 @@
       <file leaf-file-name="Encryption3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dataProcessing/Encryption3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
+            <state relative-caret-position="184">
               <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
@@ -157,36 +153,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>dis</find>
-      <find>ip</find>
-      <find>PORT</find>
-      <find>Success</find>
-      <find>Login</find>
-      <find>startSer</find>
-      <find>server</find>
-      <find>orderQueue</find>
-      <find>Server</find>
-      <find>kit</find>
-      <find>st</find>
-      <find>start</find>
-      <find>reques</find>
-      <find>signOn</find>
-      <find>hide</find>
-      <find>connec</find>
-      <find>kitchen</find>
-      <find>conn</find>
-      <find>orderBtn</find>
-      <find>killOrder</find>
-      <find>animate</find>
-      <find>animateHide(kotsLoginPanel,cycleCount,duration,yAnimatorDistance)signO</find>
-      <find>animateHide</find>
-      <find>si</find>
-      <find>connect</find>
-      <find>loginBt</find>
-      <find>loginBtn</find>
       <find>signOut</find>
-      <find>conne</find>
+      <find>flag</find>
+      <find>adminFla</find>
+      <find>ordersViewSlider</find>
+      <find>server</find>
+      <find>addOr</find>
+      <find>kots</find>
+      <find>create</find>
+      <find>subm</find>
+      <find>getDes</find>
+      <find>categoriesL</find>
+      <find>menuDB</find>
+      <find>toggleS</find>
+      <find>categories</find>
+      <find>itemsList</find>
+      <find>itemsListDe</find>
+      <find>anim</find>
+      <find>upd</find>
+      <find>start</find>
+      <find>Timer</find>
+      <find>animate</find>
+      <find>OrderCh</find>
+      <find>test</find>
+      <find>scheduleA</find>
+      <find>init</find>
+      <find>initial</find>
+      <find>Edit</find>
+      <find>initDe</find>
+      <find>initD</find>
+      <find>connec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/reservationsystemui.css" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/rewardsSystem_UI_Style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/Edit_POS_Menu_UI.css" />
@@ -213,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/styles/sideBarBtnStyle.css" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/UIUtil.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/EditOrderPOSView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/KitchenOrderQueueView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/DB.java" />
@@ -231,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/KOTS_PasswordManagerView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/DBNames.java" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/kitchen_Order_Queue_Style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/dataProcessing/Encryption3.java" />
         <option value="$PROJECT_DIR$/src/main/java/kots/SystemUsers.kt" />
         <option value="$PROJECT_DIR$/src/main/java/kots/ClientUsers.kt" />
@@ -240,16 +233,19 @@
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/IP_AddressView.kt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server2.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/kots/EventNames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt" />
         <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManagerView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/kots/ClientEvents.java" />
         <option value="$PROJECT_DIR$/src/main/java/kots/IP_AddressView.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/RestuarantUIStyle.css" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/onScreenLabel.css" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/EventNames.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" />
       </list>
     </option>
@@ -363,6 +359,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="devutil" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PERSONAL_HotelManagementApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hotelbackend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -467,7 +471,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KotlinLauncher">
+  <component name="RunManager" selected="Application.KOTS_Launcher">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -735,12 +739,12 @@
       <workItem from="1523321843044" duration="104802000" />
       <workItem from="1523495267231" duration="51000" />
       <workItem from="1523495467251" duration="8618000" />
-      <workItem from="1523504947043" duration="4156000" />
+      <workItem from="1523504947043" duration="40563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="802979000" />
+    <option name="totallyTimeSpent" value="839386000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,25 +761,25 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47279322" sideWeight="0.37911302" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2382104" sideWeight="0.37911302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25272068" sideWeight="0.6230329" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56469166" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24304716" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5550181" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21316166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21316166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12088698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2732769" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29020557" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -800,17 +804,17 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12088698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2732769" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29020557" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47279322" sideWeight="0.37911302" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2382104" sideWeight="0.37911302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24304716" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56570154" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5550181" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21030043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21316166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1020,25 +1024,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>245</line>
-          <properties />
-          <option name="timeStamp" value="146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>661</line>
+          <line>1006</line>
           <properties />
           <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>663</line>
+          <line>1008</line>
           <properties />
           <option name="timeStamp" value="153" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>683</line>
+          <line>1029</line>
           <properties />
           <option name="timeStamp" value="154" />
         </line-breakpoint>
@@ -1116,85 +1114,85 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>215</line>
+          <line>298</line>
           <properties />
           <option name="timeStamp" value="181" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>214</line>
+          <line>297</line>
           <properties />
           <option name="timeStamp" value="182" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>49</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>62</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="186" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>833</line>
+          <line>958</line>
           <properties />
           <option name="timeStamp" value="202" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>834</line>
+          <line>959</line>
           <properties />
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>409</line>
+          <line>466</line>
           <properties />
           <option name="timeStamp" value="227" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>426</line>
+          <line>483</line>
           <properties />
           <option name="timeStamp" value="229" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>502</line>
+          <line>559</line>
           <properties />
           <option name="timeStamp" value="232" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>497</line>
+          <line>554</line>
           <properties />
           <option name="timeStamp" value="240" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>505</line>
+          <line>562</line>
           <properties />
           <option name="timeStamp" value="246" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>411</line>
+          <line>468</line>
           <properties />
           <option name="timeStamp" value="248" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>387</line>
+          <line>444</line>
           <properties />
           <option name="timeStamp" value="250" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>320</line>
+          <line>377</line>
           <properties />
           <option name="timeStamp" value="252" />
         </line-breakpoint>
@@ -1224,7 +1222,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>104</line>
+          <line>111</line>
           <properties />
           <option name="timeStamp" value="274" />
         </line-breakpoint>
@@ -1242,97 +1240,97 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>415</line>
+          <line>472</line>
           <properties />
           <option name="timeStamp" value="283" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>418</line>
+          <line>475</line>
           <properties />
           <option name="timeStamp" value="285" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>286</line>
+          <line>343</line>
           <properties />
           <option name="timeStamp" value="287" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>289</line>
+          <line>346</line>
           <properties />
           <option name="timeStamp" value="288" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>123</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="289" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>160</line>
+          <line>217</line>
           <properties />
           <option name="timeStamp" value="290" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>168</line>
+          <line>225</line>
           <properties />
           <option name="timeStamp" value="292" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>370</line>
+          <line>427</line>
           <properties />
           <option name="timeStamp" value="293" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>372</line>
+          <line>429</line>
           <properties />
           <option name="timeStamp" value="294" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>51</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="296" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>111</line>
+          <line>112</line>
           <properties />
           <option name="timeStamp" value="297" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>203</line>
+          <line>209</line>
           <properties />
           <option name="timeStamp" value="298" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>125</line>
+          <line>208</line>
           <properties />
           <option name="timeStamp" value="300" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>129</line>
+          <line>212</line>
           <properties />
           <option name="timeStamp" value="301" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>188</line>
+          <line>194</line>
           <properties />
           <option name="timeStamp" value="305" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>117</line>
+          <line>118</line>
           <properties />
           <option name="timeStamp" value="308" />
         </line-breakpoint>
@@ -1386,13 +1384,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>142</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="323" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
-          <line>126</line>
+          <line>127</line>
           <properties />
           <option name="timeStamp" value="326" />
         </line-breakpoint>
@@ -1404,27 +1402,141 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
-          <line>329</line>
+          <line>386</line>
           <properties />
           <option name="timeStamp" value="330" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>278</line>
+          <line>526</line>
           <properties />
           <option name="timeStamp" value="336" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>139</line>
+          <line>222</line>
           <properties />
           <option name="timeStamp" value="339" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
-          <line>352</line>
+          <line>694</line>
           <properties />
           <option name="timeStamp" value="340" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/IP_AddressView.kt</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="341" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>1037</line>
+          <properties />
+          <option name="timeStamp" value="343" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt</url>
+          <line>177</line>
+          <properties />
+          <option name="timeStamp" value="344" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>587</line>
+          <properties />
+          <option name="timeStamp" value="345" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>253</line>
+          <properties />
+          <option name="timeStamp" value="347" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="350" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>662</line>
+          <properties />
+          <option name="timeStamp" value="352" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>631</line>
+          <properties />
+          <option name="timeStamp" value="353" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>648</line>
+          <properties />
+          <option name="timeStamp" value="354" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="355" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="356" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="357" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="358" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>627</line>
+          <properties />
+          <option name="timeStamp" value="362" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="365" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="374" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="377" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java</url>
@@ -1608,27 +1720,69 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
-          <line>62</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="333" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
-          <line>48</line>
+          <line>83</line>
           <properties />
           <option name="timeStamp" value="334" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
-          <line>83</line>
+          <line>118</line>
           <properties />
           <option name="timeStamp" value="335" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
-          <line>84</line>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="338" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt</url>
+          <line>1036</line>
+          <properties />
+          <option name="timeStamp" value="342" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="359" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="361" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/devutil/MyUtil.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="363" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/devutil/MyUtil.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="364" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="368" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt</url>
@@ -1655,7 +1809,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java</url>
-          <line>44</line>
+          <line>54</line>
           <properties class="kots.KOTS_Server_Java">
             <option name="EMULATED" value="true" />
           </properties>
@@ -1665,7 +1819,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="341" />
+      <option name="time" value="380" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JetRunConfigurationType">
@@ -1697,6 +1851,36 @@
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
+        <expression-string>KOTS_Server_Java.orderQueue</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>terminalSocketMap</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>orderQueue</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>menuMap</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>arrayOfAnys[0]</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>orderListItems</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>ranz(&quot;uyyh&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1711,139 +1895,9 @@
         <language-id>kotlin</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>tt.byXProperty()</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>itemDetailAnchorPane.boundsInLocal.width</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>itemDetailAnchorPane.width</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>itemsListAnchorPane.boundsInLocal.width</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>itemsListAnchorPane.widthProperty()</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>itemsListAnchorPane.boundsInParent</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>itemsListAnchorPane.boundsInLocal</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/socket.io-client/1.0.0/socket.io-client-1.0.0.jar!/io/socket/client/Manager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar!/io/socket/engineio/client/Socket.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="266" column="0" lean-forward="false" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar!/io/socket/engineio/client/Transport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar!/io/socket/engineio/parser/Parser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="291" column="0" lean-forward="false" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar!/io/socket/engineio/client/transports/Polling.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/javalin/javalin/1.5.0/javalin-1.5.0.jar!/io/javalin/Javalin.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="371" column="0" lean-forward="false" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server2.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#239#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar!/io/socket/emitter/Emitter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/EventNames.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/EventNames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3363">
-          <caret line="206" column="84" lean-forward="false" selection-start-line="200" selection-start-column="7" selection-end-line="206" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/RestuarantPosUI.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/ControlsKt.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -1883,14 +1937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2680">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -1907,18 +1953,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManagerView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/animation/AnimationAccessorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#888#889#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1930,88 +1971,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="3771" column="0" lean-forward="false" selection-start-line="3771" selection-start-column="0" selection-end-line="3771" selection-end-column="0" />
-          <folding>
-            <element signature="e#66617#66618#0" expanded="false" />
-            <element signature="e#66663#66664#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/ClientEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="47" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/socket/socket.io-client/1.0.0/socket.io-client-1.0.0.jar!/io/socket/client/Socket.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/1.7.12/netty-socketio-1.7.12.jar!/com/corundumstudio/socketio/namespace/Namespace.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/1.7.12/netty-socketio-1.7.12.jar!/com/corundumstudio/socketio/handler/PacketListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/1.7.12/netty-socketio-1.7.12.jar!/com/corundumstudio/socketio/handler/InPacketHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.5.Final/netty-transport-4.1.5.Final.jar!/io/netty/channel/SimpleChannelInboundHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.5.Final/netty-transport-4.1.5.Final.jar!/io/netty/channel/AbstractChannelHandlerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="287" column="0" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2067,58 +2030,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataProcessing/Encryption3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="240" column="21" lean-forward="false" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/IP_AddressView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/styles/RestuarantUIStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -2131,13 +2046,500 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.7.15/tornadofx-1.7.15.jar!/tornadofx/UIComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="347" column="35" lean-forward="false" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/ClientEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="47" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/ClientUsers.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/EventNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ObservableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar!/io/socket/thread/EventThread.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <marker date="1523050299004" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523050299004" expanded="false" signature="140:324" ph="..." />
+            <marker date="1523050299004" expanded="false" signature="512:586" ph="newThread(runnable) → {" />
+            <marker date="1523050299004" expanded="false" signature="828:839" ph="}" />
+            <marker date="1523050299004" expanded="false" signature="1003:1014" ph=" { " />
+            <marker date="1523050299004" expanded="false" signature="1030:1036" ph=" }" />
+            <marker date="1523050299004" expanded="false" signature="1075:1086" ph=" { " />
+            <marker date="1523050299004" expanded="false" signature="1119:1125" ph=" }" />
+            <marker date="1523050299004" expanded="true" signature="1170:1284" ph="{...}" />
+            <marker date="1523050299004" expanded="true" signature="1339:3044" ph="{...}" />
+            <marker date="1523050299004" expanded="false" signature="1675:1723" ph="run() → {" />
+            <marker date="1523050299004" expanded="false" signature="3021:3036" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/1.7.12/netty-socketio-1.7.12.jar!/com/corundumstudio/socketio/namespace/Namespace.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <marker date="1523050225422" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523050225422" expanded="false" signature="161:1603" ph="..." />
+            <marker date="1523050225422" expanded="true" signature="2655:2930" ph="{...}" />
+            <marker date="1523050225422" expanded="false" signature="2980:2991" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="3042:3048" ph=" }" />
+            <marker date="1523050225422" expanded="false" signature="3077:3088" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="3105:3111" ph=" }" />
+            <marker date="1523050225422" expanded="true" signature="3227:3684" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="3739:3938" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="4042:4512" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="4622:5435" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="5485:5653" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="5736:5933" ph="{...}" />
+            <marker date="1523050225422" expanded="false" signature="6001:6012" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="6051:6057" ph=" }" />
+            <marker date="1523050225422" expanded="true" signature="6111:7064" ph="{...}" />
+            <marker date="1523050225422" expanded="false" signature="7126:7137" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="7173:7179" ph=" }" />
+            <marker date="1523050225422" expanded="true" signature="7230:7792" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="7850:7942" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="8006:8099" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="8127:8290" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="8330:8861" ph="{...}" />
+            <marker date="1523050225422" expanded="false" signature="8909:8920" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="8971:8977" ph=" }" />
+            <marker date="1523050225422" expanded="true" signature="9051:9117" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="9173:9337" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="9392:9665" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="9742:10202" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="10254:10369" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="10426:10592" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="10675:10917" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="10970:11087" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="11144:11315" ph="{...}" />
+            <marker date="1523050225422" expanded="false" signature="11350:11361" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="11394:11400" ph=" }" />
+            <marker date="1523050225422" expanded="true" signature="11466:12061" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="12117:12201" ph="{...}" />
+            <marker date="1523050225422" expanded="false" signature="12242:12253" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="12277:12283" ph=" }" />
+            <marker date="1523050225422" expanded="false" signature="12331:12342" ph=" { " />
+            <marker date="1523050225422" expanded="false" signature="12391:12397" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/1.7.12/netty-socketio-1.7.12.jar!/com/corundumstudio/socketio/handler/PacketListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <marker date="1523050225422" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523050225422" expanded="false" signature="159:886" ph="..." />
+            <marker date="1523050225422" expanded="true" signature="1203:1328" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="1415:3581" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/1.7.12/netty-socketio-1.7.12.jar!/com/corundumstudio/socketio/handler/InPacketHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <marker date="1523050225422" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523050225422" expanded="false" signature="159:891" ph="..." />
+            <marker date="1523050225422" expanded="true" signature="1412:1593" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="1695:3740" ph="{...}" />
+            <marker date="1523050225422" expanded="true" signature="3831:3955" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.5.Final/netty-transport-4.1.5.Final.jar!/io/netty/channel/SimpleChannelInboundHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1523050227505" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523050227505" expanded="false" signature="140:225" ph="..." />
+            <marker date="1523050227505" expanded="false" signature="450:461" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="472:478" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="543:686" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="768:779" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="810:816" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="920:1036" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="1107:1154" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="1240:1641" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManagerView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.5.Final/netty-transport-4.1.5.Final.jar!/io/netty/channel/AbstractChannelHandlerContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="306" column="48" lean-forward="false" selection-start-line="306" selection-start-column="48" selection-end-line="306" selection-end-column="48" />
+          <folding>
+            <marker date="1523050227505" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523050227505" expanded="false" signature="140:1086" ph="..." />
+            <marker date="1523050227505" expanded="true" signature="2355:2648" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="2678:2689" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="2720:2726" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="2765:2776" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="2797:2803" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="2840:2851" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="2897:2903" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="2941:3048" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="3074:3085" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="3102:3108" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="3167:3255" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="3339:3674" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="3519:3592" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="3623:3655" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="3719:4035" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="4096:4186" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="4272:4611" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="4454:4527" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="4560:4592" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="4658:4978" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="5033:5168" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="5248:5575" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="5424:5497" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="5524:5556" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="5616:5924" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="5981:6067" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="6149:6480" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="6327:6400" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="6429:6461" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="6523:6835" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="6907:6984" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="7089:7823" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="7343:7424" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="7458:7498" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="7881:8646" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="8718:8814" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="8919:9315" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="9154:9227" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="9264:9296" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="9373:9703" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="9766:9853" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="9943:10357" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="10207:10280" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="10306:10338" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="10406:10718" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="10779:10869" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="10955:11487" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="11264:11320" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="11395:11418" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="11534:11854" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="11921:12017" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="12109:12669" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="12440:12496" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="12577:12600" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="12722:13054" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="13113:13124" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="13174:13180" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="13243:13254" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="13308:13314" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="13406:13490" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="13529:13540" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="13582:13588" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="13622:13633" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="13670:13676" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="13715:13726" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="13768:13774" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="13870:14611" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="14367:14423" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="14504:14527" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="14693:15036" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="15124:15205" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="15339:16118" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="15856:15912" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="16011:16034" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="16232:16611" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="16679:17684" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="17225:17281" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="17577:17600" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="17744:18071" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="18134:18746" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="18515:18571" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="18639:18662" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="18801:19118" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="19186:19808" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="19572:19628" ph="run() → {" />
+            <marker date="1523050227505" expanded="false" signature="19701:19724" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="19868:20195" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="20237:20809" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="20580:20661" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="20679:20719" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="20841:21128" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="21172:21183" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="21225:21231" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="21300:21808" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="21875:22029" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="22097:22303" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="22346:22971" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="22692:22773" ph="run() → { " />
+            <marker date="1523050227505" expanded="false" signature="22792:22832" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="23004:23134" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="23168:23348" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="23425:23741" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="23816:24011" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="24087:24839" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="24891:24902" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="24952:24958" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="25056:25287" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="25346:25645" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="25709:26367" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="26407:26418" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="26484:26490" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="26553:26646" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="26694:26991" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="27051:27138" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="27226:28308" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="28373:28524" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="28590:28742" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="28783:28794" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="28830:28836" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="28865:28876" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="28898:28904" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="28938:29114" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="29147:29255" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="29293:29418" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="29450:29461" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="29491:29497" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="29552:29563" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="29595:29601" ph=" }" />
+            <marker date="1523050227505" expanded="false" signature="29654:29665" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="29700:29706" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="29823:30173" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="30207:30218" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="30289:30295" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="30326:30453" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="30466:30893" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="30992:32120" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="31092:31303" ph="newObject(handle) → {" />
+            <marker date="1523050227505" expanded="false" signature="31402:31417" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="31574:31785" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="31885:31929" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="32028:32114" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="32240:33103" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="32332:32519" ph="newObject(handle) → {" />
+            <marker date="1523050227505" expanded="false" signature="32610:32625" ph="}" />
+            <marker date="1523050227505" expanded="true" signature="32774:32969" ph="{...}" />
+            <marker date="1523050227505" expanded="false" signature="33052:33067" ph=" { " />
+            <marker date="1523050227505" expanded="false" signature="33087:33097" ph=" }" />
+            <marker date="1523050227505" expanded="true" signature="33169:35318" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="33789:33834" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="33996:34589" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="34623:35156" ph="{...}" />
+            <marker date="1523050227505" expanded="true" signature="35258:35312" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/HotelRoomReservationView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2861">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hotelbackend/HotelBackEndNorris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/EditPOSView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="3770" column="0" lean-forward="false" selection-start-line="3770" selection-start-column="0" selection-end-line="3770" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/IP_AddressView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentLinkedQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-263">
+          <caret line="380" column="13" lean-forward="false" selection-start-line="380" selection-start-column="13" selection-end-line="380" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/TimerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataProcessing/Encryption3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devutil/MyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3603">
+          <caret line="705" column="30" lean-forward="false" selection-start-line="705" selection-start-column="30" selection-end-line="705" selection-end-column="30" />
+          <folding>
+            <element signature="e#14#1093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1179#1191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="72" column="58" lean-forward="true" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
+        <state relative-caret-position="247">
+          <caret line="507" column="37" lean-forward="false" selection-start-line="507" selection-start-column="37" selection-end-line="507" selection-end-column="37" />
           <folding>
-            <element signature="e#22#940#0" expanded="true" />
-            <marker date="1523511518510" expanded="true" signature="3648:3692" ph="..." />
+            <marker date="1523551513350" expanded="true" signature="6106:6150" ph="..." />
           </folding>
         </state>
       </provider>

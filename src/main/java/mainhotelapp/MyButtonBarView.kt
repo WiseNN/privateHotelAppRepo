@@ -50,12 +50,12 @@ class MyButtonBarView constructor() : View()
         db.permenantlyRemoveDoc(DBNames.reservations)
         db.permenantlyRemoveDoc(DBNames.hotelCalenderEvents)
         db.permenantlyRemoveDoc(DBNames.restaurantTables)
-        db.permenantlyRemoveDoc(DBNames.restaurantMenu)
+//        db.permenantlyRemoveDoc(DBNames.restaurantMenu)
         roomsClass.createRooms()
         tablesClass.createTables()
         db.createDoc(DBNames.reservations, HashMap<String, Any>())
         db.createDoc(DBNames.hotelCalenderEvents, HashMap<String, Any>())
-        menuItemsClass.createMenu()
+//        menuItemsClass.createMenu()
 
 //        ------------------//------------------//------------------//------------------
 

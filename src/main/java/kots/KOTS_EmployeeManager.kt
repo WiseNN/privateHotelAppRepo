@@ -182,6 +182,16 @@ class KOTS_EmployeeManager
 
     }
 
+    //if isAdminUser, user is flag eligible
+    fun isAdminUser(username: String) : Boolean
+    {
+        val db = DB()
+        val kotsDBMap = db.readDocInDB(DBNames.kotsSystemUsers)
+
+        return kotsDBMap.containsKey(username)
+
+    }
+
 
 
 }
