@@ -33,9 +33,18 @@ public class Encryption3
          int[] randNumsAryForStringValue = ranz(stringValue);
 
 
+
          //send random array of numbers for message, and text from message to encrypt function, store encrypted text
          String encryptedValue = encrypt(stringValue, randNumsAryForStringValue);
 
+         int i=0;
+         //pass array to arrayList
+         while(i<randNumsAryForStringValue.length)
+         {
+            randomNumsAry.add(randNumsAryForStringValue[i]);
+            i++;
+
+         }
          //map array to decrypt string
          decryptKey = mapAryToString(randomNumsAry);
 

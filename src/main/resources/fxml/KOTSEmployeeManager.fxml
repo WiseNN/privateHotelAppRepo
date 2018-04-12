@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="kotsEmployeeManagerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="80.0" prefWidth="868.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -68,12 +68,12 @@
                <children>
                   <TableView fx:id="clientUsersTableView" prefHeight="211.0" prefWidth="338.0" VBox.vgrow="ALWAYS">
                     <columns>
-                      <TableColumn fx:id="usersTableView" prefWidth="337.0000305175781" resizable="false" text="Client Users" />
+                      <TableColumn id="clientUsersColumn" fx:id="clientUsersColumn" prefWidth="337.0000305175781" resizable="false" text="Client Users" />
                     </columns>
                   </TableView>
                   <TableView fx:id="systemUsersTableView" prefHeight="211.0" prefWidth="338.0" VBox.vgrow="ALWAYS">
                      <columns>
-                        <TableColumn fx:id="usersTableView1" prefWidth="337.0000305175781" resizable="false" text="System Users" />
+                        <TableColumn id="systemUsersColumn" fx:id="systemUsersColumn" prefWidth="337.0000305175781" resizable="false" text="System Users" />
                      </columns>
                   </TableView>
                </children>

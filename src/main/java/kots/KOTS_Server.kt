@@ -24,41 +24,75 @@ import javafx.beans.property.SimpleObjectProperty
 import javafx.collections.ObservableList
 import tornadofx.*
 import com.corundumstudio.socketio.AckCallback
+import javafx.scene.paint.Color
 import org.json.JSONObject
-
+import java.net.InetAddress
+import tornadofx.*
+import kotlin.collections.HashMap
+import kotlin.reflect.jvm.javaGetter
 
 object KOTS_Server
 {
 
 
-    private val PORT = 5000
+
     internal var server: SocketIOServer? = null
+    private val PORT = 5000
     private val orderQueue  = SimpleObjectProperty<Queue<RestaurantItem>>()
     private var uiSocket : SocketIOClient? = null
     private var terminalSocketMap  = HashMap<String, SocketIOClient>()
-
+    var kitchView : KitchenOrderQueueView? = null
 
     @Throws(InterruptedException::class)
     @JvmStatic
     fun main(args: Array<String>)
     {
-        val ts = Thread(Runnable {
-            try {
-                initOrderQueue()
-                server()
+////        val ts = Thread(Runnable {
+//            try {
+//                initOrderQueue()
+//                server()
+//
+//            } catch (e: InterruptedException) {
+//                e.printStackTrace()
+//            } catch (e: UnsupportedEncodingException) {
+//                e.printStackTrace()
+//            }
+//
+////        })
 
-            } catch (e: InterruptedException) {
-                e.printStackTrace()
-            } catch (e: UnsupportedEncodingException) {
-                e.printStackTrace()
-            }
-
-        })
-
-        ts.start()
+//        ts.start()
     }
 
 
+    fun startServer()
+    {
+
+
+        //        val ts = Thread(Runnable {
+        try {
+
+
+            initOrderQueue()
+            server()
+
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        } catch (e: UnsupportedEncodingException) {
+            e.printStackTrace()
+        }
+
+//        })
+
+//        ts.start()
+    }
+
+    fun stopServer()
+    {
+        server!!.stop()
+        kitchView!!.connectedStatusText.text = "Not Connected..."
+        kitchView!!.statusIndicator.fill = Color.web("#ff0000")
+
+    }
 
     fun initOrderQueue()
     {
@@ -80,9 +114,14 @@ object KOTS_Server
         config.setPort(PORT)
         server = SocketIOServer(config)
 
+        server!!.addConnectListener {
+            println("Hello World!")
+        }
+
+
 
         //add orders to the queue
-        server!!.addEventListener("addOrder", JSONObject::class.java) { client, data, ackRequest ->
+        server!!.addEventListener(EventNames.addOrder, JSONObject::class.java) { client, data, ackRequest ->
 
             //get the restuarantItem from data param cast to RestuarantItem
             val restuarantItem = data["item"] as RestaurantItem
@@ -99,31 +138,14 @@ object KOTS_Server
             }
         }
 
-
-        server!!.addEventListener("connect", JSONObject::class.java) { client, data, ackRequest ->
-
-
-            if (data["clientID"] == "UI_SOCKET") {
-                //not sure what the [] dictionary param is for, guess we'll find out
-
-                //store uiSocket reference
-                uiSocket!!["uiClient"] = client
-
-                println("UI HOST client connected!")
-
-            }
-            else
-            {
-                println("terminal client connected!")
-                val obj = data
-
-                //retain client in dictionary
-                terminalSocketMap[data["clientID"] as String] = client
-            }
-
-
+        server!!.addEventListener("chatevent", String::class.java) { client, textData, ackRequest ->
+            // broadcast messages to all clients
+            server!!.getBroadcastOperations().sendEvent("chatevent", textData)
         }
-        server!!.addEventListener("dequeueItem", String::class.java) { client, data, ackRequest ->
+
+
+
+        server!!.addEventListener("dequeueOrder", String::class.java) { client, data, ackRequest ->
 
             val p = com.corundumstudio.socketio.protocol.Packet(PacketType.EVENT)
 
@@ -136,22 +158,53 @@ object KOTS_Server
             }
 
 
-            server!!.addDisconnectListener {
 
-                println("disconnecting....")
-//            Thread.sleep(20000)
-                println("disconnected!!!!")
 
+            server!!.addEventListener(EventNames.requestClientSignOn, String::class.java) { client, data, ackRequest ->
+
+                println(EventNames.requestClientSignOn)
+
+                val isEncryptedPassword = KOTS_EmployeeManager().getKOTS_User(KOTS_EmployeeManager.kotsUserType.CLIENT, data)
+
+                if(isEncryptedPassword != null)
+                {
+
+                    client.sendEvent(EventNames.signOn, isEncryptedPassword)
+                }else{
+                    client.sendEvent(EventNames.signOn,"no user")
+                }
             }
 
 
-            server!!.addConnectListener {
+//                //if items exist in the orderQueue, send back an item, else ignore request
+//                if (orderQueue.get().size > 0) {
+//                    p.setData(orderQueue.get().remove())
+//
+//                    client.send(p)
+//                }
 
-                println("connect from server")
-            }
-
-            server!!.start()
         }
+        server!!.addDisconnectListener {
+
+            println("disconnecting....")
+//            Thread.sleep(20000)
+            println("disconnected!!!!")
+
+        }
+
+        server!!.addConnectListener {
+
+            println("client connected!! client: $it")
+        }
+
+        server!!.start()
+        println("Server Online...")
+        println("Local Address: ${InetAddress.getLocalHost().hostAddress}")
+        //display IP Address to connect to from local LAN/WAN
+        kitchView!!.connectedStatusText.text = InetAddress.getLocalHost().hostAddress+":$PORT"
+        kitchView!!.statusIndicator.fill = Color.web("#12ff00")
+
+        println("LoopBack Address: ${InetAddress.getLoopbackAddress().hostAddress}")
     }
 }
 

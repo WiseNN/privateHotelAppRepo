@@ -3,6 +3,7 @@ package kots
 import couchdb.DB
 import de.codecentric.centerdevice.javafxsvg.SvgImageLoaderFactory
 import de.codecentric.centerdevice.javafxsvg.dimension.PrimitiveDimensionProvider
+import devutil.ConsoleColors
 import javafx.application.Application
 import tornadofx.*
 import javafx.scene.paint.Color
@@ -22,7 +23,9 @@ import javafx.animation.KeyFrame
 import javafx.beans.binding.DoubleBinding
 import javafx.event.ActionEvent
 import javafx.event.EventHandler
+import javafx.scene.control.Button
 import javafx.scene.control.Label
+import javafx.stage.StageStyle
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
@@ -34,6 +37,8 @@ class KitchenOrderQueueView : View()
 {
     val kitchenOrderQVIew: StackPane by fxml("/fxml/kitchenOrderQueue_UI.fxml")
     val timeLabel : Label by fxid()
+    val connectedStatusText : Text by fxid()
+    val statusIndicator : Circle by fxid()
     override val root = kitchenOrderQVIew
     val kitchenObservationVBox  : VBox by fxid()
     val orderOneVBox : VBox by fxid()
@@ -43,7 +48,7 @@ class KitchenOrderQueueView : View()
     val usernameTextField : TextField by fxid()
     val passwordTextField : TextField by fxid()
     val headerBarHBox : HBox by fxid()
-    val loginBtn : TextField by fxid()
+    val loginBtn : Button by fxid()
     val ordersBtn : Label by fxid()
     val signInOutBtn : Label by  fxid()
     val gridPane : GridPane by fxid()
@@ -65,45 +70,81 @@ class KitchenOrderQueueView : View()
     val sideBarWidth = sidebarMenuAnchorPane.widthProperty()
     val loginPanelHeight = kotsLoginPanelAnchorPane.heightProperty()
     val headerBarHeight = headerBarHBox.heightProperty()
+    val employeeManagerView = KOTS_EmployeeManagerView()
+
+
+    //set testing boolean
+    val isTesting = false
+    var isInitialLoad = false
+    var isLoggingOut = false
+
 
     init
     {
+
+
         //init view layout for initial view
-        initializeViewLayout()
+        initializeViewLayout(isTesting)
+
+        //disable kitchen observation box
+        kitchenObservationVBox.disableProperty().set(!isTesting)
+
 
         val dateTime = LocalDateTime.now()
         initClock()
 
-        kitchenObservationVBox.setOnMouseClicked {
 
-            println("click count: "+it.clickCount)
-            if(it.clickCount == 2)
+
+
+        //login button from slide down loginPanel
+        loginBtn.setOnMouseClicked {
+
+            if((usernameTextField.text != "" || usernameTextField.text != null) &&
+                    (passwordTextField.text != "" || passwordTextField.text != null))
             {
-                //send source node to disable on transition
-                //send returnToNode node, to know what view to put back on the stack after hide animation
-                //here source node is same as returnToView
-                showSideBarMenu(it.source as Node,sideBarWidth.add(0),false).play()
+                val result = KOTS_EmployeeManager().signIntoKOTS(KOTS_EmployeeManager.kotsUserType.SYSTEM,usernameTextField.text, passwordTextField.text)
+
+
+                if(result[0])
+                {
+                    //pass this instance to server class
+                    KOTS_Server_Java.kitchView = this
+
+                    //start Server
+                    KOTS_Server_Java.startServer()
+
+
+                    //set isInitialLoad
+                    isInitialLoad = true
+
+                    //load logged in event listeners
+//                    loadLoggedInListeners()
+
+                    //hide loginPanel
+                    hideLoginPanel(loginPanelHeight.add(headerBarHeight).add(20)).play()
+
+                    //enable kitchen observation view
+                    kitchenObservationVBox.disableProperty().set(false)
+
+                    println(ConsoleColors.cyanText("From Login: Success!"))
+
+
+                }
+                else if(!result[0] && result[1]) //user exists, failed password
+                {
+                    println(ConsoleColors.cyanText("From Login: Password does not match our records"))
+                }
+                else if(!result[0] && !result[1]) //user does not exist
+                {
+                    println(ConsoleColors.cyanText("From Login: Username does not exist"))
+                }
 
             }
 
-        }
+            //clear textFields
+            usernameTextField.text = ""
+            passwordTextField.text = ""
 
-        orderDetailsOverlayAnchorPane.setOnMouseClicked {
-
-        }
-
-        ordersBtn.setOnMouseClicked {
-
-
-//            (it.source as Label).disableProperty().set(true)
-            //source not is different from returnToView
-
-            //source > parent > parent
-            showSideBarMenuItems(it.source as Node ,itemsListWidth.add(sideBarWidth),false).play()
-        }
-
-        signInOutBtn.setOnMouseClicked {
-            showLoginPanel(kitchenObservationVBox, loginPanelHeight.add(headerBarHeight).add(20), false).play()
         }
 
         root.vgrow = Priority.ALWAYS
@@ -112,6 +153,82 @@ class KitchenOrderQueueView : View()
         //for incoming orders
 //        testOrderChangeAnimation()
 
+    }
+
+
+    fun loadLoggedInListeners()
+    {
+        kitchenObservationVBox.setOnMouseClicked {
+
+            println("click count: "+it.clickCount)
+            if(it.clickCount == 2)
+            {
+                //send source node to disable on transition
+                //send returnToNode node, to know what view to put back on the stack after hide animation
+                //here source node is same as returnToView
+                showSideBarMenu(sideBarWidth.add(0),false).play()
+
+            }
+
+        }
+
+        ordersBtn.setOnMouseClicked {
+
+
+            //            (it.source as Label).disableProperty().set(true)
+            //source not is different from returnToView
+
+            //source > parent > parent
+            showSideBarMenuItems(it.source as Node ,itemsListWidth.add(sideBarWidth),false).play()
+        }
+
+
+        signInOutBtn.setOnMouseClicked {
+
+            //stop server
+            KOTS_Server_Java.stopServer()
+            //set isLogging out flag
+            isLoggingOut = true
+
+            //unload event listeners
+            unloadLoggedInListeners()
+
+            //~~hide the sideBarMenu, then show the login panel~~
+
+            //hide sideBarMenu
+            val ttSideBar = hideSideBarMenu(sideBarWidth.add(0))
+
+            //slideDown the loginPanel
+            val ttLoginPanel = showLoginPanel(loginPanelHeight.add(headerBarHeight).add(20),false)
+            sequentialTransition {
+                children.addAll(ttSideBar,ttLoginPanel)
+
+                setOnFinished {
+                    //disable the kitchen observation view
+                    kitchenObservationVBox.disableProperty().set(true)
+                    isLoggingOut = false
+                }
+            }
+
+
+        }
+
+
+        employeeManagerBtn.setOnMouseClicked {
+            //if docked or visible, do not open
+            if(employeeManagerView.isDocked) return@setOnMouseClicked
+            employeeManagerView.openWindow(stageStyle = StageStyle.UTILITY)
+        }
+
+
+    }
+
+    fun unloadLoggedInListeners()
+    {
+        kitchenObservationVBox.setOnMouseClicked { null }
+        ordersBtn.setOnMouseClicked { null }
+        signInOutBtn.setOnMouseClicked { null }
+        employeeManagerBtn.setOnMouseClicked { null }
     }
 
     fun initClock()
@@ -152,11 +269,8 @@ class KitchenOrderQueueView : View()
 
 
 
-    fun showLoginPanel( returnToView : Node,boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
+    fun showLoginPanel( boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
     {
-        //disable node so user cannot click mid animation
-        signInOutBtn.disableProperty().set(true)
-
         //unbind yTranslate Value
         kotsLoginPanelAnchorPane.translateYProperty().unbind()
 
@@ -169,15 +283,20 @@ class KitchenOrderQueueView : View()
         tt.setOnFinished {
 
 
-            //create focus change listener for orverlay Panel View
-            kotsLoginPanelAnchorPane.setOnMouseClicked {
+            //if not initial load enable this
+            if(!isInitialLoad && !isLoggingOut)
+            {
+                //create focus change listener for orverlay Panel View
+                kotsLoginPanelAnchorPane.setOnMouseClicked {
 
-                //if has click, but this does not, rebind, and hide menu
-                if (it.clickCount == 2 )
-                {
+                    //if has click, but this does not, rebind, and hide menu
+                    if (it.clickCount == 2 )
+                    {
 
-                    hideLoginPanel(returnToView,boundedValue).play()
-                }
+                        hideLoginPanel(boundedValue).play()
+                    }
+            }
+
             }
 
 
@@ -195,7 +314,7 @@ class KitchenOrderQueueView : View()
     }
 
     //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
-    fun hideLoginPanel(returnToView: Node,boundedValue: DoubleBinding) : TranslateTransition
+    fun hideLoginPanel(boundedValue: DoubleBinding) : TranslateTransition
     {
 
         //disable during animation/processing click
@@ -209,7 +328,7 @@ class KitchenOrderQueueView : View()
 
 
             kotsLoginPanelAnchorPane.translateYProperty().unbind()
-            //re-bind xTranslate Value
+            //re-bind yTranslate Value
             kotsLoginPanelAnchorPane.translateYProperty().bind(-boundedValue)
 
             //detach listeners on node created in showSideBarMenu onFinishFunction
@@ -218,11 +337,17 @@ class KitchenOrderQueueView : View()
             //re enable node even though its out of view range
             kotsLoginPanelAnchorPane.disableProperty().set(false)
 
-            //move kitchen Observation View back to front of stack
-            root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
+            //move overlay View back to front of stack unless this is initialLoad, then move kitchen Observation to front
+            if(isInitialLoad){
+                loadLoggedInListeners()
+                root.getChildList()!!.move(kitchenObservationVBox, root.getChildList()!!.lastIndex)
+                isInitialLoad = false
+            }
+            else{
+                root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
+            }
 
-            //re-enable th signOutBtn
-            signInOutBtn.disableProperty().set(false)
+
         }
 
         tt.node = kotsLoginPanelAnchorPane
@@ -237,15 +362,15 @@ class KitchenOrderQueueView : View()
         return tt
     }
 
-    fun showSideBarMenu( returnToView : Node,boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
+    fun showSideBarMenu( boundedValue : DoubleBinding, reverse : Boolean) : TranslateTransition
     {
         //disable node so user cannot click mid animation
-        kitchenObservationVBox.disableProperty().set(true)
+//        kitchenObservationVBox.disableProperty().set(true)
 
         //unbind xTranslate Value
         sidebarMenuAnchorPane.translateXProperty().unbind()
         //move overlay's parent to the last view in the stack
-        root.getChildList()!!.move(sidebarMenuAnchorPane.parent, root.getChildList()!!.lastIndex)
+        root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
 
         val tt = TranslateTransition()
 
@@ -260,7 +385,7 @@ class KitchenOrderQueueView : View()
                 if (it.clickCount == 2 )
                 {
 
-                    hideSideBarMenu(returnToView,boundedValue).play()
+                    hideSideBarMenu(boundedValue).play()
                 }
             }
 
@@ -278,7 +403,7 @@ class KitchenOrderQueueView : View()
     }
 
     //hide menu that were previously hidden, requires rebinding given from showSideBarMenu()
-    fun hideSideBarMenu(returnToView: Node,boundedValue: DoubleBinding) : TranslateTransition
+    fun hideSideBarMenu(boundedValue: DoubleBinding) : TranslateTransition
     {
 
         //disable during animation/processing click
@@ -288,8 +413,15 @@ class KitchenOrderQueueView : View()
 
 
         tt.setOnFinished {
-            //move kitchen Observation View back to front of stack
-            root.getChildList()!!.move(kitchenObservationVBox, root.getChildList()!!.lastIndex)
+            if(isLoggingOut)
+            {
+                //move overlay View back to front of stack if logging out, else...
+                root.getChildList()!!.move(orderDetailsOverlayAnchorPane, root.getChildList()!!.lastIndex)
+            }else{
+                //...move kitchen Observation View back to front of stack
+                root.getChildList()!!.move(kitchenObservationVBox, root.getChildList()!!.lastIndex)
+            }
+
 
 
             sidebarMenuAnchorPane.translateXProperty().unbind()
@@ -411,7 +543,7 @@ class KitchenOrderQueueView : View()
 
 
     //move all side elements off of the screen to slide in on use
-    fun initializeViewLayout()
+    fun initializeViewLayout(testing: Boolean)
     {
 
         //get width of all overlay panes
@@ -422,7 +554,7 @@ class KitchenOrderQueueView : View()
         itemDetailAnchorPane.translateXProperty().bind(detailWidth.add(itemsListWidth).add(sideBarWidth))
         menuItemsListAnchorPane.translateXProperty().bind(itemsListWidth.add(sideBarWidth))
         sidebarMenuAnchorPane.translateXProperty().bind(sideBarWidth)
-        kotsLoginPanelAnchorPane.translateYProperty().bind(-(loginPanelHeight.add(headerBarHeight).add(20)))
+        if(testing) kotsLoginPanelAnchorPane.translateYProperty().bind(-(loginPanelHeight.add(headerBarHeight).add(20)))
 
 
 //        //get widths of all login panes
@@ -432,7 +564,8 @@ class KitchenOrderQueueView : View()
 
 
         //now make the las view in the stack the kitchenObservationVBox
-        root.getChildList()!!.move(kitchenObservationVBox,root.getChildList()!!.lastIndex)
+        if(testing) root.getChildList()!!.move(kitchenObservationVBox,root.getChildList()!!.lastIndex)
+        else root.getChildList()!!.move(orderDetailsOverlayAnchorPane,root.getChildList()!!.lastIndex)
 
     }
     fun testOrderChangeAnimation()

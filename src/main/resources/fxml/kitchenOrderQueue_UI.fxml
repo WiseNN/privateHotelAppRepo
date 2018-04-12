@@ -30,17 +30,17 @@
             <HBox fx:id="headerBarHBox" maxHeight="63.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="866.0" styleClass="headerLabel" VBox.vgrow="NEVER">
                <children>
                   <Label maxWidth="1.7976931348623157E308" prefHeight="63.0" prefWidth="670.0" styleClass="headerTitle" text="Kitchen Order Queue" HBox.hgrow="ALWAYS" />
-                  <Text fx:id="connectedStatusLabel" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Connected..." wrappingWidth="111.55361119066356">
+                  <Text fx:id="connectedStatusText" nodeOrientation="RIGHT_TO_LEFT" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" style="-f: 0 0 0 10;" text="Not Connected..." wrappingWidth="129.55361119066356">
                      <HBox.margin>
                         <Insets top="24.0" />
                      </HBox.margin>
                   </Text>
                   <Circle fx:id="statusIndicator" fill="RED" opacity="0.5" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE">
                      <HBox.margin>
-                        <Insets top="24.0" />
+                        <Insets left="10.0" top="24.0" />
                      </HBox.margin>
                   </Circle>
-                  <Label fx:id="timeLabel" maxHeight="63.0" maxWidth="345.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="63.0" prefWidth="276.0" styleClass="headerClock" text="18 : 24 : 23 PM" />
+                  <Label fx:id="timeLabel" maxHeight="63.0" maxWidth="345.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="63.0" prefWidth="325.0" styleClass="headerClock" text="18 : 24 : 23 PM" />
                </children>
             </HBox>
             <GridPane fx:id="gridPane" prefHeight="558.0" prefWidth="866.0" VBox.vgrow="ALWAYS">

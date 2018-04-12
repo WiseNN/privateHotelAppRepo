@@ -4,6 +4,13 @@
     -fx-background-color: #F0EF9C;
 }
 
+
+.slideMenu{
+    -fx-effect: innershadow(gaussian , rgba(0,0,0,.4), 21,0,0,0);
+    -fx-background-color: #1081D7;
+}
+
+
 .onScreenLabel{
     -fx-text-fill: black;
     -fx-font-family: Avenir;

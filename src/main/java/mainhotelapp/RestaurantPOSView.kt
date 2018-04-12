@@ -1,9 +1,13 @@
 package mainhotelapp
 
+import com.corundumstudio.socketio.AckCallback
 import couchdb.DB
 import couchdb.DBNames
 import couchdb.RestaurantItem
 import devutil.ConsoleColors
+import io.socket.client.Ack
+import io.socket.client.IO
+import io.socket.client.Socket
 import javafx.collections.MapChangeListener
 import javafx.collections.ObservableList
 import javafx.collections.ObservableMap
@@ -18,11 +22,19 @@ import java.util.*
 import javafx.animation.TranslateTransition
 import javafx.scene.Node
 import javafx.scene.shape.Rectangle
+import javafx.stage.StageStyle
 import javafx.util.Duration
+
+import javafx.animation.FadeTransition
+import javafx.scene.control.ListView
+import javafx.scene.image.ImageView
+import kots.EventNames
+import kots.IP_AddressView
 
 
 class RestaurantPOSView(parentView : MyButtonBarView) : View()
 {
+
     val restuarantPOS: StackPane by fxml("/fxml/RestuarantPosUI.fxml")
 //    val sideBarBtn : Button by fxid()
     val sideBar : VBox by fxid()
@@ -44,6 +56,37 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
     val loginAnchorPane: AnchorPane by fxid()
     val eidLabel : Label by fxid()
     val posVBox : VBox by fxid()
+    val loginBtn : Button by fxid()
+    val usernameTextField : TextField by fxid()
+    val passwordTextField : TextField by fxid()
+
+
+    //ordersOverlayView
+    val ordersOverlayAnchorPaneContainer : AnchorPane by fxid()
+    val ordersOverlayHBoxView : HBox by fxid()
+    val ordersListVBox : VBox by fxid()
+    val ordersListRowHBox : HBox by fxid()
+    val orderInfoLabe : Label by fxid()
+    val stopOrderBtn : ImageView by fxid()
+    val resolveStopOrderBtn : ImageView by fxid()
+    val ordersViewSlider : Button by fxid()
+    val payoutOrderListScreen : ListView<String> by fxid()
+
+
+
+    //retain IP Address view instance
+    val ipAddressView = IP_AddressView(this)
+
+    //socketIO Client
+    var socket : Socket? = null
+
+    //get animator translation distances for show/ hiding
+    val yAnimatorDistance = -kotsLoginPanel.parentToLocal(kotsLoginPanel.boundsInParent.maxX,kotsLoginPanel.boundsInParent.maxY).y-120
+    val yAnimatorDistance2 = +kotsLoginPanel.parentToLocal(kotsLoginPanel.boundsInParent.maxX,kotsLoginPanel.boundsInParent.maxY).y+120
+
+
+
+
 
 
 
@@ -52,16 +95,41 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
     init{
 
-        //get animator translation distances for show/ hiding
-        val yAnimatorDistance = -kotsLoginPanel.parentToLocal(kotsLoginPanel.boundsInParent.maxX,kotsLoginPanel.boundsInParent.maxY).y-120
-        val yAnimatorDistance2 = +kotsLoginPanel.parentToLocal(kotsLoginPanel.boundsInParent.maxX,kotsLoginPanel.boundsInParent.maxY).y+120
-        //translate login dialog out of view
-        kotsLoginPanel.translateYProperty().set(yAnimatorDistance)
-//        //hide loginAnchorPane
-        loginAnchorPane.visibleProperty().set(false)
+        //everytime the screen changes update us
+        outputScreen.getChildList().toProperty().addListener(ChangeListener { observable, oldValue, newValue ->
+
+
+            if(newValue.size <= 0)
+            {
+
+            }
+
+        })
 
 
 
+
+        //hide loginAnchorPane without animation on initial load
+        animateShow(kotsLoginPanel,1,0.0,yAnimatorDistance2)
+
+        //hide newOrder Button on initial load, before signIn
+        newOrderBtn.visibleProperty().set(false)
+
+//        loginAnchorPane.visibleProperty().set(false)
+
+
+
+
+        loginBtn.setOnMouseClicked {
+
+
+            if((usernameTextField.text != "" || usernameTextField.text != null) &&
+                    (passwordTextField.text != "" || passwordTextField.text != null))
+            {
+
+                ipAddressView.openWindow(stageStyle = StageStyle.UTILITY)
+            }
+        }
 
         eidLabel.setOnMouseClicked {
             println("can see: ${loginAnchorPane.visibleProperty().get()}")
@@ -71,6 +139,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
             {
                 eidLabel.disableProperty().set(true)
                 animateHide(kotsLoginPanel,cycleCount,duration,yAnimatorDistance)
+
 
             }
             else if(eidLabel.disableProperty().value != true)
@@ -149,6 +218,7 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
                     //check if order list exist...
                     if(orderListItems == null)
                     {
+
                         orderListItems = mutableListOf<RestaurantItem>().observable()
                         orderListItems!!.add(0,orderIDTextField.text)
 
@@ -180,6 +250,183 @@ class RestaurantPOSView(parentView : MyButtonBarView) : View()
 
 
         }
+
+    fun connectToServer(ipAddress : String)
+    {
+        socket = IO.socket("$ipAddress")
+
+
+//        socket!!.on(Socket.EVENT_DISCONNECT, object : Emitter.Listener {
+//
+//            override fun call(vararg args: Any) {}
+//
+//        })
+
+
+        socket!!.connect()
+        socket!!.open()
+
+//        socket!!.emit(Socket.EVENT_CONNECT, "Hello!")
+
+
+        socket!!.send("hey")
+//       socket!!.emit(EventNames.requestClientSignOn, usernameTextField.text)
+
+//        val d = AckCallback("")
+        socket!!.emit(EventNames.requestClientSignOn, usernameTextField.text, Ack{
+                arrayOfAnys ->
+
+            println("response: "+arrayOfAnys[0])
+
+            //cast value to string from server, hope for encrypted password
+            val encryptedPassword = arrayOfAnys[0] as String
+
+
+            when(encryptedPassword)
+            {
+                "no user" -> {
+                    //if no user, show a message telling user that username doesnt exist, shutdown and disconnect from server
+
+
+                }
+
+                else -> {
+
+                    val result = encryptedPassword!!.split("OR")
+                    val isMatch = passwordTextField.text == dataProcessing.Encryption3().decryptValue("decrypt", result[0],result[1])
+
+                    if(isMatch)
+                    {
+                        socket!!.emit(EventNames.signOn, usernameTextField.text, Ack{
+                            arrayOfAnys ->
+                            val isSignedIn = arrayOfAnys[0] as Boolean
+                            if(isSignedIn)
+                            {
+                                val cycleCount = 1
+                                val duration = 0.5
+                                runAsync {
+                                    ui {
+                                        newOrderBtn.visibleProperty().set(true)
+                                        usernameTextField.text = ""
+                                        passwordTextField.text = ""
+                                        loginBtn.text = "Logout"
+
+                                    }
+                                }
+
+                                //sign out of KOTS Server
+                                loginBtn.setOnMouseClicked { signOut() }
+                                animateHide(kotsLoginPanel,cycleCount,duration,yAnimatorDistance)
+                                //enable new order button
+                                newOrderBtn.disableProperty().set(false);
+                            }else{
+                                println(ConsoleColors.yellowText(("ERROR: 500, PLEASE CONTACT IT SUPPORT IMMEDIATELY")))
+                            }
+
+                        })
+
+
+
+                    }else{
+
+                        val response = "This password does not match our records"
+                        println(response)
+
+                    }
+
+
+
+                }
+            }
+
+
+        })
+
+
+
+    }
+
+    fun signOut()
+    {
+
+        //hide this
+        killOrderBtn.visibleProperty().set(false)
+        //show newOrder Btn
+        newOrderBtn.visibleProperty().set(false)
+
+        //disable & clear textField
+        orderIDTextField.text = ""
+        orderIDTextField.disableProperty().set(true)
+
+        //disable viewStackPane
+        viewStackPane.disableProperty().set(true)
+
+        //clear the orderListItems
+        orderListItems = null
+
+
+
+
+        //clear the outputScreen orderItems
+        if(outputScreen.getChildList() != null)
+        {
+            outputScreen.getChildList()!!.clear()
+        }
+
+
+        //reset login button text
+        loginBtn.text = "Login"
+
+        loginBtn.setOnMouseClicked {
+
+
+            if((usernameTextField.text != "" || usernameTextField.text != null) &&
+                    (passwordTextField.text != "" || passwordTextField.text != null))
+            {
+
+                ipAddressView.openWindow(stageStyle = StageStyle.UTILITY)
+            }
+        }
+
+
+
+
+
+        //dont hide on signOut, disable orderUI
+//        val cycleCount = 1
+//        val duration = 0.5
+//        animateHide(kotsLoginPanel,cycleCount,duration,yAnimatorDistance)
+
+
+
+    }
+
+    fun flashLoginTextNotifier(forNode: Label, state:String)
+    {
+        val fadeTrans = FadeTransition()
+        fadeTrans.node = forNode
+        fadeTrans.fromValue = 0.0
+        fadeTrans.toValue = 1.0
+        fadeTrans.duration = 2.seconds
+
+        when(state)
+        {
+            "noAuth" -> {
+                fadeTrans.setOnFinished {
+                    //disconnect from server, & disable UI
+                }
+            }
+
+            "hasAccess" -> {
+                //slide login Dialog up and enable UI (@ create Order level)
+            }
+
+
+
+        }
+
+
+    }
     fun animateHide(forNode : Node, myCycleCount : Int, myDuration : Double,animatorDistance : Double )
     {
         val clipRect = Rectangle(kotsLoginPanel.width, kotsLoginPanel.height)

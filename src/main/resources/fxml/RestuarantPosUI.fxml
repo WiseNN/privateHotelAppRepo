@@ -5,6 +5,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
@@ -89,7 +90,7 @@
       </AnchorPane>
       <VBox fx:id="posVBox" maxHeight="1.7976931348623157E308" style="-fx-background-color: green;">
          <children>
-            <AnchorPane fx:id="headerBar" prefHeight="51.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;">
+            <AnchorPane fx:id="headerBar" prefHeight="51.0" prefWidth="860.0" style="-fx-background-color: #36AAFF;" stylesheets="@../styles/RestuarantUIStyle.css">
                <children>
                   <ImageView fitHeight="42.0" fitWidth="70.0" layoutX="790.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="4.0">
                      <image>
@@ -111,6 +112,7 @@
                   <TextField fx:id="orderIDTextField" layoutX="609.0" layoutY="8.0" prefHeight="34.0" prefWidth="133.0" style="-fx-padding: 0 0 0 10;" styleClass="textFields" stylesheets="@../styles/finalOut_POS_Style.css" text="Zelia" AnchorPane.rightAnchor="118.0" />
                   <Button fx:id="killOrderBtn" layoutX="444.0" layoutY="9.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="124.0" style="-fx-border-color: red; -fx-border-radius: 5; -fx-text-fill: red; -fx-background-color: none; -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.50), 3,0,-4,4);" text="kill Order" textAlignment="CENTER" AnchorPane.rightAnchor="345.0" />
                   <Button fx:id="newOrderBtn" contentDisplay="CENTER" layoutX="391.0" layoutY="9.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="124.0" style="-fx-border-color: #4DF63D; -fx-border-radius: 5; -fx-text-fill: #4DF63D; -fx-background-color: none; -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.50), 3,0,-4,4);" text="new Order" textAlignment="CENTER" AnchorPane.rightAnchor="345.0" />
+                  <Button fx:id="ordersViewSlider" layoutX="174.0" minWidth="42.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="42.0" style="-fx-padding: 0 0 0 0 !important; -fx-background-color: none; -fx-border-color: rgba(0,0,0,0.1); -fx-border-radius: 30; -fx-min-width: 200; -fx-max-width: 200;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="486.0" AnchorPane.topAnchor="0.0" />
                </children>
                <opaqueInsets>
                   <Insets />
@@ -178,5 +180,51 @@
             </StackPane>
          </children>
       </VBox>
+      <AnchorPane fx:id="ordersOverlayAnchorPaneContainer" stylesheets="@../styles/onScreenLabel.css">
+         <children>
+            <HBox fx:id="ordersOverlayHBoxView" layoutY="50.0" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="559.0" prefWidth="342.0" style="-fx-border-width: 0; -fx-background-color: none;" HBox.hgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="ordersListVBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="557.0" prefWidth="389.0" style="-fx-background-color: #1081D7; -fx-border-width: 0;">
+                           <children>
+                              <HBox fx:id="ordersListRowHBox" prefHeight="63.0" spacing="10.0" styleClass="slideMenu">
+                                 <children>
+                                    <Label fx:id="orderInfoLabe" lineSpacing="10.0" maxWidth="1.7976931348623157E308" prefHeight="63.0" prefWidth="359.0" style="-fx-font-style: normal !important; -fx-font-size: 24;" styleClass="onScreenLabel" text="#12 - Zelia" textOverrun="CENTER_ELLIPSIS" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets left="13.0" />
+                                       </padding>
+                                    </Label>
+                                    <ImageView fx:id="stopOrderBtn" fitHeight="38.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                       <HBox.margin>
+                                          <Insets right="4.0" top="14.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../images/stopOrder-enable2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="resolveStopOrderBtn" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                       <image>
+                                          <Image url="@../images/blackCheck2.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="42.0" top="7.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <ListView fx:id="payoutOrderListScreen" prefHeight="558.0" prefWidth="437.0" style="-fx-background-color: #F0EF9C;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="-1.0" />
+                     </HBox.margin>
+                  </ListView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
    </children>
 </StackPane>
