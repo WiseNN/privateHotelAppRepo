@@ -20,12 +20,12 @@ class MainAppKotlin : App(MyButtonBarView::class)
     }
 
 
-fun main(args: Array<String>) {
-
-        Application.launch(MainAppKotlin::class.java, *args)
-        SvgImageLoaderFactory.install(PrimitiveDimensionProvider())
-
-
-
-    }
+//fun main(args: Array<String>) {
+//
+//        Application.launch(MainAppKotlin::class.java, *args)
+//        SvgImageLoaderFactory.install(PrimitiveDimensionProvider())
+//
+//
+//
+//    }
 

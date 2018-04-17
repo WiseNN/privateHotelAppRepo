@@ -52,15 +52,6 @@ class KOTS_EmployeeManagerView : tornadofx.View()
         clientUsersList.addAll(getClientList(KOTS_EmployeeManager().readClientUsersAsList().observable()))
         systemUsersList.addAll(getSystemList(KOTS_EmployeeManager().readSystemUsersAsList().observable()))
 
-
-//        //delete usersDB
-//        KOTS_EmployeeManager().deleteKotsUsersDB()
-//
-//        //create usersDB
-//        KOTS_EmployeeManager().createKotsUsersDB()
-
-
-
         //initially bind deleteButton to clientUsersTableView selected item property
         deleteUserBtn.disableProperty().bind(clientUsersTableView.selectionModel.selectedItemProperty().isNull)
 

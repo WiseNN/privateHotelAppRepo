@@ -146,7 +146,7 @@ class KitchenOrderQueueView : View()
 //                    loadLoggedInListeners()
 
                     //hide loginPanel
-                    hideLoginPanel(loginPanelHeight.add(headerBarHeight).add(20)).play()
+                    hideLoginPanel(loginPanelHeight.add(headerBarHeight).add(40)).play()
 
                     //enable kitchen observation view
                     kitchenObservationVBox.disableProperty().set(false)
@@ -242,6 +242,10 @@ class KitchenOrderQueueView : View()
 
         signInOutBtn.setOnMouseClicked {
 
+            //top dequeue thread timer
+            timer.cancel()
+            timer.purge()
+
             //stop server
             KOTS_Server_Java.stopServer()
             //set isLogging out flag
@@ -256,7 +260,7 @@ class KitchenOrderQueueView : View()
             val ttSideBar = hideSideBarMenu(sideBarWidth.add(0))
 
             //slideDown the loginPanel
-            val ttLoginPanel = showLoginPanel(loginPanelHeight.add(headerBarHeight).add(20),false)
+            val ttLoginPanel = showLoginPanel(loginPanelHeight.add(headerBarHeight).add(40),false)
             sequentialTransition {
                 children.addAll(ttSideBar,ttLoginPanel)
 
@@ -353,6 +357,8 @@ class KitchenOrderQueueView : View()
                         hideLoginPanel(boundedValue).play()
                     }
             }
+
+
 
             }
 

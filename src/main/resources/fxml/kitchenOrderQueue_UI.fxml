@@ -70,12 +70,12 @@
                         <Insets bottom="65.0" left="68.0" right="29.0" top="10.0" />
                      </GridPane.margin>
                      <children>
-                        <Label fx:id="orderOneTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" text="- Mac N’Cheese            - Shrimp &amp; Grits          Add-Ons:                Cheese,garlic,salt,sausage." textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="orderOneTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
                      </children>
                   </VBox>
                   <VBox fx:id="orderThreeVBox" style="-fx-border-color: red;" styleClass="orderItemBox" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="orderThreeTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" text="- Mac N’Cheese            - Shrimp &amp; Grits          Add-Ons:                Cheese,garlic,salt,sausage." textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="orderThreeTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
                      </children>
                      <GridPane.margin>
                         <Insets bottom="35.0" left="68.0" right="29.0" top="20.0" />
@@ -83,7 +83,7 @@
                   </VBox>
                   <VBox fx:id="orderFourVBox" styleClass="orderItemBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Label fx:id="orderFourTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" text="- Mac N’Cheese            - Shrimp &amp; Grits          Add-Ons:                Cheese,garlic,salt,sausage." textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="orderFourTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
                      </children>
                      <GridPane.margin>
                         <Insets bottom="35.0" left="68.0" right="29.0" top="20.0" />
@@ -91,7 +91,7 @@
                   </VBox>
                   <VBox fx:id="orderTwoVBox" style="-fx-border-color: #FFEC00;" styleClass="orderItemBox" GridPane.columnIndex="1">
                      <children>
-                        <Label fx:id="orderTwoTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" text="- Mac N’Cheese            - Shrimp &amp; Grits          Add-Ons:                Cheese,garlic,salt,sausage." textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="orderTwoTextLabel" alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="263.0" prefWidth="433.0" styleClass="orderItemLabel" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
                      </children>
                      <GridPane.margin>
                         <Insets bottom="65.0" left="68.0" right="29.0" top="10.0" />

@@ -23,6 +23,7 @@ public class CouchbaseSingleton {
 
     private CouchbaseSingleton() {
         try {
+
             this.manager = new Manager(new JavaContext("data"), Manager.DEFAULT_OPTIONS);
 
             this.database = this.manager.getDatabase("reservationsystemdb");

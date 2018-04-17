@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox
 import tornadofx.*
 import javafx.scene.control.ComboBox
 import javafx.scene.layout.Priority
+import kots.KOTS_EmployeeManager
 import kots.KitchenOrderQueueView
 
 
@@ -46,16 +47,18 @@ class MyButtonBarView constructor() : View()
         val tablesClass = RestaurantTable()
         val menuItemsClass = RestaurantItem()
         val db = DB()
-        db.permenantlyRemoveDoc(DBNames.rooms)
-        db.permenantlyRemoveDoc(DBNames.reservations)
-        db.permenantlyRemoveDoc(DBNames.hotelCalenderEvents)
-        db.permenantlyRemoveDoc(DBNames.restaurantTables)
+//        db.permenantlyRemoveDoc(DBNames.rooms)
+//        db.permenantlyRemoveDoc(DBNames.reservations)
+//        db.permenantlyRemoveDoc(DBNames.hotelCalenderEvents)
+//        db.permenantlyRemoveDoc(DBNames.restaurantTables)
 //        db.permenantlyRemoveDoc(DBNames.restaurantMenu)
+//        KOTS_EmployeeManager().deleteKotsUsersDB()
         roomsClass.createRooms()
         tablesClass.createTables()
         db.createDoc(DBNames.reservations, HashMap<String, Any>())
         db.createDoc(DBNames.hotelCalenderEvents, HashMap<String, Any>())
-//        menuItemsClass.createMenu()
+        menuItemsClass.createMenu()
+        KOTS_EmployeeManager().createKotsUsersDB()
 
 //        ------------------//------------------//------------------//------------------
 

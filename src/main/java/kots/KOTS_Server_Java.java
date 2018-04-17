@@ -36,7 +36,7 @@ import java.util.concurrent.PriorityBlockingQueue;
      static ConcurrentHashMap<String, SocketIOClient> terminalSocketMap  = new ConcurrentHashMap<String, SocketIOClient>();
 
     static KitchenOrderQueueView kitchView  = null;
-    static Timer timer = new Timer();
+//    static Timer timer = new Timer();
 
 
     KOTS_Server_Java()
@@ -81,8 +81,18 @@ import java.util.concurrent.PriorityBlockingQueue;
 
     static void startServer() throws InterruptedException
     {
+        //get host address to connect to
+        InetAddress ipInfo = null;
+        try{
+            ipInfo = InetAddress.getLocalHost();
+        }catch(UnknownHostException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+
         Configuration config = new Configuration();
-        config.setHostname("localhost");
+        config.setHostname(ipInfo.getHostAddress());
         config.setPort(PORT);
 
          server = new SocketIOServer(config);
@@ -197,16 +207,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 
         server.start();
         System.out.println("Server Online...");
-        InetAddress ipInfo = null;
 
-
-        //get host
-        try{
-            ipInfo = InetAddress.getLocalHost();
-        }catch(UnknownHostException e)
-        {
-            System.out.println(e.getMessage());
-        }
 
         //display IP Address to connect to from local LAN/WAN
         kitchView.getConnectedStatusText().setText(ipInfo.getHostAddress()+":"+PORT);
@@ -220,9 +221,11 @@ import java.util.concurrent.PriorityBlockingQueue;
 
     static void stopServer()
     {
+
         server.stop();
         kitchView.getConnectedStatusText().setText("Not Connected...");
         kitchView.getStatusIndicator().setFill(Color.web("#ff0000"));
+
 
     }
 

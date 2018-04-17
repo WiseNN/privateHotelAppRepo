@@ -18,6 +18,10 @@ class KOTS_EmployeeManager
         val db = DB()
         db.createDoc(DBNames.kotsClientUsers, HashMap<String, Any>())
         db.createDoc(DBNames.kotsSystemUsers, HashMap<String, Any>())
+
+        //generic admin account using EmployeeManagerView function
+        KOTS_EmployeeManager().createKotsUser(KOTS_EmployeeManager.kotsUserType.SYSTEM, "admin","password")
+
     }
 
     fun deleteKotsUsersDB()

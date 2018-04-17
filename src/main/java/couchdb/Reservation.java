@@ -1,6 +1,6 @@
 package couchdb;
 
-import com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference;
+//import com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference;
 import devutil.ConsoleColors;
 import devutil.MyUtil;
 
