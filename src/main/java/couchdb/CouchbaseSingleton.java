@@ -21,49 +21,40 @@ public class CouchbaseSingleton {
 
     private static CouchbaseSingleton instance = null;
 
-    private CouchbaseSingleton() {
-        try {
-
+    private CouchbaseSingleton()
+    {
+        try
+        {
             this.manager = new Manager(new JavaContext("data"), Manager.DEFAULT_OPTIONS);
-
             this.database = this.manager.getDatabase("reservationsystemdb");
+
             View todoView = database.getView("rooms");
+
+
             todoView.setMap(new Mapper() {
                 @Override
                 public void map(Map<String, Object> document, Emitter emitter) {
                     emitter.emit(document.get("_id"), document);
 
-                   // Map photosObj = document.get("photos");
-
-
+                    // Map photosObj = document.get("photos");
                 }
             }, "1");
-        } catch (Exception e) {
+
+        }
+
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
     }
 
 
-//var db =  {
-    //      "photo": "ksdjsdtyyt65uiew98923", //view
-
-    //    "videos": { },
-
-    //  "timeline" : { }
-    //}
-
-    //db.get("")
-
-    //db.ge
 
 
 
 
-
-
-
-
-    public static CouchbaseSingleton getInstance() {
+    public static CouchbaseSingleton getInstance()
+    {
         System.out.println("GETTING INSTANCE");
         if(instance == null) {
             System.out.println("CREATING NEW COUCHBASE INSTANCE");

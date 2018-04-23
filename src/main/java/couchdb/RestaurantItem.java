@@ -234,6 +234,12 @@ public class RestaurantItem implements Serializable
         DB db = new DB();
         Map<String, Object> newMenu = new HashMap<>();
 
+        //if the rooms database exists, do not create one
+        if(db.readDocInDB(DBNames.restaurantMenu) != null)
+        {
+            return;
+        }
+
         db.createDoc(DBNames.restaurantMenu, newMenu);
 
     }

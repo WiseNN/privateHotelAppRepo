@@ -43,7 +43,7 @@ public class RestaurantTable implements Serializable
 
 
 
-        //if the rooms database exists, do not create one
+        //if the tables database exists, do not create one
         if(db.readDocInDB(DBNames.restaurantTables) != null)
         {
             return;

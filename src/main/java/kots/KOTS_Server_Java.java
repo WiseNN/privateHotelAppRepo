@@ -16,6 +16,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.paint.Color;
 import org.json.JSONObject;
 
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.*;
@@ -38,13 +39,9 @@ import java.util.concurrent.PriorityBlockingQueue;
     static KitchenOrderQueueView kitchView  = null;
 //    static Timer timer = new Timer();
 
-
-    KOTS_Server_Java()
-    {
-
-
-
-    }
+//
+//    KOTS_Server_Java()
+//    { }
 
     public static void main(String[] args)
     {
@@ -83,27 +80,30 @@ import java.util.concurrent.PriorityBlockingQueue;
     {
         //get host address to connect to
         InetAddress ipInfo = null;
+        Configuration config = new Configuration();
+
+        System.out.println("config host name: "+config.getHostname());
+
         try{
-            ipInfo = InetAddress.getLocalHost();
-        }catch(UnknownHostException e)
+
+            ipInfo = Inet4Address.getLocalHost();
+
+            config.setHostname(ipInfo.getHostAddress().toString());
+            config.setPort(PORT);
+            server = new SocketIOServer(config);
+
+        }catch(Exception e)
         {
             System.out.println(e.getMessage());
         }
 
 
-        Configuration config = new Configuration();
-        config.setHostname(ipInfo.getHostAddress());
-        config.setPort(PORT);
-
-         server = new SocketIOServer(config);
         //user will request to signOn, we will check if username exists, if so we send back
         //encrypted password, user will sign back sign on event if successfully authenticated
         server.addEventListener(EventNames.requestClientSignOn, String.class, new DataListener<String>() {
 
-
             @Override
             public void onData(SocketIOClient client, String username, AckRequest ackRequest) {
-
 
                 String isEncryptedPassword = new KOTS_EmployeeManager().getKOTS_User(KOTS_EmployeeManager.kotsUserType.CLIENT, username);
 
@@ -111,18 +111,18 @@ import java.util.concurrent.PriorityBlockingQueue;
                 {
                     //send back ack with encrypted password
                     ackRequest.sendAckData(isEncryptedPassword);
-
-                }else{
+                }
+                else{
                     //send back ack with no user string
                     ackRequest.sendAckData("no user");
                 }
             }
-
         });
+
+
 
         //after user authenticates locally, we will add them to the list of currently online terminal devices
         server.addEventListener(EventNames.signOn, String.class, new DataListener<String>() {
-
             @Override
             public void onData(SocketIOClient client, String username, AckRequest ackRequest) {
 
@@ -131,6 +131,8 @@ import java.util.concurrent.PriorityBlockingQueue;
             }
 
         });
+
+
 
 
         //this event listener adds orders to the queue, and sends back an ack to the user
@@ -213,7 +215,8 @@ import java.util.concurrent.PriorityBlockingQueue;
         kitchView.getConnectedStatusText().setText(ipInfo.getHostAddress()+":"+PORT);
         kitchView.getStatusIndicator().setFill( Color.web("#12ff00"));
 
-        System.out.println("LoopBack Address: ${InetAddress.getLoopbackAddress().hostAddress}");
+        System.out.println("Host Address:"+ipInfo.getHostAddress());
+        System.out.println("Host Name:"+ipInfo.getHostName());
 
 //        initDequeueTask();
 

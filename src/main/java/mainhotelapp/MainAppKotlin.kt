@@ -12,6 +12,7 @@ class MainAppKotlin : App(MyButtonBarView::class)
     {
 
         init {
+
             importStylesheet("/styles/RectBtnStyle.css")
             reloadStylesheetsOnFocus()
             SvgImageLoaderFactory.install()
