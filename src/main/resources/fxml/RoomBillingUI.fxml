@@ -14,11 +14,11 @@
       <WebView fx:id="billingWebView" layoutY="52.0" prefHeight="366.0" prefWidth="762.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0" />
       <TextField fx:id="firstNameTextField" layoutX="24.0" layoutY="489.0" prefHeight="27.0" prefWidth="154.0" promptText="first name" text="Norris" />
       <TextField fx:id="lastnameTextField" layoutX="207.0" layoutY="489.0" prefHeight="27.0" prefWidth="154.0" promptText="last name" text="Wise" />
-      <TextField fx:id="addressOneTextField" layoutX="23.0" layoutY="539.0" prefHeight="27.0" prefWidth="339.0" promptText="Address 1" text="5501 Glenridge Dr. " />
-      <TextField fx:id="addressTwoTextField" layoutX="23.0" layoutY="582.0" prefHeight="27.0" prefWidth="339.0" promptText="Address 2" text="APT 429" />
-      <TextField fx:id="cityTextField" layoutX="23.0" layoutY="628.0" prefHeight="27.0" prefWidth="154.0" promptText="City" text="Atlanta" />
-      <TextField fx:id="stateTextField" layoutX="206.0" layoutY="628.0" prefHeight="27.0" prefWidth="154.0" promptText="State" text="GA" />
-      <TextField fx:id="zipcodeTextField" layoutX="23.0" layoutY="668.0" prefHeight="27.0" prefWidth="154.0" promptText="Zipcode" text="30342" />
+      <TextField fx:id="addressOneTextField" layoutX="23.0" layoutY="539.0" prefHeight="27.0" prefWidth="339.0" promptText="Address 1" text="123 FarmRidge Dr." />
+      <TextField fx:id="addressTwoTextField" layoutX="23.0" layoutY="582.0" prefHeight="27.0" prefWidth="339.0" promptText="Address 2" text="APT 125" />
+      <TextField fx:id="cityTextField" layoutX="23.0" layoutY="628.0" prefHeight="27.0" prefWidth="154.0" promptText="City" text="Denver" />
+      <TextField fx:id="stateTextField" layoutX="206.0" layoutY="628.0" prefHeight="27.0" prefWidth="154.0" promptText="State" text="CO" />
+      <TextField fx:id="zipcodeTextField" layoutX="23.0" layoutY="668.0" prefHeight="27.0" prefWidth="154.0" promptText="Zipcode" text="39345" />
       <Separator layoutX="388.0" layoutY="453.0" orientation="VERTICAL" prefHeight="264.0" prefWidth="4.0" AnchorPane.bottomAnchor="6.0" AnchorPane.topAnchor="453.0" />
       <Text layoutX="470.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
       <Text layoutX="546.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/" />

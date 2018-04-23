@@ -56,8 +56,8 @@ class RestaurantReservationView(parentView : MyButtonBarView) : View()
 
         bookNowBtn.setOnMouseClicked {
             val timeString = reservationTimesComboBox.value
-            var hr = timeString.substring(0,2).toInt()
-            val mins = timeString.substring(3,5).toInt()
+            var hr = if(timeString.substring(0,1) != "8" && timeString.substring(0,1) != "9")timeString.substring(0,2).toInt() else timeString.substring(0,1).toInt()
+            val mins = if(hr == 8 || hr == 9) timeString.substring(2,4).toInt() else timeString.substring(3,5).toInt()
             val period = reservationTimesComboBox.value.substring(5)
 
             if(period.equals("PM")) hr += 12
