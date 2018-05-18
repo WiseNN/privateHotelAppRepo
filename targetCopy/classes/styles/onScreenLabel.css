@@ -1,0 +1,39 @@
+
+.onScreenHorizRect{
+    -fx-effect: innershadow(gaussian , rgba(0,0,0,.4), 21,0,0,0);
+    -fx-background-color: #F0EF9C;
+}
+
+
+.slideMenu{
+    -fx-effect: innershadow(gaussian , rgba(0,0,0,.4), 21,0,0,0);
+    -fx-background-color: #1081D7;
+}
+
+
+.onScreenLabel{
+    -fx-text-fill: black;
+    -fx-font-family: Avenir;
+    -fx-font-size: 36px;
+    /*-fx-font-style: bold;*/
+    -fx-font-weight: 300;
+    -fx-label-padding: 0 0 0 10;
+    /*-fx-background-color: red;*/
+
+}
+
+.deleteBtn{
+    -fx-background-color: red;
+    /*-fx-label-padding: 0 0 0 80;*/
+    -fx-background-image: url(../images/delete-button1.png);
+    -fx-background-repeat: none;
+
+
+}
+
+.keyboardBtn{
+    -fx-background-color: green;
+}
+
+
+

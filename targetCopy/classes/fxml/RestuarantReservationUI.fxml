@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="64.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name*" />
+      <Text layoutX="259.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email*" />
+      <Text layoutX="524.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone*" />
+      <TextField fx:id="phoneNumberTextField1" layoutX="174.0" layoutY="453.0" prefHeight="27.0" prefWidth="114.0" />
+      <TextField fx:id="firstNameTextField" layoutX="64.0" layoutY="141.0" prefHeight="27.0" prefWidth="85.0" promptText="John" text="Norris" />
+      <TextField fx:id="lastNameTextField" layoutX="152.0" layoutY="141.0" prefHeight="27.0" prefWidth="85.0" promptText="Doe" text="Wise" />
+      <TextField fx:id="emailTextField" layoutX="259.0" layoutY="141.0" promptText="john.doe@gmail.com" text="wise.norris1@gmail.com" />
+      <TextField fx:id="phoneNumberTextField" layoutX="524.0" layoutY="141.0" promptText="704-334-2345" text="7044083304" />
+      <DatePicker fx:id="reservationFromDatePicker" layoutX="64.0" layoutY="217.0" prefHeight="27.0" prefWidth="167.0" />
+      <ComboBox fx:id="reservationTimesComboBox" layoutX="259.0" layoutY="217.0" prefHeight="27.0" prefWidth="167.0" />
+      <ComboBox fx:id="partySizeComboBox" layoutX="524.0" layoutY="217.0" prefHeight="27.0" prefWidth="68.0" />
+      <TextArea fx:id="specialRequestsTextArea" layoutX="63.0" layoutY="305.0" prefHeight="103.0" prefWidth="629.0" text="Plese have wine bottles on the table, we do not care about the brand. &#10;&#10;This is a special occassion. &#10;&#10;Thank You!" />
+      <Button fx:id="bookNowBtn" layoutX="585.0" layoutY="447.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="114.0" text="Book Now" />
+      <Text layoutX="64.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date*" />
+      <Text layoutX="259.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time*" />
+      <Text layoutX="524.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Party Size*" />
+      <Text layoutX="64.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPECIAL REQUESTS" />
+      <Text layoutX="293.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fancy Restuarant Name" />
+      <Separator layoutX="33.0" layoutY="430.0" prefHeight="5.0" prefWidth="666.0" />
+      <Text layoutX="35.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel / Rewards Num." />
+   </children>
+</AnchorPane>

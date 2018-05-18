@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="558.0" prefWidth="860.0" stylesheets="@../styles/edit_Item_POS_Style.css">
+         <children>
+            <Pane layoutY="-5.0" prefHeight="614.0" prefWidth="860.0" styleClass="bgRect" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="dishNameLabel" alignment="CENTER" layoutX="30.0" layoutY="504.0" prefHeight="75.0" prefWidth="267.0" styleClass="cornerLabel" text="Item: Mac N' Cheese" textAlignment="CENTER" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
+            <AnchorPane layoutX="367.0" layoutY="143.0" AnchorPane.topAnchor="143.0">
+               <children>
+                  <ImageView fitHeight="290.0" fitWidth="327.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../images/sticky-note_Clipart_svg_File1.5.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="trashCanImgView" fitHeight="42.0" fitWidth="21.0" layoutX="13.0" layoutY="233.77079010009766" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.629209518432617" AnchorPane.leftAnchor="13.0">
+                     <image>
+                        <Image url="@../images/recycle-bin3-upState.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="checkboxImgView" fitHeight="29.0" fitWidth="28.0" layoutX="277.0" layoutY="220.37078857421875" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.12921142578125" AnchorPane.rightAnchor="22.0">
+                     <image>
+                        <Image url="@../images/check-upState3.png" />
+                     </image>
+                  </ImageView>
+                  <TextArea fx:id="notesTextArea" prefHeight="189.0" prefWidth="275.0" rotate="-3.0" styleClass="stickyNoteLabel" wrapText="true" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="28.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,38 @@
+/**{*/
+    /*!*font-style: normal !important;*!*/
+/*}*/
+#myBtn{
+    -fx-background-color: radial-gradient(focus-angle 270deg, focus-distance 0%, center 50% 50%, radius 63.7449516%, reflect, #40ADFF 0%, #1D94ED 100%);
+    -fx-border-color: #1081D7;
+    -fx-border-width:  5px;
+    -fx-border-style: solid;
+    /*-fx-effect: dropshadow(gaussian , black , 4,1,6,2);*/
+    -fx-padding: 5px;
+    -fx-min-width: 53px;
+    -fx-min-height: 100px;
+    -fx-pref-height: 100px;
+    -fx-pref-width: 5000px;
+    -fx-max-height: 100px;
+    -fx-font-style: bold ;
+    -fx-font-family: "Avenir Next";
+    -fx-font-size: 16px;
+    -fx-max-height: 200px;
+
+}
+
+
+.eid{
+    -fx-border-radius: 100;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-label-padding: 0 0 0 5;
+    /*-fx-font-weight: 200;*/
+    /*-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,.5), 21,0,0,0);*/
+
+}
+
+/*.sideBarBtn{*/
+    /*!*-fx-pref-height: 100;*!*/
+
+
+/*}*/

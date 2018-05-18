@@ -1,0 +1,33 @@
+/*---------- Fonts ----------*/
+@font-face {
+    font-family: 'TravelingTypewriter';
+    src: url('TravelingTypewriter.ttf');
+}
+/*------------------------------*/
+.durationLabel{
+    -fx-font-weight: bold;
+    -fx-text-fill: #656363;
+    -fx-font-size: 16px;
+    -fx-font-family: "TravelingTypewriter";
+
+}
+
+.topDurationLabel{
+
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: "#E7E7E7";
+}
+
+.bottomDurationLabel{
+    -fx-border-width: 0 0 0 0;
+    /*-fx-border-color: black;*/
+}
+
+.designRect{
+    /*-fx-border-radius: 10px;*/
+    /*-fx-background-radius: 10px;*/
+    /*-fx-arc-width: 10px;*/
+    /*-fx-arc-height: 10px;*/
+    -fx-background-color: black;
+    -fx-stroke-width: 3px;
+}

@@ -1,0 +1,65 @@
+.printScreen{
+    -fx-background-color: #F0EF9C;
+}
+
+
+.textFields{
+    -fx-effect: innershadow(gaussian , rgba(0,0,0,.4), 3,0,0,1);
+    -fx-background-color: #2096EF;
+    -fx-background-radius: 8px;
+
+}
+
+.cashBtn{
+    -fx-background-color: #D8D8D8;
+    -fx-border-color: #979797;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.49), 8,0,6,5);
+
+}
+
+.stopBtn{
+    -fx-background-color: radial-gradient(focus-angle 270deg, focus-distance 0%, center 50% 50%, radius 63.7449516%, #FD9595 0%, #ED1D1D 100%);
+    -fx-border-color: #F97272;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.49), 8,0,6,5);
+    -fx-text-fill: black;
+
+}
+
+.checkoutBtn{
+    -fx-background-color: radial-gradient(focus-angle 270deg, focus-distance 0%, center 50% 50%, radius 63.7449516%, #4AFF40 0%,#50A124 100%);
+    -fx-border-color: #4DF63D;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.49), 8,0,6,5);
+
+}
+
+.editOrderBtn{
+    -fx-background-color: radial-gradient(focus-angle 270deg, focus-distance 0%, center 50% 50%, radius 63.7449516%, #FCFDD8 0%,#B1B815 100%);
+    -fx-border-color: #F8FF4C;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.49), 8,0,6,5);
+
+}
+
+.manualOverrideBtn{
+    -fx-background-color: radial-gradient(focus-angle 270deg, focus-distance 0%, center 50% 50%, radius 63.7449516%, #F9F0DA 0%, #E29D21 100%);
+    -fx-border-color: #FFCB30;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian , rgba(0,0,0,0.49), 8,0,6,5);
+}
+
+.roomTxt{
+    -fx-font-size: 30px;
+}
