@@ -8,6 +8,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import kots.KOTS_Server_Java;
+import kots.KitchenOrderQueueView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class MainApp extends Application
@@ -16,6 +21,7 @@ public class MainApp extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
+
 //        Parent root = FXMLLoader.load(getClass().getResource("/fxml/ReservationSystemUI.fxml"));
 //
 //
@@ -30,6 +36,10 @@ public class MainApp extends Application
 
     }
 
+
+
+
+
     /**
      * The main() method is ignored in correctly deployed JavaFX application.
      * main() serves only as fallback in case the application can not be
@@ -41,7 +51,7 @@ public class MainApp extends Application
     public static void main(String[] args)
     {
 //        launch(args);
-                launch(MainAppKotlin.class, args);
+        launch(MainAppKotlin.class, args);
         SvgImageLoaderFactory.install(new PrimitiveDimensionProvider());
     }
 

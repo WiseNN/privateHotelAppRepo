@@ -222,12 +222,16 @@ import java.util.concurrent.PriorityBlockingQueue;
 
     }
 
-    static void stopServer()
+    public static void stopServer()
     {
 
-        server.stop();
-        kitchView.getConnectedStatusText().setText("Not Connected...");
-        kitchView.getStatusIndicator().setFill(Color.web("#ff0000"));
+        if(server != null)
+        {
+            server.stop();
+            kitchView.getConnectedStatusText().setText("Not Connected...");
+            kitchView.getStatusIndicator().setFill(Color.web("#ff0000"));
+        }
+
 
 
     }

@@ -14,8 +14,10 @@
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-shm" />
       <change beforePath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" afterPath="$PROJECT_DIR$/data/data/com.couchbase.lite.test/files/data/reservationsystemdb.cblite2/db.sqlite3-wal" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantReservationView.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantReservationView.kt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/RoomBillingUI.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RoomBillingUI.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" afterPath="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" afterPath="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/RoomBillingUI.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/RoomBillingUI.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,19 +32,11 @@
       <file leaf-file-name="MainAppKotlin.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestaurantTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/couchdb/RestaurantTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="166">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#256#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,24 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KOTS_Server_Java.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="90" column="65" lean-forward="false" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
-              <folding>
-                <element signature="e#1209#1221#0" expanded="true" />
-                <element signature="e#1321#1345#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestaurantReservationView.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RestaurantReservationView.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantReservationView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="59" column="72" lean-forward="false" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+            <state relative-caret-position="1012">
+              <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -115,6 +96,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KOTS_Server_Java.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="232" column="9" lean-forward="false" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1209#1221#0" expanded="true" />
+                <element signature="e#1321#1345#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,8 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Timer</find>
-      <find>animate</find>
       <find>OrderCh</find>
       <find>test</find>
       <find>scheduleA</find>
@@ -167,7 +170,6 @@
       <find>show</find>
       <find>signIn</find>
       <find>sign</find>
-      <find>timer</find>
       <find>getHostAddre</find>
       <find>config</find>
       <find>host</find>
@@ -175,6 +177,9 @@
       <find>start</find>
       <find>Host A</find>
       <find>PORT</find>
+      <find>stop</find>
+      <find>timer</find>
+      <find>task</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,17 +233,17 @@
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantPOSView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManagerView.kt" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_EmployeeManager.kt" />
         <option value="$PROJECT_DIR$/src/main/java/kots/KitchenOrderQueueView.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/RestaurantTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/RestaurantItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/couchdb/CouchbaseSingleton.java" />
         <option value="$PROJECT_DIR$/bin/src/main/java/mainhotelapp/MainAppKotlin.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" />
         <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantReservationView.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java" />
       </list>
     </option>
   </component>
@@ -716,12 +721,12 @@
       <workItem from="1523935673768" duration="15254000" />
       <workItem from="1523994306188" duration="337000" />
       <workItem from="1524169647456" duration="97000" />
-      <workItem from="1524441188454" duration="18451000" />
+      <workItem from="1524441188454" duration="21001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="873525000" />
+    <option name="totallyTimeSpent" value="876075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -745,17 +750,17 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34099153" sideWeight="0.3769671" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20435308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20435308" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20314735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20314735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12088698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29020557" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29020557" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -814,7 +819,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt</url>
-          <line>10</line>
+          <line>9</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
@@ -1750,7 +1755,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java</url>
-          <line>18</line>
+          <line>24</line>
           <properties />
           <option name="timeStamp" value="380" />
         </line-breakpoint>
@@ -2174,14 +2179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MyButtonBarView.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -2262,30 +2259,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantReservationView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="90" column="65" lean-forward="false" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
-          <folding>
-            <element signature="e#1209#1221#0" expanded="true" />
-            <element signature="e#1321#1345#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1012">
+          <caret line="72" column="28" lean-forward="false" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/MainAppKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="166">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#256#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mainhotelapp/RestaurantReservationView.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kots/KOTS_Server_Java.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="59" column="72" lean-forward="false" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
-          <folding />
+        <state relative-caret-position="316">
+          <caret line="232" column="9" lean-forward="false" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1209#1221#0" expanded="true" />
+            <element signature="e#1321#1345#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
